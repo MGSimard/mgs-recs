@@ -1,15 +1,11 @@
 import tsParser from "@typescript-eslint/parser";
 import tseslint from "typescript-eslint";
 import * as reactHooks from "eslint-plugin-react-hooks";
-import mantine from "eslint-config-mantine";
-import jsxA11y from "eslint-plugin-jsx-a11y";
 
 export default tseslint.config(
   tseslint.configs.recommendedTypeChecked,
   tseslint.configs.stylisticTypeChecked,
   reactHooks.configs.recommended,
-  jsxA11y.flatConfigs.recommended,
-  mantine,
   {
     languageOptions: {
       parser: tsParser,
