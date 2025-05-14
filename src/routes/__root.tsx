@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Outlet, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { createTheme, ColorSchemeScript, mantineHtmlProps, MantineProvider } from "@mantine/core";
+import { Sidenav } from "@/_components/Sidenav/Sidenav";
 import globalCss from "@/_styles/global.css?url";
 import mantineCss from "@mantine/core/styles.css?url";
 
@@ -47,6 +48,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
       </head>
       <body>
         <MantineProvider theme={theme} defaultColorScheme="dark">
+          <Sidenav />
           {children}
           <Scripts />
         </MantineProvider>
