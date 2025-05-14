@@ -4,7 +4,7 @@ _This could've been a markdown file_
 
 ## Stack
 
-- TanStack Start (Vite, React 19)
+- TanStack Start (React 19, Vite, Nitro, H3, Vinxi)
 - TypeScript
 - Cloudflare Pages
 - Mantine UI
