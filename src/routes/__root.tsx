@@ -1,6 +1,8 @@
 import type { ReactNode } from "react";
 import { Outlet, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
-import { MantineProvider } from "@mantine/core";
+import { createTheme, ColorSchemeScript, mantineHtmlProps, MantineProvider } from "@mantine/core";
+import globalCss from "@/_styles/global.css?url";
+import mantineCss from "@mantine/core/styles.css?url";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -16,29 +18,38 @@ export const Route = createRootRoute({
         title: "TanStack Start Starter",
       },
     ],
+    links: [
+      { rel: "stylesheet", href: globalCss },
+      { rel: "stylesheet", href: mantineCss },
+    ],
   }),
   component: RootComponent,
 });
 
 function RootComponent() {
   return (
-    <MantineProvider>
-      <RootDocument>
-        <Outlet />
-      </RootDocument>
-    </MantineProvider>
+    <RootDocument>
+      <Outlet />
+    </RootDocument>
   );
 }
 
+const theme = createTheme({
+  scale: 1.6,
+});
+
 function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html>
+    <html lang="en" {...mantineHtmlProps}>
       <head>
         <HeadContent />
+        <ColorSchemeScript defaultColorScheme="dark" />
       </head>
       <body>
-        {children}
-        <Scripts />
+        <MantineProvider theme={theme} defaultColorScheme="dark">
+          {children}
+          <Scripts />
+        </MantineProvider>
       </body>
     </html>
   );

@@ -16,6 +16,9 @@ export default defineConfig({
     },
   },
   vite: {
+    ssr: {
+      noExternal: ["@mantine/*"],
+    },
     plugins: [
       tsConfigPaths({
         projects: ["./tsconfig.json"],
