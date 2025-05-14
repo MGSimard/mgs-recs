@@ -1,11 +1,11 @@
 import tsParser from "@typescript-eslint/parser";
-// import * as reactHooks from "eslint-plugin-react-hooks";
+import * as reactHooks from "eslint-plugin-react-hooks";
 import tseslint from "typescript-eslint";
 
 export default tseslint.config(
   tseslint.configs.recommendedTypeChecked,
   tseslint.configs.stylisticTypeChecked,
-  // reactHooks.configs.recommended,
+  reactHooks.configs.recommended,
   {
     languageOptions: {
       parser: tsParser,

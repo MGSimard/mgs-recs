@@ -10,6 +10,11 @@ export default defineConfig({
   tsr: {
     appDirectory: "./src",
   },
+  react: {
+    babel: {
+      plugins: [["babel-plugin-react-compiler", { target: "19" }]],
+    },
+  },
   vite: {
     plugins: [
       tsConfigPaths({
