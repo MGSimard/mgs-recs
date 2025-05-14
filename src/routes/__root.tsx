@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Outlet, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { MantineProvider } from "@mantine/core";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -21,9 +22,11 @@ export const Route = createRootRoute({
 
 function RootComponent() {
   return (
-    <RootDocument>
-      <Outlet />
-    </RootDocument>
+    <MantineProvider>
+      <RootDocument>
+        <Outlet />
+      </RootDocument>
+    </MantineProvider>
   );
 }
 
