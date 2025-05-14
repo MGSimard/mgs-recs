@@ -7,3 +7,4 @@ _This could've been a markdown file_
 - TanStack Start (Vite, React 19)
 - TypeScript
 - Cloudflare Pages
+- Mantine UI
