@@ -1,94 +1,82 @@
 import { NavMain } from "@/_components/ui/nav/nav-main";
-import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarRail } from "@/_components/ui/sidebar";
-import { BookOpen, Bot, Settings2, SquareTerminal } from "lucide-react";
+import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader } from "@/_components/ui/sidebar";
+import { BookOpen, BookType, Database, DollarSign, KeyRound, Layers, Server } from "lucide-react";
 
 // This is sample data.
 const data = {
   navMain: [
     {
-      title: "Web Development",
+      title: "Frontend Languages",
       url: "#",
-      icon: SquareTerminal,
+      icon: BookType,
+      items: [
+        {
+          title: "HTML5",
+          url: "#",
+        },
+        {
+          title: "CSS3",
+          url: "#",
+        },
+        {
+          title: "JavaScript (ES6+)",
+          url: "#",
+        },
+        {
+          title: "TypeScript",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "Frameworks",
+      url: "#",
+      icon: Layers,
       isActive: true,
       items: [
         {
-          title: "History",
+          title: "Vite",
           url: "#",
         },
         {
-          title: "Starred",
+          title: "TanStack Start",
           url: "#",
         },
         {
-          title: "Settings",
+          title: "Next.js",
           url: "#",
         },
       ],
     },
     {
-      title: "Models",
+      title: "Databases",
       url: "#",
-      icon: Bot,
-      items: [
-        {
-          title: "Genesis",
-          url: "#",
-        },
-        {
-          title: "Explorer",
-          url: "#",
-        },
-        {
-          title: "Quantum",
-          url: "#",
-        },
-      ],
+      icon: Database,
+      items: [],
     },
     {
-      title: "Documentation",
+      title: "Auth",
+      url: "/auth",
+      icon: KeyRound,
+      items: [],
+    },
+    {
+      title: "Hosting",
+      url: "/hosting",
+      icon: Server,
+      items: [],
+    },
+    {
+      title: "Payment Gateways",
+      url: "/payment-gateways",
+      icon: DollarSign,
+      items: [],
+    },
+    {
+      title: "Learning",
       url: "#",
       icon: BookOpen,
-      items: [
-        {
-          title: "Introduction",
-          url: "#",
-        },
-        {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Settings",
-      url: "#",
-      icon: Settings2,
-      items: [
-        {
-          title: "General",
-          url: "#",
-        },
-        {
-          title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
-          url: "#",
-        },
-      ],
+      items: [],
     },
   ],
 };
