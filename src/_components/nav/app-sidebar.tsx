@@ -6,7 +6,7 @@ import { BookOpen, Bot, Settings2, SquareTerminal } from "lucide-react";
 const data = {
   navMain: [
     {
-      title: "Playground",
+      title: "Web Development",
       url: "#",
       icon: SquareTerminal,
       isActive: true,
