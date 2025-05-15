@@ -29,9 +29,9 @@ export function NavMain({
   }[];
 }) {
   const location = useLocation();
-  const { state, isMobile } = useSidebar();
   const currentPath = location.pathname.replace(/\/$/, "");
   const currentHash = (location.hash || "").replace(/^#/, "");
+  const { state, isMobile } = useSidebar();
 
   return (
     <SidebarGroup>
@@ -39,65 +39,70 @@ export function NavMain({
       <SidebarMenu>
         {items.map((item) => {
           const normalizedItemUrl = item.url.replace(/\/$/, "");
-          // Collapsed: highlight group if any subitem or group matches
+          const isItemActive = currentPath === normalizedItemUrl || currentPath.startsWith(normalizedItemUrl + "/");
+
           const isAnySubItemActive =
             item.items?.some((subItem) => {
               const [subPathRaw, subHashRaw] = subItem.url.split("#");
-              const subPath = subPathRaw || "";
+              const subPath = (subPathRaw || "").replace(/\/$/, "");
               const subHash = subHashRaw || "";
-              return currentPath === subPath.replace(/\/$/, "") && currentHash === subHash;
-            }) ?? false;
-          const isItemActiveCollapsed =
-            currentPath === normalizedItemUrl || currentPath.startsWith(normalizedItemUrl + "/") || isAnySubItemActive;
-          // Expanded: highlight group only if exact match (no hash, no child)
-          const isItemActiveExpanded = currentPath === normalizedItemUrl && !currentHash;
+              return currentPath === subPath && currentHash === subHash;
+            }) || false;
+
           return (
-            <Collapsible key={item.title} asChild defaultOpen={isItemActiveCollapsed} className="group/collapsible">
+            <Collapsible
+              key={item.title}
+              asChild
+              defaultOpen={isItemActive || isAnySubItemActive}
+              className="group/collapsible">
               <SidebarMenuItem>
                 {state === "collapsed" && !isMobile ? (
                   <SidebarMenuButton
-                    asChild
                     tooltip={item.title}
                     className="hover:cursor-pointer"
-                    isActive={isItemActiveCollapsed}>
+                    data-active={isItemActive || isAnySubItemActive}
+                    asChild>
                     <Link to={item.url}>
                       {item.icon && <item.icon />}
                       <span>{item.title}</span>
                     </Link>
                   </SidebarMenuButton>
                 ) : (
-                  <CollapsibleTrigger asChild>
-                    <SidebarMenuButton
-                      tooltip={item.title}
-                      className="hover:cursor-pointer"
-                      isActive={isItemActiveExpanded}>
-                      {item.icon && <item.icon />}
-                      <span>{item.title}</span>
-                      <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
-                    </SidebarMenuButton>
-                  </CollapsibleTrigger>
+                  <>
+                    <CollapsibleTrigger asChild>
+                      <SidebarMenuButton
+                        tooltip={item.title}
+                        className="hover:cursor-pointer"
+                        data-active={isItemActive || isAnySubItemActive}>
+                        {item.icon && <item.icon />}
+                        <span>{item.title}</span>
+                        <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
+                      </SidebarMenuButton>
+                    </CollapsibleTrigger>
+                    <CollapsibleContent>
+                      <SidebarMenuSub>
+                        {item.items?.map((subItem) => {
+                          const [subPathRaw, subHashRaw] = subItem.url.split("#");
+                          const subPath = subPathRaw || "";
+                          const subHash = subHashRaw || "";
+                          const isSubItemActive = currentPath === subPath.replace(/\/$/, "") && currentHash === subHash;
+                          return (
+                            <SidebarMenuSubItem key={subItem.title}>
+                              <SidebarMenuSubButton
+                                asChild
+                                className="text-muted-foreground"
+                                isActive={isSubItemActive}>
+                                <Link to={subItem.url}>
+                                  <span>{subItem.title}</span>
+                                </Link>
+                              </SidebarMenuSubButton>
+                            </SidebarMenuSubItem>
+                          );
+                        })}
+                      </SidebarMenuSub>
+                    </CollapsibleContent>
+                  </>
                 )}
-                <CollapsibleContent>
-                  <SidebarMenuSub>
-                    {item.items?.map((subItem) => {
-                      // Split subItem.url into path and hash
-                      const [subPathRaw, subHashRaw] = subItem.url.split("#");
-                      const subPath = subPathRaw || "";
-                      const subHash = subHashRaw || "";
-                      // isActive if path matches and hash matches (or both have no hash)
-                      const isSubItemActive = currentPath === subPath.replace(/\/$/, "") && currentHash === subHash;
-                      return (
-                        <SidebarMenuSubItem key={subItem.title}>
-                          <SidebarMenuSubButton asChild className="text-muted-foreground " isActive={isSubItemActive}>
-                            <Link to={subItem.url}>
-                              <span>{subItem.title}</span>
-                            </Link>
-                          </SidebarMenuSubButton>
-                        </SidebarMenuSubItem>
-                      );
-                    })}
-                  </SidebarMenuSub>
-                </CollapsibleContent>
               </SidebarMenuItem>
             </Collapsible>
           );
