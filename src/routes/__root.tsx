@@ -5,6 +5,7 @@ import { SidebarInset, SidebarProvider } from "@/_components/ui/sidebar";
 import { AppSidebar } from "@/_components/ui/nav/app-sidebar";
 import { Header } from "@/_components/ui/header/Header";
 import globalCss from "@/_styles/global.css?url";
+import fontsCss from "@/_styles/fonts.css?url";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -20,7 +21,10 @@ export const Route = createRootRoute({
         title: "TanStack Start Starter",
       },
     ],
-    links: [{ rel: "stylesheet", href: globalCss }],
+    links: [
+      { rel: "stylesheet", href: globalCss },
+      { rel: "stylesheet", href: fontsCss },
+    ],
   }),
   component: RootComponent,
 });

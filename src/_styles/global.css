@@ -4,6 +4,10 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  --coreFont: "Rajdhani", -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica,
+    Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+  --secondaryFont: "Orbitron", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -113,6 +117,11 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+@theme {
+  --font-rajdhani: var(--coreFont);
+  --font-orbitron: var(--secondaryFont);
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -120,4 +129,8 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+html {
+  font-family: var(--coreFont);
 }

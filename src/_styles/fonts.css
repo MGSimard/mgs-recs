@@ -1,0 +1,135 @@
+/* RAJDHANI
+Light: 300
+Regular: 400
+Medium: 500
+SemiBold: 600
+Bold: 700
+*/
+
+@font-face {
+  font-family: "Rajdhani";
+  src: url("/fonts/rajdhani/Rajdhani-Light.woff2") format("woff2"),
+    url("/fonts/rajdhani/Rajdhani-Light.woff") format("woff"),
+    url("/fonts/rajdhani/Rajdhani-Light.ttf") format("truetype"),
+    url("/fonts/rajdhani/Rajdhani-Light.eot") format("eot");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rajdhani";
+  src: url("/fonts/rajdhani/Rajdhani-Regular.woff2") format("woff2"),
+    url("/fonts/rajdhani/Rajdhani-Regular.woff") format("woff"),
+    url("/fonts/rajdhani/Rajdhani-Regular.ttf") format("truetype"),
+    url("/fonts/rajdhani/Rajdhani-Regular.eot") format("eot");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rajdhani";
+  src: url("/fonts/rajdhani/Rajdhani-Medium.woff2") format("woff2"),
+    url("/fonts/rajdhani/Rajdhani-Medium.woff") format("woff"),
+    url("/fonts/rajdhani/Rajdhani-Medium.ttf") format("truetype"),
+    url("/fonts/rajdhani/Rajdhani-Medium.eot") format("eot");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rajdhani";
+  src: url("/fonts/rajdhani/Rajdhani-SemiBold.woff2") format("woff2"),
+    url("/fonts/rajdhani/Rajdhani-SemiBold.woff") format("woff"),
+    url("/fonts/rajdhani/Rajdhani-SemiBold.ttf") format("truetype"),
+    url("/fonts/rajdhani/Rajdhani-SemiBold.eot") format("eot");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rajdhani";
+  src: url("/fonts/rajdhani/Rajdhani-Bold.woff2") format("woff2"),
+    url("/fonts/rajdhani/Rajdhani-Bold.woff") format("woff"),
+    url("/fonts/rajdhani/Rajdhani-Bold.ttf") format("truetype"), url("/fonts/rajdhani/Rajdhani-Bold.eot") format("eot");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Orbitron
+Regular: 400
+Medium: 500
+SemiBold: 600
+Bold: 700
+ExtraBold: 800
+Black: 900
+*/
+
+@font-face {
+  font-family: "Orbitron";
+  src: url("/fonts/orbitron/Orbitron-Regular.woff2") format("woff2"),
+    url("/fonts/orbitron/Orbitron-Regular.woff") format("woff"),
+    url("/fonts/orbitron/Orbitron-Regular.ttf") format("truetype"),
+    url("/fonts/orbitron/Orbitron-Regular.eot") format("eot");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Orbitron";
+  src: url("/fonts/orbitron/Orbitron-Medium.woff2") format("woff2"),
+    url("/fonts/orbitron/Orbitron-Medium.woff") format("woff"),
+    url("/fonts/orbitron/Orbitron-Medium.ttf") format("truetype"),
+    url("/fonts/orbitron/Orbitron-Medium.eot") format("eot");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Orbitron";
+  src: url("/fonts/orbitron/Orbitron-SemiBold.woff2") format("woff2"),
+    url("/fonts/orbitron/Orbitron-SemiBold.woff") format("woff"),
+    url("/fonts/orbitron/Orbitron-SemiBold.ttf") format("truetype"),
+    url("/fonts/orbitron/Orbitron-SemiBold.eot") format("eot");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Orbitron";
+  src: url("/fonts/orbitron/Orbitron-Bold.woff2") format("woff2"),
+    url("/fonts/orbitron/Orbitron-Bold.woff") format("woff"),
+    url("/fonts/orbitron/Orbitron-Bold.ttf") format("truetype"), url("/fonts/orbitron/Orbitron-Bold.eot") format("eot");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Orbitron";
+  src: url("/fonts/orbitron/Orbitron-ExtraBold.woff2") format("woff2"),
+    url("/fonts/orbitron/Orbitron-ExtraBold.woff") format("woff"),
+    url("/fonts/orbitron/Orbitron-ExtraBold.ttf") format("truetype"),
+    url("/fonts/orbitron/Orbitron-ExtraBold.eot") format("eot");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Orbitron";
+  src: url("/fonts/orbitron/Orbitron-Black.woff2") format("woff2"),
+    url("/fonts/orbitron/Orbitron-Black.woff") format("woff"),
+    url("/fonts/orbitron/Orbitron-Black.ttf") format("truetype"),
+    url("/fonts/orbitron/Orbitron-Black.eot") format("eot");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
