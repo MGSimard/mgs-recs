@@ -1,4 +1,4 @@
-import { NavMain } from "@/_components/nav/nav-main";
+import { NavMain } from "@/_components/ui/nav/nav-main";
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarRail } from "@/_components/ui/sidebar";
 import { BookOpen, Bot, Settings2, SquareTerminal } from "lucide-react";
 
@@ -100,8 +100,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarContent>
         <NavMain items={data.navMain} />
       </SidebarContent>
-      <SidebarFooter>Footer</SidebarFooter>
-      <SidebarRail />
     </Sidebar>
   );
 }
