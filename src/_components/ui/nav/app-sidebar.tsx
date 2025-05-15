@@ -1,6 +1,6 @@
+import { Sidebar, SidebarContent, SidebarHeader } from "@/_components/ui/sidebar";
 import { NavMain } from "@/_components/ui/nav/nav-main";
-import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader } from "@/_components/ui/sidebar";
-import { NavLinks } from "./nav-links";
+import { NavLinks } from "@/_components/ui/nav/nav-links";
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
