@@ -265,7 +265,7 @@ export const NavLinks = {
         icon: Clapperboard,
         items: [
           {
-            title: "Davinci Resolve",
+            title: "DaVinci Resolve",
             url: "/video-editing#davinci-resolve",
           },
         ],
