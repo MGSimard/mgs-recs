@@ -47,7 +47,7 @@ export function NavItem({
             <CollapsibleTrigger asChild>
               <SidebarMenuButton
                 tooltip={title}
-                className="hover:cursor-pointer"
+                className="hover:cursor-pointer uppercase"
                 data-active={isActive || isAnySubItemActive}>
                 {Icon && <Icon />}
                 <span>{title}</span>

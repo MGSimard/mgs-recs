@@ -26,7 +26,7 @@ export function NavMain({
 
   return (
     <SidebarGroup>
-      <SidebarGroupLabel>{label}</SidebarGroupLabel>
+      <SidebarGroupLabel className="">{label}</SidebarGroupLabel>
       <SidebarMenu>
         {items.map((item) => {
           const normalizedItemUrl = item.url.replace(/\/$/, "");
