@@ -13,6 +13,8 @@
 import { Route as rootRoute } from './routes/__root'
 import { Route as IndexImport } from './routes/index'
 import { Route as FrontendLanguagesIndexImport } from './routes/frontend-languages/index'
+import { Route as FrameworksIndexImport } from './routes/frameworks/index'
+import { Route as CodeEditorsIndexImport } from './routes/code-editors/index'
 
 // Create/Update Routes
 
@@ -28,6 +30,18 @@ const FrontendLanguagesIndexRoute = FrontendLanguagesIndexImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
+const FrameworksIndexRoute = FrameworksIndexImport.update({
+  id: '/frameworks/',
+  path: '/frameworks/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const CodeEditorsIndexRoute = CodeEditorsIndexImport.update({
+  id: '/code-editors/',
+  path: '/code-editors/',
+  getParentRoute: () => rootRoute,
+} as any)
+
 // Populate the FileRoutesByPath interface
 
 declare module '@tanstack/react-router' {
@@ -37,6 +51,20 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/code-editors/': {
+      id: '/code-editors/'
+      path: '/code-editors'
+      fullPath: '/code-editors'
+      preLoaderRoute: typeof CodeEditorsIndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/frameworks/': {
+      id: '/frameworks/'
+      path: '/frameworks'
+      fullPath: '/frameworks'
+      preLoaderRoute: typeof FrameworksIndexImport
       parentRoute: typeof rootRoute
     }
     '/frontend-languages/': {
@@ -53,36 +81,51 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/code-editors': typeof CodeEditorsIndexRoute
+  '/frameworks': typeof FrameworksIndexRoute
   '/frontend-languages': typeof FrontendLanguagesIndexRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/code-editors': typeof CodeEditorsIndexRoute
+  '/frameworks': typeof FrameworksIndexRoute
   '/frontend-languages': typeof FrontendLanguagesIndexRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
+  '/code-editors/': typeof CodeEditorsIndexRoute
+  '/frameworks/': typeof FrameworksIndexRoute
   '/frontend-languages/': typeof FrontendLanguagesIndexRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/frontend-languages'
+  fullPaths: '/' | '/code-editors' | '/frameworks' | '/frontend-languages'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/frontend-languages'
-  id: '__root__' | '/' | '/frontend-languages/'
+  to: '/' | '/code-editors' | '/frameworks' | '/frontend-languages'
+  id:
+    | '__root__'
+    | '/'
+    | '/code-editors/'
+    | '/frameworks/'
+    | '/frontend-languages/'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CodeEditorsIndexRoute: typeof CodeEditorsIndexRoute
+  FrameworksIndexRoute: typeof FrameworksIndexRoute
   FrontendLanguagesIndexRoute: typeof FrontendLanguagesIndexRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CodeEditorsIndexRoute: CodeEditorsIndexRoute,
+  FrameworksIndexRoute: FrameworksIndexRoute,
   FrontendLanguagesIndexRoute: FrontendLanguagesIndexRoute,
 }
 
@@ -97,11 +140,19 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
+        "/code-editors/",
+        "/frameworks/",
         "/frontend-languages/"
       ]
     },
     "/": {
       "filePath": "index.tsx"
+    },
+    "/code-editors/": {
+      "filePath": "code-editors/index.tsx"
+    },
+    "/frameworks/": {
+      "filePath": "frameworks/index.tsx"
     },
     "/frontend-languages/": {
       "filePath": "frontend-languages/index.tsx"
