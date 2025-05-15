@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { Outlet, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/_components/ui/sidebar";
-import { AppSidebar } from "@/_components/app-sidebar";
+import { AppSidebar } from "@/_components/nav/app-sidebar";
 import globalCss from "@/_styles/global.css?url";
 import {
   Breadcrumb,
@@ -67,16 +67,8 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
                 </Breadcrumb>
               </div>
             </header>
-            <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
-              <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-                <div className="aspect-video rounded-xl bg-muted/50" />
-                <div className="aspect-video rounded-xl bg-muted/50" />
-                <div className="aspect-video rounded-xl bg-muted/50" />
-              </div>
-              <div className="min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min" />
-            </div>
+            <main className="flex flex-1 flex-col gap-4 p-4 pt-0">{children}</main>
           </SidebarInset>
-          {children}
         </SidebarProvider>
         <Scripts />
       </body>
