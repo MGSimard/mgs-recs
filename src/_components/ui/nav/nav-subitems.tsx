@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "@tanstack/react-router";
 import { SidebarMenuSubButton, SidebarMenuSubItem } from "@/_components/ui/sidebar";
 
+// Utility function to normalize paths by removing trailing slashes
+const normalizePath = (path: string) => path.replace(/\/$/, "");
+
 interface NavSubItemsProps {
   items: {
     title: string;
@@ -11,7 +14,7 @@ interface NavSubItemsProps {
 
 export function NavSubItems({ items }: NavSubItemsProps) {
   const location = useLocation();
-  const currentPath = location.pathname.replace(/\/$/, "");
+  const currentPath = normalizePath(location.pathname);
   const [currentHash, setCurrentHash] = useState("");
 
   useEffect(() => {
@@ -22,11 +25,9 @@ export function NavSubItems({ items }: NavSubItemsProps) {
     <>
       {items.map((subItem) => {
         const [subPathRaw, subHashRaw] = subItem.url.split("#");
-        const subPath = (subPathRaw || "").replace(/\/$/, "");
+        const subPath = normalizePath(subPathRaw || "");
         const subHash = decodeURIComponent(subHashRaw || "");
-        const isActive =
-          currentPath === subPath.replace(/\/$/, "") &&
-          ((currentHash === "" && subHash === "") || currentHash === subHash);
+        const isActive = currentPath === subPath && ((currentHash === "" && subHash === "") || currentHash === subHash);
 
         return (
           <SidebarMenuSubItem key={subItem.title}>
