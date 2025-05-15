@@ -1,24 +1,24 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/_components/Section";
 
-export const Route = createFileRoute("/frameworks/")({
-  component: PageFrameworks,
-  loader: () => ({ title: "Frameworks" }),
+export const Route = createFileRoute("/learning/")({
+  component: PageLearning,
+  loader: () => ({ title: "Learning" }),
 });
 
-function PageFrameworks() {
+function PageLearning() {
   return (
     <>
-      <Section title="Vite + Tanstack Router" id="vite-tanstack-router">
+      <Section title="freeCodeCamp" id="freecodecamp">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
       </Section>
-      <Section title="TanStack Start" id="tanstack-start">
+      <Section title="Codevolution" id="codevolution">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
       </Section>
-      <Section title="Next.js" id="nextjs">
+      <Section title="Theo" id="theo">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
       </Section>
-      <Section title="Payload" id="payload">
+      <Section title="Jack Herrington" id="jack-herrington">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
       </Section>
     </>

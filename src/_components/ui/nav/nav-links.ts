@@ -9,7 +9,10 @@ import {
   KeyRound,
   Layers,
   PenTool,
+  Rows,
   Server,
+  Table,
+  Table2,
 } from "lucide-react";
 
 export const NavLinks = {
@@ -76,37 +79,133 @@ export const NavLinks = {
             title: "Next.js",
             url: "/frameworks#nextjs",
           },
+          {
+            title: "Payload",
+            url: "/frameworks#payload",
+          },
         ],
       },
       {
         title: "Databases",
         url: "/databases",
         icon: Database,
-        items: [],
+        items: [
+          {
+            title: "PostgreSQL",
+            url: "/databases#postgresql",
+          },
+          {
+            title: "MySQL",
+            url: "/databases#mysql",
+          },
+          {
+            title: "Redis",
+            url: "/databases#redis",
+          },
+          {
+            title: "Dexie.js",
+            url: "/databases#dexiejs",
+          },
+          {
+            title: "localStorage",
+            url: "/databases#localstorage",
+          },
+        ],
+      },
+      {
+        title: "ORMs",
+        url: "/orms",
+        icon: Table,
+        items: [
+          {
+            title: "Drizzle ORM",
+            url: "/orms#drizzle-orm",
+          },
+          {
+            title: "Prisma",
+            url: "/orms#prisma",
+          },
+        ],
       },
       {
         title: "Auth",
         url: "/auth",
         icon: KeyRound,
-        items: [],
+        items: [
+          {
+            title: "Better Auth",
+            url: "/auth#better-auth",
+          },
+          {
+            title: "Clerk",
+            url: "/auth#clerk",
+          },
+        ],
       },
       {
         title: "Hosting",
         url: "/hosting",
         icon: Server,
-        items: [],
+        items: [
+          {
+            title: "Cloudflare",
+            url: "/hosting#cloudflare",
+          },
+          {
+            title: "Netlify",
+            url: "/hosting#netlify",
+          },
+          {
+            title: "Vercel",
+            url: "/hosting#vercel",
+          },
+          {
+            title: "Coolify",
+            url: "/hosting#coolify",
+          },
+          {
+            title: "Hetzner",
+            url: "/hosting#hetzner",
+          },
+        ],
       },
       {
-        title: "Payment Gateways",
-        url: "/payment-gateways",
+        title: "Payments",
+        url: "/payments",
         icon: DollarSign,
-        items: [],
+        items: [
+          {
+            title: "Stripe",
+            url: "/payments#stripe",
+          },
+          {
+            title: "Polar",
+            url: "/payments#polar",
+          },
+        ],
       },
       {
         title: "Learning",
         url: "/learning",
         icon: BookOpen,
-        items: [],
+        items: [
+          {
+            title: "freeCodeCamp",
+            url: "/learning#freecodecamp",
+          },
+          {
+            title: "Codevolution",
+            url: "/learning#codevolution",
+          },
+          {
+            title: "Theo",
+            url: "/learning#theo",
+          },
+          {
+            title: "Jack Herrington",
+            url: "/learning#jack-herrington",
+          },
+        ],
       },
     ],
   },

@@ -1,24 +1,27 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/_components/Section";
 
-export const Route = createFileRoute("/frameworks/")({
-  component: PageFrameworks,
-  loader: () => ({ title: "Frameworks" }),
+export const Route = createFileRoute("/databases/")({
+  component: PageDatabases,
+  loader: () => ({ title: "Databases" }),
 });
 
-function PageFrameworks() {
+function PageDatabases() {
   return (
     <>
-      <Section title="Vite + Tanstack Router" id="vite-tanstack-router">
+      <Section title="PostgreSQL" id="postgresql">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
       </Section>
-      <Section title="TanStack Start" id="tanstack-start">
+      <Section title="MySQL" id="mysql">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
       </Section>
-      <Section title="Next.js" id="nextjs">
+      <Section title="Redis" id="redis">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
       </Section>
-      <Section title="Payload" id="payload">
+      <Section title="Dexie.js" id="dexiejs">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+      </Section>
+      <Section title="localStorage" id="localstorage">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
       </Section>
     </>

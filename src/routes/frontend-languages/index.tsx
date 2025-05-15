@@ -1,25 +1,26 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Section } from "@/_components/Section";
 
 export const Route = createFileRoute("/frontend-languages/")({
-  component: RouteComponent,
+  component: PageFrontendLanguages,
   loader: () => ({ title: "Frontend Languages" }),
 });
 
-function RouteComponent() {
+function PageFrontendLanguages() {
   return (
     <>
-      <section id="html">
-        <h2>HTML5</h2>
-      </section>
-      <section id="css">
-        <h2>CSS3</h2>
-      </section>
-      <section id="javascript">
-        <h2>JavaScript (ES6+)</h2>
-      </section>
-      <section id="typescript">
-        <h2>TypeScript</h2>
-      </section>
+      <Section title="HTML5" id="html">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+      </Section>
+      <Section title="CSS3" id="css">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+      </Section>
+      <Section title="JavaScript (ES6+)" id="javascript">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+      </Section>
+      <Section title="TypeScript" id="typescript">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+      </Section>
     </>
   );
 }

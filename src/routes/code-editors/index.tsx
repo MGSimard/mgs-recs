@@ -1,28 +1,23 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Section } from "@/_components/Section";
 
 export const Route = createFileRoute("/code-editors/")({
-  component: RouteComponent,
+  component: PageCodeEditors,
   loader: () => ({ title: "Code Editors" }),
 });
 
-function RouteComponent() {
+function PageCodeEditors() {
   return (
     <>
-      <section id="visual-studio-code">
-        <h2 className="text-2xl font-bold">Visual Studio Code</h2>
-        <hr />
+      <Section title="Visual Studio Code" id="visual-studio-code">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-      </section>
-      <section id="cursor">
-        <h2 className="text-2xl font-bold">Cursor</h2>
-        <hr />
+      </Section>
+      <Section title="Cursor" id="cursor">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-      </section>
-      <section id="phoenix-code">
-        <h2 className="text-2xl font-bold">Phoenix Code</h2>
-        <hr />
+      </Section>
+      <Section title="Phoenix Code" id="phoenix-code">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-      </section>
+      </Section>
     </>
   );
 }

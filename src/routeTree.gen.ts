@@ -12,15 +12,45 @@
 
 import { Route as rootRoute } from './routes/__root'
 import { Route as IndexImport } from './routes/index'
+import { Route as PaymentsIndexImport } from './routes/payments/index'
+import { Route as OrmsIndexImport } from './routes/orms/index'
+import { Route as LearningIndexImport } from './routes/learning/index'
+import { Route as HostingIndexImport } from './routes/hosting/index'
 import { Route as FrontendLanguagesIndexImport } from './routes/frontend-languages/index'
 import { Route as FrameworksIndexImport } from './routes/frameworks/index'
+import { Route as DatabasesIndexImport } from './routes/databases/index'
 import { Route as CodeEditorsIndexImport } from './routes/code-editors/index'
+import { Route as AuthIndexImport } from './routes/auth/index'
 
 // Create/Update Routes
 
 const IndexRoute = IndexImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const PaymentsIndexRoute = PaymentsIndexImport.update({
+  id: '/payments/',
+  path: '/payments/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const OrmsIndexRoute = OrmsIndexImport.update({
+  id: '/orms/',
+  path: '/orms/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const LearningIndexRoute = LearningIndexImport.update({
+  id: '/learning/',
+  path: '/learning/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const HostingIndexRoute = HostingIndexImport.update({
+  id: '/hosting/',
+  path: '/hosting/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -36,9 +66,21 @@ const FrameworksIndexRoute = FrameworksIndexImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
+const DatabasesIndexRoute = DatabasesIndexImport.update({
+  id: '/databases/',
+  path: '/databases/',
+  getParentRoute: () => rootRoute,
+} as any)
+
 const CodeEditorsIndexRoute = CodeEditorsIndexImport.update({
   id: '/code-editors/',
   path: '/code-editors/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const AuthIndexRoute = AuthIndexImport.update({
+  id: '/auth/',
+  path: '/auth/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -53,11 +95,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
+    '/auth/': {
+      id: '/auth/'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthIndexImport
+      parentRoute: typeof rootRoute
+    }
     '/code-editors/': {
       id: '/code-editors/'
       path: '/code-editors'
       fullPath: '/code-editors'
       preLoaderRoute: typeof CodeEditorsIndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/databases/': {
+      id: '/databases/'
+      path: '/databases'
+      fullPath: '/databases'
+      preLoaderRoute: typeof DatabasesIndexImport
       parentRoute: typeof rootRoute
     }
     '/frameworks/': {
@@ -74,6 +130,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FrontendLanguagesIndexImport
       parentRoute: typeof rootRoute
     }
+    '/hosting/': {
+      id: '/hosting/'
+      path: '/hosting'
+      fullPath: '/hosting'
+      preLoaderRoute: typeof HostingIndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/learning/': {
+      id: '/learning/'
+      path: '/learning'
+      fullPath: '/learning'
+      preLoaderRoute: typeof LearningIndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/orms/': {
+      id: '/orms/'
+      path: '/orms'
+      fullPath: '/orms'
+      preLoaderRoute: typeof OrmsIndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/payments/': {
+      id: '/payments/'
+      path: '/payments'
+      fullPath: '/payments'
+      preLoaderRoute: typeof PaymentsIndexImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -81,52 +165,108 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/auth': typeof AuthIndexRoute
   '/code-editors': typeof CodeEditorsIndexRoute
+  '/databases': typeof DatabasesIndexRoute
   '/frameworks': typeof FrameworksIndexRoute
   '/frontend-languages': typeof FrontendLanguagesIndexRoute
+  '/hosting': typeof HostingIndexRoute
+  '/learning': typeof LearningIndexRoute
+  '/orms': typeof OrmsIndexRoute
+  '/payments': typeof PaymentsIndexRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/auth': typeof AuthIndexRoute
   '/code-editors': typeof CodeEditorsIndexRoute
+  '/databases': typeof DatabasesIndexRoute
   '/frameworks': typeof FrameworksIndexRoute
   '/frontend-languages': typeof FrontendLanguagesIndexRoute
+  '/hosting': typeof HostingIndexRoute
+  '/learning': typeof LearningIndexRoute
+  '/orms': typeof OrmsIndexRoute
+  '/payments': typeof PaymentsIndexRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
+  '/auth/': typeof AuthIndexRoute
   '/code-editors/': typeof CodeEditorsIndexRoute
+  '/databases/': typeof DatabasesIndexRoute
   '/frameworks/': typeof FrameworksIndexRoute
   '/frontend-languages/': typeof FrontendLanguagesIndexRoute
+  '/hosting/': typeof HostingIndexRoute
+  '/learning/': typeof LearningIndexRoute
+  '/orms/': typeof OrmsIndexRoute
+  '/payments/': typeof PaymentsIndexRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/code-editors' | '/frameworks' | '/frontend-languages'
+  fullPaths:
+    | '/'
+    | '/auth'
+    | '/code-editors'
+    | '/databases'
+    | '/frameworks'
+    | '/frontend-languages'
+    | '/hosting'
+    | '/learning'
+    | '/orms'
+    | '/payments'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/code-editors' | '/frameworks' | '/frontend-languages'
+  to:
+    | '/'
+    | '/auth'
+    | '/code-editors'
+    | '/databases'
+    | '/frameworks'
+    | '/frontend-languages'
+    | '/hosting'
+    | '/learning'
+    | '/orms'
+    | '/payments'
   id:
     | '__root__'
     | '/'
+    | '/auth/'
     | '/code-editors/'
+    | '/databases/'
     | '/frameworks/'
     | '/frontend-languages/'
+    | '/hosting/'
+    | '/learning/'
+    | '/orms/'
+    | '/payments/'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AuthIndexRoute: typeof AuthIndexRoute
   CodeEditorsIndexRoute: typeof CodeEditorsIndexRoute
+  DatabasesIndexRoute: typeof DatabasesIndexRoute
   FrameworksIndexRoute: typeof FrameworksIndexRoute
   FrontendLanguagesIndexRoute: typeof FrontendLanguagesIndexRoute
+  HostingIndexRoute: typeof HostingIndexRoute
+  LearningIndexRoute: typeof LearningIndexRoute
+  OrmsIndexRoute: typeof OrmsIndexRoute
+  PaymentsIndexRoute: typeof PaymentsIndexRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AuthIndexRoute: AuthIndexRoute,
   CodeEditorsIndexRoute: CodeEditorsIndexRoute,
+  DatabasesIndexRoute: DatabasesIndexRoute,
   FrameworksIndexRoute: FrameworksIndexRoute,
   FrontendLanguagesIndexRoute: FrontendLanguagesIndexRoute,
+  HostingIndexRoute: HostingIndexRoute,
+  LearningIndexRoute: LearningIndexRoute,
+  OrmsIndexRoute: OrmsIndexRoute,
+  PaymentsIndexRoute: PaymentsIndexRoute,
 }
 
 export const routeTree = rootRoute
@@ -140,22 +280,46 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
+        "/auth/",
         "/code-editors/",
+        "/databases/",
         "/frameworks/",
-        "/frontend-languages/"
+        "/frontend-languages/",
+        "/hosting/",
+        "/learning/",
+        "/orms/",
+        "/payments/"
       ]
     },
     "/": {
       "filePath": "index.tsx"
     },
+    "/auth/": {
+      "filePath": "auth/index.tsx"
+    },
     "/code-editors/": {
       "filePath": "code-editors/index.tsx"
+    },
+    "/databases/": {
+      "filePath": "databases/index.tsx"
     },
     "/frameworks/": {
       "filePath": "frameworks/index.tsx"
     },
     "/frontend-languages/": {
       "filePath": "frontend-languages/index.tsx"
+    },
+    "/hosting/": {
+      "filePath": "hosting/index.tsx"
+    },
+    "/learning/": {
+      "filePath": "learning/index.tsx"
+    },
+    "/orms/": {
+      "filePath": "orms/index.tsx"
+    },
+    "/payments/": {
+      "filePath": "payments/index.tsx"
     }
   }
 }
