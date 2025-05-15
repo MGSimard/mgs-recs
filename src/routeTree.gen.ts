@@ -12,12 +12,16 @@
 
 import { Route as rootRoute } from './routes/__root'
 import { Route as IndexImport } from './routes/index'
+import { Route as VideoEditingIndexImport } from './routes/video-editing/index'
+import { Route as VectorGraphicsIndexImport } from './routes/vector-graphics/index'
 import { Route as PaymentsIndexImport } from './routes/payments/index'
 import { Route as OrmsIndexImport } from './routes/orms/index'
 import { Route as LearningIndexImport } from './routes/learning/index'
 import { Route as HostingIndexImport } from './routes/hosting/index'
+import { Route as GraphicDesignIndexImport } from './routes/graphic-design/index'
 import { Route as FrontendLanguagesIndexImport } from './routes/frontend-languages/index'
 import { Route as FrameworksIndexImport } from './routes/frameworks/index'
+import { Route as DesignIndexImport } from './routes/design/index'
 import { Route as DatabasesIndexImport } from './routes/databases/index'
 import { Route as CodeEditorsIndexImport } from './routes/code-editors/index'
 import { Route as AuthIndexImport } from './routes/auth/index'
@@ -27,6 +31,18 @@ import { Route as AuthIndexImport } from './routes/auth/index'
 const IndexRoute = IndexImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const VideoEditingIndexRoute = VideoEditingIndexImport.update({
+  id: '/video-editing/',
+  path: '/video-editing/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const VectorGraphicsIndexRoute = VectorGraphicsIndexImport.update({
+  id: '/vector-graphics/',
+  path: '/vector-graphics/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -54,6 +70,12 @@ const HostingIndexRoute = HostingIndexImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
+const GraphicDesignIndexRoute = GraphicDesignIndexImport.update({
+  id: '/graphic-design/',
+  path: '/graphic-design/',
+  getParentRoute: () => rootRoute,
+} as any)
+
 const FrontendLanguagesIndexRoute = FrontendLanguagesIndexImport.update({
   id: '/frontend-languages/',
   path: '/frontend-languages/',
@@ -63,6 +85,12 @@ const FrontendLanguagesIndexRoute = FrontendLanguagesIndexImport.update({
 const FrameworksIndexRoute = FrameworksIndexImport.update({
   id: '/frameworks/',
   path: '/frameworks/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const DesignIndexRoute = DesignIndexImport.update({
+  id: '/design/',
+  path: '/design/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -116,6 +144,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DatabasesIndexImport
       parentRoute: typeof rootRoute
     }
+    '/design/': {
+      id: '/design/'
+      path: '/design'
+      fullPath: '/design'
+      preLoaderRoute: typeof DesignIndexImport
+      parentRoute: typeof rootRoute
+    }
     '/frameworks/': {
       id: '/frameworks/'
       path: '/frameworks'
@@ -128,6 +163,13 @@ declare module '@tanstack/react-router' {
       path: '/frontend-languages'
       fullPath: '/frontend-languages'
       preLoaderRoute: typeof FrontendLanguagesIndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/graphic-design/': {
+      id: '/graphic-design/'
+      path: '/graphic-design'
+      fullPath: '/graphic-design'
+      preLoaderRoute: typeof GraphicDesignIndexImport
       parentRoute: typeof rootRoute
     }
     '/hosting/': {
@@ -158,6 +200,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PaymentsIndexImport
       parentRoute: typeof rootRoute
     }
+    '/vector-graphics/': {
+      id: '/vector-graphics/'
+      path: '/vector-graphics'
+      fullPath: '/vector-graphics'
+      preLoaderRoute: typeof VectorGraphicsIndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/video-editing/': {
+      id: '/video-editing/'
+      path: '/video-editing'
+      fullPath: '/video-editing'
+      preLoaderRoute: typeof VideoEditingIndexImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -168,12 +224,16 @@ export interface FileRoutesByFullPath {
   '/auth': typeof AuthIndexRoute
   '/code-editors': typeof CodeEditorsIndexRoute
   '/databases': typeof DatabasesIndexRoute
+  '/design': typeof DesignIndexRoute
   '/frameworks': typeof FrameworksIndexRoute
   '/frontend-languages': typeof FrontendLanguagesIndexRoute
+  '/graphic-design': typeof GraphicDesignIndexRoute
   '/hosting': typeof HostingIndexRoute
   '/learning': typeof LearningIndexRoute
   '/orms': typeof OrmsIndexRoute
   '/payments': typeof PaymentsIndexRoute
+  '/vector-graphics': typeof VectorGraphicsIndexRoute
+  '/video-editing': typeof VideoEditingIndexRoute
 }
 
 export interface FileRoutesByTo {
@@ -181,12 +241,16 @@ export interface FileRoutesByTo {
   '/auth': typeof AuthIndexRoute
   '/code-editors': typeof CodeEditorsIndexRoute
   '/databases': typeof DatabasesIndexRoute
+  '/design': typeof DesignIndexRoute
   '/frameworks': typeof FrameworksIndexRoute
   '/frontend-languages': typeof FrontendLanguagesIndexRoute
+  '/graphic-design': typeof GraphicDesignIndexRoute
   '/hosting': typeof HostingIndexRoute
   '/learning': typeof LearningIndexRoute
   '/orms': typeof OrmsIndexRoute
   '/payments': typeof PaymentsIndexRoute
+  '/vector-graphics': typeof VectorGraphicsIndexRoute
+  '/video-editing': typeof VideoEditingIndexRoute
 }
 
 export interface FileRoutesById {
@@ -195,12 +259,16 @@ export interface FileRoutesById {
   '/auth/': typeof AuthIndexRoute
   '/code-editors/': typeof CodeEditorsIndexRoute
   '/databases/': typeof DatabasesIndexRoute
+  '/design/': typeof DesignIndexRoute
   '/frameworks/': typeof FrameworksIndexRoute
   '/frontend-languages/': typeof FrontendLanguagesIndexRoute
+  '/graphic-design/': typeof GraphicDesignIndexRoute
   '/hosting/': typeof HostingIndexRoute
   '/learning/': typeof LearningIndexRoute
   '/orms/': typeof OrmsIndexRoute
   '/payments/': typeof PaymentsIndexRoute
+  '/vector-graphics/': typeof VectorGraphicsIndexRoute
+  '/video-editing/': typeof VideoEditingIndexRoute
 }
 
 export interface FileRouteTypes {
@@ -210,36 +278,48 @@ export interface FileRouteTypes {
     | '/auth'
     | '/code-editors'
     | '/databases'
+    | '/design'
     | '/frameworks'
     | '/frontend-languages'
+    | '/graphic-design'
     | '/hosting'
     | '/learning'
     | '/orms'
     | '/payments'
+    | '/vector-graphics'
+    | '/video-editing'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/auth'
     | '/code-editors'
     | '/databases'
+    | '/design'
     | '/frameworks'
     | '/frontend-languages'
+    | '/graphic-design'
     | '/hosting'
     | '/learning'
     | '/orms'
     | '/payments'
+    | '/vector-graphics'
+    | '/video-editing'
   id:
     | '__root__'
     | '/'
     | '/auth/'
     | '/code-editors/'
     | '/databases/'
+    | '/design/'
     | '/frameworks/'
     | '/frontend-languages/'
+    | '/graphic-design/'
     | '/hosting/'
     | '/learning/'
     | '/orms/'
     | '/payments/'
+    | '/vector-graphics/'
+    | '/video-editing/'
   fileRoutesById: FileRoutesById
 }
 
@@ -248,12 +328,16 @@ export interface RootRouteChildren {
   AuthIndexRoute: typeof AuthIndexRoute
   CodeEditorsIndexRoute: typeof CodeEditorsIndexRoute
   DatabasesIndexRoute: typeof DatabasesIndexRoute
+  DesignIndexRoute: typeof DesignIndexRoute
   FrameworksIndexRoute: typeof FrameworksIndexRoute
   FrontendLanguagesIndexRoute: typeof FrontendLanguagesIndexRoute
+  GraphicDesignIndexRoute: typeof GraphicDesignIndexRoute
   HostingIndexRoute: typeof HostingIndexRoute
   LearningIndexRoute: typeof LearningIndexRoute
   OrmsIndexRoute: typeof OrmsIndexRoute
   PaymentsIndexRoute: typeof PaymentsIndexRoute
+  VectorGraphicsIndexRoute: typeof VectorGraphicsIndexRoute
+  VideoEditingIndexRoute: typeof VideoEditingIndexRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
@@ -261,12 +345,16 @@ const rootRouteChildren: RootRouteChildren = {
   AuthIndexRoute: AuthIndexRoute,
   CodeEditorsIndexRoute: CodeEditorsIndexRoute,
   DatabasesIndexRoute: DatabasesIndexRoute,
+  DesignIndexRoute: DesignIndexRoute,
   FrameworksIndexRoute: FrameworksIndexRoute,
   FrontendLanguagesIndexRoute: FrontendLanguagesIndexRoute,
+  GraphicDesignIndexRoute: GraphicDesignIndexRoute,
   HostingIndexRoute: HostingIndexRoute,
   LearningIndexRoute: LearningIndexRoute,
   OrmsIndexRoute: OrmsIndexRoute,
   PaymentsIndexRoute: PaymentsIndexRoute,
+  VectorGraphicsIndexRoute: VectorGraphicsIndexRoute,
+  VideoEditingIndexRoute: VideoEditingIndexRoute,
 }
 
 export const routeTree = rootRoute
@@ -283,12 +371,16 @@ export const routeTree = rootRoute
         "/auth/",
         "/code-editors/",
         "/databases/",
+        "/design/",
         "/frameworks/",
         "/frontend-languages/",
+        "/graphic-design/",
         "/hosting/",
         "/learning/",
         "/orms/",
-        "/payments/"
+        "/payments/",
+        "/vector-graphics/",
+        "/video-editing/"
       ]
     },
     "/": {
@@ -303,11 +395,17 @@ export const routeTree = rootRoute
     "/databases/": {
       "filePath": "databases/index.tsx"
     },
+    "/design/": {
+      "filePath": "design/index.tsx"
+    },
     "/frameworks/": {
       "filePath": "frameworks/index.tsx"
     },
     "/frontend-languages/": {
       "filePath": "frontend-languages/index.tsx"
+    },
+    "/graphic-design/": {
+      "filePath": "graphic-design/index.tsx"
     },
     "/hosting/": {
       "filePath": "hosting/index.tsx"
@@ -320,6 +418,12 @@ export const routeTree = rootRoute
     },
     "/payments/": {
       "filePath": "payments/index.tsx"
+    },
+    "/vector-graphics/": {
+      "filePath": "vector-graphics/index.tsx"
+    },
+    "/video-editing/": {
+      "filePath": "video-editing/index.tsx"
     }
   }
 }
