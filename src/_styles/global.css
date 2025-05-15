@@ -142,3 +142,7 @@ h5,
 h6 {
   text-transform: uppercase;
 }
+
+* {
+  outline: 1px solid red !important;
+}
