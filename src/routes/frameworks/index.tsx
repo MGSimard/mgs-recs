@@ -21,6 +21,9 @@ function PageFrameworks() {
       <Section title="Payload" id="payload">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
       </Section>
+      <Section title="Fumadocs" id="fumadocs">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+      </Section>
     </>
   );
 }

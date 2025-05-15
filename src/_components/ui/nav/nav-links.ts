@@ -84,6 +84,10 @@ export const NavLinks = {
             title: "Payload",
             url: "/frameworks#payload",
           },
+          {
+            title: "Fumadocs",
+            url: "/frameworks#fumadocs",
+          },
         ],
       },
       {
