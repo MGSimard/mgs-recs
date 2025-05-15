@@ -7,50 +7,50 @@ const data = {
   navMain: [
     {
       title: "Frontend Languages",
-      url: "#",
+      url: "/frontend-languages",
       icon: BookType,
       items: [
         {
           title: "HTML5",
-          url: "#",
+          url: "/frontend-languages#html5",
         },
         {
           title: "CSS3",
-          url: "#",
+          url: "/frontend-languages#css3",
         },
         {
           title: "JavaScript (ES6+)",
-          url: "#",
+          url: "/frontend-languages#javascript",
         },
         {
           title: "TypeScript",
-          url: "#",
+          url: "/frontend-languages#typescript",
         },
       ],
     },
     {
       title: "Frameworks",
-      url: "#",
+      url: "/frameworks",
       icon: Layers,
       isActive: true,
       items: [
         {
           title: "Vite",
-          url: "#",
+          url: "/frameworks#vite",
         },
         {
           title: "TanStack Start",
-          url: "#",
+          url: "/frameworks#tanstack-start",
         },
         {
           title: "Next.js",
-          url: "#",
+          url: "/frameworks#nextjs",
         },
       ],
     },
     {
       title: "Databases",
-      url: "#",
+      url: "/databases",
       icon: Database,
       items: [],
     },
@@ -74,7 +74,7 @@ const data = {
     },
     {
       title: "Learning",
-      url: "#",
+      url: "/learning",
       icon: BookOpen,
       items: [],
     },
