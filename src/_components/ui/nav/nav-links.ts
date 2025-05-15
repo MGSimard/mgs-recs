@@ -102,6 +102,10 @@ export const NavLinks = {
             title: "Mantine",
             url: "/ui-libraries#mantine",
           },
+          {
+            title: "Ant Design",
+            url: "/ui-libraries#ant-design",
+          },
         ],
       },
       {

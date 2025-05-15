@@ -12,6 +12,12 @@ function PageUILibraries() {
       <Section title="shadcn/ui" id="shadcn-ui">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
       </Section>
+      <Section title="Mantine" id="mantine">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+      </Section>
+      <Section title="Ant Design" id="ant-design">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+      </Section>
     </>
   );
 }
