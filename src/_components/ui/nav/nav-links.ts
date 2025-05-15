@@ -65,8 +65,8 @@ export const NavLinks = {
         isActive: true,
         items: [
           {
-            title: "Vite",
-            url: "/frameworks#vite",
+            title: "Vite + TanStack Router",
+            url: "/frameworks#vite-tanstack-router",
           },
           {
             title: "TanStack Start",

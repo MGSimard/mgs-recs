@@ -8,7 +8,7 @@ export const Route = createFileRoute("/frameworks/")({
 function RouteComponent() {
   return (
     <>
-      <section id="vite">
+      <section id="vite-tanstack-router">
         <h2>Vite + Tanstack Router</h2>
       </section>
       <section id="tanstack-start">
