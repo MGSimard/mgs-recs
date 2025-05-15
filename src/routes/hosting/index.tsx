@@ -12,10 +12,10 @@ function PageHosting() {
       <Section title="Cloudflare" id="cloudflare">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
       </Section>
-      <Section title="Netlify" id="netlify">
+      <Section title="Vercel" id="vercel">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
       </Section>
-      <Section title="Vercel" id="vercel">
+      <Section title="Netlify" id="netlify">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
       </Section>
       <Section title="Coolify" id="coolify">

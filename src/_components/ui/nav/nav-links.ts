@@ -157,12 +157,12 @@ export const NavLinks = {
             url: "/hosting#cloudflare",
           },
           {
-            title: "Netlify",
-            url: "/hosting#netlify",
-          },
-          {
             title: "Vercel",
             url: "/hosting#vercel",
+          },
+          {
+            title: "Netlify",
+            url: "/hosting#netlify",
           },
           {
             title: "Coolify",
