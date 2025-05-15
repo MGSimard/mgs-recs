@@ -1,8 +1,6 @@
 import {
-  Activity,
   BookOpen,
   BookType,
-  Brain,
   Clapperboard,
   Code,
   Database,
@@ -10,6 +8,7 @@ import {
   FileImage,
   KeyRound,
   Layers,
+  LayoutGrid,
   PenTool,
   Server,
   Table,
@@ -91,6 +90,21 @@ export const NavLinks = {
         ],
       },
       {
+        title: "UI Libraries",
+        url: "/ui-libraries",
+        icon: LayoutGrid,
+        items: [
+          {
+            title: "shadcn/ui",
+            url: "/ui-libraries#shadcn-ui",
+          },
+          {
+            title: "Mantine",
+            url: "/ui-libraries#mantine",
+          },
+        ],
+      },
+      {
         title: "Databases",
         url: "/databases",
         icon: Database,
@@ -152,33 +166,6 @@ export const NavLinks = {
         ],
       },
       {
-        title: "Hosting",
-        url: "/hosting",
-        icon: Server,
-        items: [
-          {
-            title: "Cloudflare",
-            url: "/hosting#cloudflare",
-          },
-          {
-            title: "Vercel",
-            url: "/hosting#vercel",
-          },
-          {
-            title: "Netlify",
-            url: "/hosting#netlify",
-          },
-          {
-            title: "Coolify",
-            url: "/hosting#coolify",
-          },
-          {
-            title: "Hetzner",
-            url: "/hosting#hetzner",
-          },
-        ],
-      },
-      {
         title: "Payments",
         url: "/payments",
         icon: DollarSign,
@@ -205,6 +192,33 @@ export const NavLinks = {
           {
             title: "CodeRabbit",
             url: "/ci-cd#coderabbit",
+          },
+        ],
+      },
+      {
+        title: "Hosting",
+        url: "/hosting",
+        icon: Server,
+        items: [
+          {
+            title: "Cloudflare",
+            url: "/hosting#cloudflare",
+          },
+          {
+            title: "Vercel",
+            url: "/hosting#vercel",
+          },
+          {
+            title: "Netlify",
+            url: "/hosting#netlify",
+          },
+          {
+            title: "Coolify",
+            url: "/hosting#coolify",
+          },
+          {
+            title: "Hetzner",
+            url: "/hosting#hetzner",
           },
         ],
       },
