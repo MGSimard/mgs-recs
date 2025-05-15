@@ -24,6 +24,9 @@ function PageDatabases() {
       <Section title="localStorage" id="localstorage">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
       </Section>
+      <Section title="Google Sheets" id="google-sheets">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+      </Section>
     </>
   );
 }

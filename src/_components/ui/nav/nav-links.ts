@@ -9,10 +9,8 @@ import {
   KeyRound,
   Layers,
   PenTool,
-  Rows,
   Server,
   Table,
-  Table2,
 } from "lucide-react";
 
 export const NavLinks = {
@@ -109,6 +107,10 @@ export const NavLinks = {
           {
             title: "localStorage",
             url: "/databases#localstorage",
+          },
+          {
+            title: "Google Sheets",
+            url: "/databases#google-sheets",
           },
         ],
       },
