@@ -220,12 +220,20 @@ export const NavLinks = {
         icon: PenTool,
         items: [
           {
+            title: "Excalidraw",
+            url: "/design#excalidraw",
+          },
+          {
             title: "Figma",
             url: "/design#figma",
           },
           {
             title: "Canva",
             url: "/design#canva",
+          },
+          {
+            title: "PureRef",
+            url: "/design#pureref",
           },
         ],
       },
