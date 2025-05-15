@@ -12,12 +12,19 @@
 
 import { Route as rootRoute } from './routes/__root'
 import { Route as IndexImport } from './routes/index'
+import { Route as FrontendLanguagesIndexImport } from './routes/frontend-languages/index'
 
 // Create/Update Routes
 
 const IndexRoute = IndexImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const FrontendLanguagesIndexRoute = FrontendLanguagesIndexImport.update({
+  id: '/frontend-languages/',
+  path: '/frontend-languages/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -32,6 +39,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
+    '/frontend-languages/': {
+      id: '/frontend-languages/'
+      path: '/frontend-languages'
+      fullPath: '/frontend-languages'
+      preLoaderRoute: typeof FrontendLanguagesIndexImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -39,32 +53,37 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/frontend-languages': typeof FrontendLanguagesIndexRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/frontend-languages': typeof FrontendLanguagesIndexRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
+  '/frontend-languages/': typeof FrontendLanguagesIndexRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/frontend-languages'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/frontend-languages'
+  id: '__root__' | '/' | '/frontend-languages/'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  FrontendLanguagesIndexRoute: typeof FrontendLanguagesIndexRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  FrontendLanguagesIndexRoute: FrontendLanguagesIndexRoute,
 }
 
 export const routeTree = rootRoute
@@ -77,11 +96,15 @@ export const routeTree = rootRoute
     "__root__": {
       "filePath": "__root.tsx",
       "children": [
-        "/"
+        "/",
+        "/frontend-languages/"
       ]
     },
     "/": {
       "filePath": "index.tsx"
+    },
+    "/frontend-languages/": {
+      "filePath": "frontend-languages/index.tsx"
     }
   }
 }
