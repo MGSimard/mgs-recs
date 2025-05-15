@@ -99,12 +99,12 @@ export const NavLinks = {
             url: "/ui-libraries#shadcn-ui",
           },
           {
-            title: "Mantine",
-            url: "/ui-libraries#mantine",
-          },
-          {
             title: "Ant Design",
             url: "/ui-libraries#ant-design",
+          },
+          {
+            title: "Mantine",
+            url: "/ui-libraries#mantine",
           },
         ],
       },
