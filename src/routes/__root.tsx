@@ -1,18 +1,10 @@
 import type { ReactNode } from "react";
 import { Outlet, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { ThemeProvider } from "@/_components/ThemeProvider";
-import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/_components/ui/sidebar";
+import { SidebarInset, SidebarProvider } from "@/_components/ui/sidebar";
 import { AppSidebar } from "@/_components/ui/nav/app-sidebar";
+import { Header } from "@/_components/ui/header/Header";
 import globalCss from "@/_styles/global.css?url";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/_components/ui/breadcrumb";
-import { Separator } from "@/_components/ui/separator";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -52,23 +44,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
           <SidebarProvider>
             <AppSidebar className="whitespace-nowrap" />
             <SidebarInset>
-              <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
-                <div className="flex items-center gap-2 px-4">
-                  <SidebarTrigger className="-ml-1" />
-                  <Separator orientation="vertical" className="mr-2 h-4" />
-                  <Breadcrumb>
-                    <BreadcrumbList>
-                      <BreadcrumbItem className="hidden md:block">
-                        <BreadcrumbLink href="#">Building Your Application</BreadcrumbLink>
-                      </BreadcrumbItem>
-                      <BreadcrumbSeparator className="hidden md:block" />
-                      <BreadcrumbItem>
-                        <BreadcrumbPage>Data Fetching</BreadcrumbPage>
-                      </BreadcrumbItem>
-                    </BreadcrumbList>
-                  </Breadcrumb>
-                </div>
-              </header>
+              <Header />
               <main className="flex flex-1 flex-col gap-4 p-4 pt-0">{children}</main>
             </SidebarInset>
           </SidebarProvider>
