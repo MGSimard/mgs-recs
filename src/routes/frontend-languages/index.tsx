@@ -1,7 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useRouteContext, useRouterState } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/frontend-languages/")({
   component: RouteComponent,
+  loader: () => ({ title: "Frontend Languages" }),
 });
 
 function RouteComponent() {
