@@ -23,7 +23,7 @@ export const NavLinks = {
         items: [
           {
             title: "Visual Studio Code",
-            url: "/code-editors#vscode",
+            url: "/code-editors#visual-studio-code",
           },
           {
             title: "Cursor",
