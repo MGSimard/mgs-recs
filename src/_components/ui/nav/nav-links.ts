@@ -1,6 +1,8 @@
 import {
+  Activity,
   BookOpen,
   BookType,
+  Brain,
   Clapperboard,
   Code,
   Database,
@@ -11,6 +13,7 @@ import {
   PenTool,
   Server,
   Table,
+  Workflow,
 } from "lucide-react";
 
 export const NavLinks = {
@@ -183,6 +186,21 @@ export const NavLinks = {
           {
             title: "Polar",
             url: "/payments#polar",
+          },
+        ],
+      },
+      {
+        title: "CI/CD",
+        url: "/ci-cd",
+        icon: Workflow,
+        items: [
+          {
+            title: "GitHub Actions",
+            url: "/ci-cd#github-actions",
+          },
+          {
+            title: "CodeRabbit",
+            url: "/ci-cd#coderabbit",
           },
         ],
       },

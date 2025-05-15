@@ -24,6 +24,7 @@ import { Route as FrameworksIndexImport } from './routes/frameworks/index'
 import { Route as DesignIndexImport } from './routes/design/index'
 import { Route as DatabasesIndexImport } from './routes/databases/index'
 import { Route as CodeEditorsIndexImport } from './routes/code-editors/index'
+import { Route as CiCdIndexImport } from './routes/ci-cd/index'
 import { Route as AuthIndexImport } from './routes/auth/index'
 
 // Create/Update Routes
@@ -106,6 +107,12 @@ const CodeEditorsIndexRoute = CodeEditorsIndexImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
+const CiCdIndexRoute = CiCdIndexImport.update({
+  id: '/ci-cd/',
+  path: '/ci-cd/',
+  getParentRoute: () => rootRoute,
+} as any)
+
 const AuthIndexRoute = AuthIndexImport.update({
   id: '/auth/',
   path: '/auth/',
@@ -128,6 +135,13 @@ declare module '@tanstack/react-router' {
       path: '/auth'
       fullPath: '/auth'
       preLoaderRoute: typeof AuthIndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/ci-cd/': {
+      id: '/ci-cd/'
+      path: '/ci-cd'
+      fullPath: '/ci-cd'
+      preLoaderRoute: typeof CiCdIndexImport
       parentRoute: typeof rootRoute
     }
     '/code-editors/': {
@@ -222,6 +236,7 @@ declare module '@tanstack/react-router' {
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/auth': typeof AuthIndexRoute
+  '/ci-cd': typeof CiCdIndexRoute
   '/code-editors': typeof CodeEditorsIndexRoute
   '/databases': typeof DatabasesIndexRoute
   '/design': typeof DesignIndexRoute
@@ -239,6 +254,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/auth': typeof AuthIndexRoute
+  '/ci-cd': typeof CiCdIndexRoute
   '/code-editors': typeof CodeEditorsIndexRoute
   '/databases': typeof DatabasesIndexRoute
   '/design': typeof DesignIndexRoute
@@ -257,6 +273,7 @@ export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
   '/auth/': typeof AuthIndexRoute
+  '/ci-cd/': typeof CiCdIndexRoute
   '/code-editors/': typeof CodeEditorsIndexRoute
   '/databases/': typeof DatabasesIndexRoute
   '/design/': typeof DesignIndexRoute
@@ -276,6 +293,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/auth'
+    | '/ci-cd'
     | '/code-editors'
     | '/databases'
     | '/design'
@@ -292,6 +310,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/auth'
+    | '/ci-cd'
     | '/code-editors'
     | '/databases'
     | '/design'
@@ -308,6 +327,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/auth/'
+    | '/ci-cd/'
     | '/code-editors/'
     | '/databases/'
     | '/design/'
@@ -326,6 +346,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AuthIndexRoute: typeof AuthIndexRoute
+  CiCdIndexRoute: typeof CiCdIndexRoute
   CodeEditorsIndexRoute: typeof CodeEditorsIndexRoute
   DatabasesIndexRoute: typeof DatabasesIndexRoute
   DesignIndexRoute: typeof DesignIndexRoute
@@ -343,6 +364,7 @@ export interface RootRouteChildren {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AuthIndexRoute: AuthIndexRoute,
+  CiCdIndexRoute: CiCdIndexRoute,
   CodeEditorsIndexRoute: CodeEditorsIndexRoute,
   DatabasesIndexRoute: DatabasesIndexRoute,
   DesignIndexRoute: DesignIndexRoute,
@@ -369,6 +391,7 @@ export const routeTree = rootRoute
       "children": [
         "/",
         "/auth/",
+        "/ci-cd/",
         "/code-editors/",
         "/databases/",
         "/design/",
@@ -388,6 +411,9 @@ export const routeTree = rootRoute
     },
     "/auth/": {
       "filePath": "auth/index.tsx"
+    },
+    "/ci-cd/": {
+      "filePath": "ci-cd/index.tsx"
     },
     "/code-editors/": {
       "filePath": "code-editors/index.tsx"
