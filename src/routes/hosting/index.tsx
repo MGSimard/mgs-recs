@@ -2,10 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/_components/Section";
 
 export const Route = createFileRoute("/hosting/")({
-  component: PagePayments,
+  component: PageHosting,
+  loader: () => ({ title: "Hosting" }),
 });
 
-function PagePayments() {
+function PageHosting() {
   return (
     <>
       <Section title="Cloudflare" id="cloudflare">

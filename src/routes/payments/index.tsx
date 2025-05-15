@@ -3,6 +3,7 @@ import { Section } from "@/_components/Section";
 
 export const Route = createFileRoute("/payments/")({
   component: PagePayments,
+  loader: () => ({ title: "Payments" }),
 });
 
 function PagePayments() {
