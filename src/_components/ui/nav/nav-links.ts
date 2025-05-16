@@ -13,6 +13,7 @@ import {
   Mail,
   PenTool,
   Server,
+  Shapes,
   Table,
   Workflow,
 } from "lucide-react";
@@ -107,6 +108,25 @@ export const NavLinks = {
           {
             title: "Mantine",
             url: "/ui-libraries#mantine",
+          },
+        ],
+      },
+      {
+        title: "Icon Libraries",
+        url: "/icon-libraries",
+        icon: Shapes,
+        items: [
+          {
+            title: "Heroicons",
+            url: "/icon-libraries#heroicons",
+          },
+          {
+            title: "Lucide",
+            url: "/icon-libraries#lucide",
+          },
+          {
+            title: "svgl",
+            url: "/icon-libraries#svgl",
           },
         ],
       },

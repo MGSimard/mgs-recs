@@ -19,6 +19,7 @@ import { Route as PaymentsIndexImport } from './routes/payments/index'
 import { Route as OrmsIndexImport } from './routes/orms/index'
 import { Route as MailingIndexImport } from './routes/mailing/index'
 import { Route as LearningIndexImport } from './routes/learning/index'
+import { Route as IconLibrariesIndexImport } from './routes/icon-libraries/index'
 import { Route as HostingIndexImport } from './routes/hosting/index'
 import { Route as GraphicDesignIndexImport } from './routes/graphic-design/index'
 import { Route as FrontendLanguagesIndexImport } from './routes/frontend-languages/index'
@@ -77,6 +78,12 @@ const MailingIndexRoute = MailingIndexImport.update({
 const LearningIndexRoute = LearningIndexImport.update({
   id: '/learning/',
   path: '/learning/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const IconLibrariesIndexRoute = IconLibrariesIndexImport.update({
+  id: '/icon-libraries/',
+  path: '/icon-libraries/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -221,6 +228,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HostingIndexImport
       parentRoute: typeof rootRoute
     }
+    '/icon-libraries/': {
+      id: '/icon-libraries/'
+      path: '/icon-libraries'
+      fullPath: '/icon-libraries'
+      preLoaderRoute: typeof IconLibrariesIndexImport
+      parentRoute: typeof rootRoute
+    }
     '/learning/': {
       id: '/learning/'
       path: '/learning'
@@ -287,6 +301,7 @@ export interface FileRoutesByFullPath {
   '/frontend-languages': typeof FrontendLanguagesIndexRoute
   '/graphic-design': typeof GraphicDesignIndexRoute
   '/hosting': typeof HostingIndexRoute
+  '/icon-libraries': typeof IconLibrariesIndexRoute
   '/learning': typeof LearningIndexRoute
   '/mailing': typeof MailingIndexRoute
   '/orms': typeof OrmsIndexRoute
@@ -308,6 +323,7 @@ export interface FileRoutesByTo {
   '/frontend-languages': typeof FrontendLanguagesIndexRoute
   '/graphic-design': typeof GraphicDesignIndexRoute
   '/hosting': typeof HostingIndexRoute
+  '/icon-libraries': typeof IconLibrariesIndexRoute
   '/learning': typeof LearningIndexRoute
   '/mailing': typeof MailingIndexRoute
   '/orms': typeof OrmsIndexRoute
@@ -330,6 +346,7 @@ export interface FileRoutesById {
   '/frontend-languages/': typeof FrontendLanguagesIndexRoute
   '/graphic-design/': typeof GraphicDesignIndexRoute
   '/hosting/': typeof HostingIndexRoute
+  '/icon-libraries/': typeof IconLibrariesIndexRoute
   '/learning/': typeof LearningIndexRoute
   '/mailing/': typeof MailingIndexRoute
   '/orms/': typeof OrmsIndexRoute
@@ -353,6 +370,7 @@ export interface FileRouteTypes {
     | '/frontend-languages'
     | '/graphic-design'
     | '/hosting'
+    | '/icon-libraries'
     | '/learning'
     | '/mailing'
     | '/orms'
@@ -373,6 +391,7 @@ export interface FileRouteTypes {
     | '/frontend-languages'
     | '/graphic-design'
     | '/hosting'
+    | '/icon-libraries'
     | '/learning'
     | '/mailing'
     | '/orms'
@@ -393,6 +412,7 @@ export interface FileRouteTypes {
     | '/frontend-languages/'
     | '/graphic-design/'
     | '/hosting/'
+    | '/icon-libraries/'
     | '/learning/'
     | '/mailing/'
     | '/orms/'
@@ -415,6 +435,7 @@ export interface RootRouteChildren {
   FrontendLanguagesIndexRoute: typeof FrontendLanguagesIndexRoute
   GraphicDesignIndexRoute: typeof GraphicDesignIndexRoute
   HostingIndexRoute: typeof HostingIndexRoute
+  IconLibrariesIndexRoute: typeof IconLibrariesIndexRoute
   LearningIndexRoute: typeof LearningIndexRoute
   MailingIndexRoute: typeof MailingIndexRoute
   OrmsIndexRoute: typeof OrmsIndexRoute
@@ -436,6 +457,7 @@ const rootRouteChildren: RootRouteChildren = {
   FrontendLanguagesIndexRoute: FrontendLanguagesIndexRoute,
   GraphicDesignIndexRoute: GraphicDesignIndexRoute,
   HostingIndexRoute: HostingIndexRoute,
+  IconLibrariesIndexRoute: IconLibrariesIndexRoute,
   LearningIndexRoute: LearningIndexRoute,
   MailingIndexRoute: MailingIndexRoute,
   OrmsIndexRoute: OrmsIndexRoute,
@@ -466,6 +488,7 @@ export const routeTree = rootRoute
         "/frontend-languages/",
         "/graphic-design/",
         "/hosting/",
+        "/icon-libraries/",
         "/learning/",
         "/mailing/",
         "/orms/",
@@ -507,6 +530,9 @@ export const routeTree = rootRoute
     },
     "/hosting/": {
       "filePath": "hosting/index.tsx"
+    },
+    "/icon-libraries/": {
+      "filePath": "icon-libraries/index.tsx"
     },
     "/learning/": {
       "filePath": "learning/index.tsx"

@@ -16,7 +16,7 @@ export function Section({ icon, title, subTitle, description, links, docsLinks, 
     <section className="bg-card flex flex-col gap-6 rounded-sm border p-4 shadow-sm">
       <div className="flex gap-4">
         {icon && (
-          <div className="bg-background rounded-sm p-2 row-span-2 w-12 h-12 [&>svg]:w-full [&>svg]:h-full">{icon}</div>
+          <div className="bg-background rounded-xs p-2 row-span-2 w-12 h-12 [&>svg]:w-full [&>svg]:h-full">{icon}</div>
         )}
         <div>
           <h2 className="text-2xl font-bold flex items-center gap-2 leading-none">
@@ -31,7 +31,10 @@ export function Section({ icon, title, subTitle, description, links, docsLinks, 
           <p className="text-muted-foreground text-sm">{subTitle}</p>
         </div>
       </div>
-      <div>{children}</div>
+      <div>
+        <p className="text-muted-foreground text-sm">{description}</p>
+        {children}
+      </div>
     </section>
   );
 }
