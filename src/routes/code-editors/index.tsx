@@ -9,7 +9,11 @@ export const Route = createFileRoute("/code-editors/")({
 function PageCodeEditors() {
   return (
     <>
-      <Section title="Visual Studio Code" id="visual-studio-code">
+      <Section
+        title="Visual Studio Code"
+        id="visual-studio-code"
+        link="https://code.visualstudio.com/"
+        docsLink="https://code.visualstudio.com/docs">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
       </Section>
       <Section title="Cursor" id="cursor">
