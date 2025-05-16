@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/_components/Section";
+import { IconHTML, IconCSS } from "@/_components/Icons";
 
 export const Route = createFileRoute("/frontend-languages/")({
   component: PageFrontendLanguages,
@@ -11,6 +12,7 @@ function PageFrontendLanguages() {
     <>
       <Section
         id="html"
+        icon={<IconHTML />}
         title="HTML5"
         subTitle="Hypertext Markup Language"
         description="HTML5 is the latest evolution of the standard that defines HTML. It includes new elements and attributes that
@@ -24,6 +26,7 @@ function PageFrontendLanguages() {
 
       <Section
         id="css"
+        icon={<IconCSS />}
         title="CSS3"
         subTitle="Cascading Style Sheets"
         description="CSS3 is the latest evolution of the Cascading Style Sheets language and aims at extending CSS2.1. It brings a lot of new features and improvements to enhance the styling capabilities of the web."

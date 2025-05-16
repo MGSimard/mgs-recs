@@ -1,9 +1,8 @@
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/_components/ui/hover-card";
-import { Separator } from "@radix-ui/react-separator";
 import { Globe, LucideProps, NotebookText } from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 
 interface SectionProps extends React.ComponentProps<"section"> {
+  icon?: React.ReactElement<React.SVGProps<SVGSVGElement>>;
   title: string;
   subTitle: string;
   description: string;
@@ -12,24 +11,28 @@ interface SectionProps extends React.ComponentProps<"section"> {
   children: React.ReactNode;
 }
 
-export function Section({ title, subTitle, description, links, docsLinks, children, ...props }: SectionProps) {
+export function Section({ icon, title, subTitle, description, links, docsLinks, children, ...props }: SectionProps) {
   return (
-    <Card {...props}>
-      <CardHeader className="grid ">
-        <CardTitle className="text-2xl font-bold flex items-center gap-2">
-          {title}
-          {links &&
-            links.map((l) => <LinkBadge key={l.href} href={l.href} Icon={Globe} title={`${l.label} Website`} />)}
-          {docsLinks &&
-            docsLinks.map((doc) => (
-              <LinkBadge key={doc.href} href={doc.href} Icon={NotebookText} title={`${doc.label} Documentation`} />
-            ))}
-        </CardTitle>
-        <CardDescription className="mb-2">{subTitle}</CardDescription>
-        <p>{description}</p>
-      </CardHeader>
-      <CardContent>{children}</CardContent>
-    </Card>
+    <section className="bg-card flex flex-col gap-6 rounded-sm border p-4 shadow-sm">
+      <div className="flex gap-4">
+        {icon && (
+          <div className="bg-background rounded-sm p-2 row-span-2 w-12 h-12 [&>svg]:w-full [&>svg]:h-full">{icon}</div>
+        )}
+        <div>
+          <h2 className="text-2xl font-bold flex items-center gap-2 leading-none">
+            {title}
+            {links &&
+              links.map((l) => <LinkBadge key={l.href} href={l.href} Icon={Globe} title={`${l.label} Website`} />)}
+            {docsLinks &&
+              docsLinks.map((doc) => (
+                <LinkBadge key={doc.href} href={doc.href} Icon={NotebookText} title={`${doc.label} Documentation`} />
+              ))}
+          </h2>
+          <p className="text-muted-foreground text-sm">{subTitle}</p>
+        </div>
+      </div>
+      <div>{children}</div>
+    </section>
   );
 }
 
