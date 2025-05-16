@@ -1,29 +1,35 @@
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/_components/ui/hover-card";
 import { Separator } from "@radix-ui/react-separator";
 import { Globe, LucideProps, NotebookText } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 
 interface SectionProps extends React.ComponentProps<"section"> {
   title: string;
-  children: React.ReactNode;
+  subTitle: string;
+  description: string;
   links?: { label: string; href: string }[];
   docsLinks?: { label: string; href: string }[];
+  children: React.ReactNode;
 }
 
-export function Section({ title, children, links, docsLinks, ...props }: SectionProps) {
+export function Section({ title, subTitle, description, links, docsLinks, children, ...props }: SectionProps) {
   return (
-    <section {...props}>
-      <h2 className="text-2xl font-bold flex items-center gap-2">
-        {title}
-        {links && links.map((l) => <LinkBadge key={l.href} href={l.href} Icon={Globe} title={`${l.label} Website`} />)}
-        {docsLinks &&
-          docsLinks.map((doc) => (
-            <LinkBadge key={doc.href} href={doc.href} Icon={NotebookText} title={`${doc.label} Documentation`} />
-          ))}
-      </h2>
-
-      <Separator className="border-b-[1px] border-gray-200 max-w-48 mt-2 mb-4" />
-      {children}
-    </section>
+    <Card {...props}>
+      <CardHeader className="grid ">
+        <CardTitle className="text-2xl font-bold flex items-center gap-2">
+          {title}
+          {links &&
+            links.map((l) => <LinkBadge key={l.href} href={l.href} Icon={Globe} title={`${l.label} Website`} />)}
+          {docsLinks &&
+            docsLinks.map((doc) => (
+              <LinkBadge key={doc.href} href={doc.href} Icon={NotebookText} title={`${doc.label} Documentation`} />
+            ))}
+        </CardTitle>
+        <CardDescription className="mb-2">{subTitle}</CardDescription>
+        <p>{description}</p>
+      </CardHeader>
+      <CardContent>{children}</CardContent>
+    </Card>
   );
 }
 
