@@ -43,8 +43,8 @@ function PageFrontendLanguages() {
         subTitle="ECMAScript 6 and beyond"
         description="JavaScript (ES6+) is a dynamic, high-level language for client-side interactivity and Document Object Model (DOM) manipulation. ECMAScript 2015 (ES6) and subsequent versions introduced features such as arrow functions, classes, and modules."
         docsLinks={[
-          { label: "W3Schools JavaScript", href: "https://www.w3schools.com/js/" },
           { label: "MDN JavaScript", href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+          { label: "W3Schools JavaScript", href: "https://www.w3schools.com/js/" },
         ]}>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
       </Section>
