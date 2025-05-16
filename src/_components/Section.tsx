@@ -34,7 +34,9 @@ function LinkBadge({ href, Icon, title }: LinkBadgeProps) {
     <a
       className="inline-flex items-center text-muted-foreground h-4 w-4 hover:text-accent-foreground focus-visible:text-accent-foreground"
       href={href}
-      title={title}>
+      title={title}
+      target="_blank"
+      rel="noopener noreferrer">
       <Icon aria-label={title} />
     </a>
   );
