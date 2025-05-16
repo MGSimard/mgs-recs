@@ -19,8 +19,8 @@ function PageFrontendLanguages() {
         subTitle="Hypertext Markup Language"
         description="HTML5 is the latest version of HyperText Markup Language, establishing the fundamental structure for web content. It incorporates semantic elements for content organization, native support for multimedia, and introduces new APIs for enhanced web application capabilities."
         docsLinks={[
-          { label: "W3Schools HTML", href: "https://www.w3schools.com/html/" },
           { label: "MDN HTML", href: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+          { label: "W3Schools HTML", href: "https://www.w3schools.com/html/" },
         ]}>
         <h3 className="text-lg font-bold">Key Features:</h3>
         {/* The default bullet points suck, there's also too much space between bullet and text */}
