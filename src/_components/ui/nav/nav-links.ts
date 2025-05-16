@@ -4,11 +4,13 @@ import {
   Clapperboard,
   Code,
   Database,
+  DatabaseZap,
   DollarSign,
   FileImage,
   KeyRound,
   Layers,
   LayoutGrid,
+  Mail,
   PenTool,
   Server,
   Table,
@@ -140,6 +142,25 @@ export const NavLinks = {
         ],
       },
       {
+        title: "Database Hosts",
+        url: "/database-hosts",
+        icon: DatabaseZap,
+        items: [
+          {
+            title: "Supabase",
+            url: "/database-hosts#supabase",
+          },
+          {
+            title: "Neon",
+            url: "/database-hosts#neon",
+          },
+          {
+            title: "PlanetScale",
+            url: "/database-hosts#planetscale",
+          },
+        ],
+      },
+      {
         title: "ORMs",
         url: "/orms",
         icon: Table,
@@ -149,7 +170,7 @@ export const NavLinks = {
             url: "/orms#drizzle-orm",
           },
           {
-            title: "Prisma",
+            title: "Prisma ORM",
             url: "/orms#prisma",
           },
         ],
@@ -185,6 +206,18 @@ export const NavLinks = {
         ],
       },
       {
+        title: "Mailing",
+        url: "/mailing",
+        icon: Mail,
+        items: [
+          {
+            title: "Resend",
+            url: "/mailing#resend",
+          },
+        ],
+      },
+
+      {
         title: "CI/CD",
         url: "/ci-cd",
         icon: Workflow,
@@ -205,8 +238,8 @@ export const NavLinks = {
         icon: Server,
         items: [
           {
-            title: "Cloudflare",
-            url: "/hosting#cloudflare",
+            title: "Cloudflare Pages",
+            url: "/hosting#cloudflare-pages",
           },
           {
             title: "Vercel",

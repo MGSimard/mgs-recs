@@ -12,14 +12,22 @@ function PageCodeEditors() {
       <Section
         title="Visual Studio Code"
         id="visual-studio-code"
-        link="https://code.visualstudio.com/"
-        docsLink="https://code.visualstudio.com/docs">
+        links={[{ label: "Visual Studio Code", href: "https://code.visualstudio.com/" }]}
+        docsLinks={[{ label: "Visual Studio Code", href: "https://code.visualstudio.com/docs" }]}>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
       </Section>
-      <Section title="Cursor" id="cursor">
+      <Section
+        title="Cursor"
+        id="cursor"
+        links={[{ label: "Cursor", href: "https://www.cursor.com/" }]}
+        docsLinks={[{ label: "Cursor", href: "https://docs.cursor.com/" }]}>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
       </Section>
-      <Section title="Phoenix Code" id="phoenix-code">
+      <Section
+        title="Phoenix Code"
+        id="phoenix-code"
+        links={[{ label: "Phoenix Code", href: "https://phcode.dev/" }]}
+        docsLinks={[{ label: "Phoenix Code", href: "https://docs.phcode.dev/" }]}>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
       </Section>
     </>

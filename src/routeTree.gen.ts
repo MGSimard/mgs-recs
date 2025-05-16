@@ -17,6 +17,7 @@ import { Route as VectorGraphicsIndexImport } from './routes/vector-graphics/ind
 import { Route as UiLibrariesIndexImport } from './routes/ui-libraries/index'
 import { Route as PaymentsIndexImport } from './routes/payments/index'
 import { Route as OrmsIndexImport } from './routes/orms/index'
+import { Route as MailingIndexImport } from './routes/mailing/index'
 import { Route as LearningIndexImport } from './routes/learning/index'
 import { Route as HostingIndexImport } from './routes/hosting/index'
 import { Route as GraphicDesignIndexImport } from './routes/graphic-design/index'
@@ -24,6 +25,7 @@ import { Route as FrontendLanguagesIndexImport } from './routes/frontend-languag
 import { Route as FrameworksIndexImport } from './routes/frameworks/index'
 import { Route as DesignIndexImport } from './routes/design/index'
 import { Route as DatabasesIndexImport } from './routes/databases/index'
+import { Route as DatabaseHostsIndexImport } from './routes/database-hosts/index'
 import { Route as CodeEditorsIndexImport } from './routes/code-editors/index'
 import { Route as CiCdIndexImport } from './routes/ci-cd/index'
 import { Route as AuthIndexImport } from './routes/auth/index'
@@ -66,6 +68,12 @@ const OrmsIndexRoute = OrmsIndexImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
+const MailingIndexRoute = MailingIndexImport.update({
+  id: '/mailing/',
+  path: '/mailing/',
+  getParentRoute: () => rootRoute,
+} as any)
+
 const LearningIndexRoute = LearningIndexImport.update({
   id: '/learning/',
   path: '/learning/',
@@ -105,6 +113,12 @@ const DesignIndexRoute = DesignIndexImport.update({
 const DatabasesIndexRoute = DatabasesIndexImport.update({
   id: '/databases/',
   path: '/databases/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const DatabaseHostsIndexRoute = DatabaseHostsIndexImport.update({
+  id: '/database-hosts/',
+  path: '/database-hosts/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -158,6 +172,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CodeEditorsIndexImport
       parentRoute: typeof rootRoute
     }
+    '/database-hosts/': {
+      id: '/database-hosts/'
+      path: '/database-hosts'
+      fullPath: '/database-hosts'
+      preLoaderRoute: typeof DatabaseHostsIndexImport
+      parentRoute: typeof rootRoute
+    }
     '/databases/': {
       id: '/databases/'
       path: '/databases'
@@ -207,6 +228,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LearningIndexImport
       parentRoute: typeof rootRoute
     }
+    '/mailing/': {
+      id: '/mailing/'
+      path: '/mailing'
+      fullPath: '/mailing'
+      preLoaderRoute: typeof MailingIndexImport
+      parentRoute: typeof rootRoute
+    }
     '/orms/': {
       id: '/orms/'
       path: '/orms'
@@ -252,6 +280,7 @@ export interface FileRoutesByFullPath {
   '/auth': typeof AuthIndexRoute
   '/ci-cd': typeof CiCdIndexRoute
   '/code-editors': typeof CodeEditorsIndexRoute
+  '/database-hosts': typeof DatabaseHostsIndexRoute
   '/databases': typeof DatabasesIndexRoute
   '/design': typeof DesignIndexRoute
   '/frameworks': typeof FrameworksIndexRoute
@@ -259,6 +288,7 @@ export interface FileRoutesByFullPath {
   '/graphic-design': typeof GraphicDesignIndexRoute
   '/hosting': typeof HostingIndexRoute
   '/learning': typeof LearningIndexRoute
+  '/mailing': typeof MailingIndexRoute
   '/orms': typeof OrmsIndexRoute
   '/payments': typeof PaymentsIndexRoute
   '/ui-libraries': typeof UiLibrariesIndexRoute
@@ -271,6 +301,7 @@ export interface FileRoutesByTo {
   '/auth': typeof AuthIndexRoute
   '/ci-cd': typeof CiCdIndexRoute
   '/code-editors': typeof CodeEditorsIndexRoute
+  '/database-hosts': typeof DatabaseHostsIndexRoute
   '/databases': typeof DatabasesIndexRoute
   '/design': typeof DesignIndexRoute
   '/frameworks': typeof FrameworksIndexRoute
@@ -278,6 +309,7 @@ export interface FileRoutesByTo {
   '/graphic-design': typeof GraphicDesignIndexRoute
   '/hosting': typeof HostingIndexRoute
   '/learning': typeof LearningIndexRoute
+  '/mailing': typeof MailingIndexRoute
   '/orms': typeof OrmsIndexRoute
   '/payments': typeof PaymentsIndexRoute
   '/ui-libraries': typeof UiLibrariesIndexRoute
@@ -291,6 +323,7 @@ export interface FileRoutesById {
   '/auth/': typeof AuthIndexRoute
   '/ci-cd/': typeof CiCdIndexRoute
   '/code-editors/': typeof CodeEditorsIndexRoute
+  '/database-hosts/': typeof DatabaseHostsIndexRoute
   '/databases/': typeof DatabasesIndexRoute
   '/design/': typeof DesignIndexRoute
   '/frameworks/': typeof FrameworksIndexRoute
@@ -298,6 +331,7 @@ export interface FileRoutesById {
   '/graphic-design/': typeof GraphicDesignIndexRoute
   '/hosting/': typeof HostingIndexRoute
   '/learning/': typeof LearningIndexRoute
+  '/mailing/': typeof MailingIndexRoute
   '/orms/': typeof OrmsIndexRoute
   '/payments/': typeof PaymentsIndexRoute
   '/ui-libraries/': typeof UiLibrariesIndexRoute
@@ -312,6 +346,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/ci-cd'
     | '/code-editors'
+    | '/database-hosts'
     | '/databases'
     | '/design'
     | '/frameworks'
@@ -319,6 +354,7 @@ export interface FileRouteTypes {
     | '/graphic-design'
     | '/hosting'
     | '/learning'
+    | '/mailing'
     | '/orms'
     | '/payments'
     | '/ui-libraries'
@@ -330,6 +366,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/ci-cd'
     | '/code-editors'
+    | '/database-hosts'
     | '/databases'
     | '/design'
     | '/frameworks'
@@ -337,6 +374,7 @@ export interface FileRouteTypes {
     | '/graphic-design'
     | '/hosting'
     | '/learning'
+    | '/mailing'
     | '/orms'
     | '/payments'
     | '/ui-libraries'
@@ -348,6 +386,7 @@ export interface FileRouteTypes {
     | '/auth/'
     | '/ci-cd/'
     | '/code-editors/'
+    | '/database-hosts/'
     | '/databases/'
     | '/design/'
     | '/frameworks/'
@@ -355,6 +394,7 @@ export interface FileRouteTypes {
     | '/graphic-design/'
     | '/hosting/'
     | '/learning/'
+    | '/mailing/'
     | '/orms/'
     | '/payments/'
     | '/ui-libraries/'
@@ -368,6 +408,7 @@ export interface RootRouteChildren {
   AuthIndexRoute: typeof AuthIndexRoute
   CiCdIndexRoute: typeof CiCdIndexRoute
   CodeEditorsIndexRoute: typeof CodeEditorsIndexRoute
+  DatabaseHostsIndexRoute: typeof DatabaseHostsIndexRoute
   DatabasesIndexRoute: typeof DatabasesIndexRoute
   DesignIndexRoute: typeof DesignIndexRoute
   FrameworksIndexRoute: typeof FrameworksIndexRoute
@@ -375,6 +416,7 @@ export interface RootRouteChildren {
   GraphicDesignIndexRoute: typeof GraphicDesignIndexRoute
   HostingIndexRoute: typeof HostingIndexRoute
   LearningIndexRoute: typeof LearningIndexRoute
+  MailingIndexRoute: typeof MailingIndexRoute
   OrmsIndexRoute: typeof OrmsIndexRoute
   PaymentsIndexRoute: typeof PaymentsIndexRoute
   UiLibrariesIndexRoute: typeof UiLibrariesIndexRoute
@@ -387,6 +429,7 @@ const rootRouteChildren: RootRouteChildren = {
   AuthIndexRoute: AuthIndexRoute,
   CiCdIndexRoute: CiCdIndexRoute,
   CodeEditorsIndexRoute: CodeEditorsIndexRoute,
+  DatabaseHostsIndexRoute: DatabaseHostsIndexRoute,
   DatabasesIndexRoute: DatabasesIndexRoute,
   DesignIndexRoute: DesignIndexRoute,
   FrameworksIndexRoute: FrameworksIndexRoute,
@@ -394,6 +437,7 @@ const rootRouteChildren: RootRouteChildren = {
   GraphicDesignIndexRoute: GraphicDesignIndexRoute,
   HostingIndexRoute: HostingIndexRoute,
   LearningIndexRoute: LearningIndexRoute,
+  MailingIndexRoute: MailingIndexRoute,
   OrmsIndexRoute: OrmsIndexRoute,
   PaymentsIndexRoute: PaymentsIndexRoute,
   UiLibrariesIndexRoute: UiLibrariesIndexRoute,
@@ -415,6 +459,7 @@ export const routeTree = rootRoute
         "/auth/",
         "/ci-cd/",
         "/code-editors/",
+        "/database-hosts/",
         "/databases/",
         "/design/",
         "/frameworks/",
@@ -422,6 +467,7 @@ export const routeTree = rootRoute
         "/graphic-design/",
         "/hosting/",
         "/learning/",
+        "/mailing/",
         "/orms/",
         "/payments/",
         "/ui-libraries/",
@@ -440,6 +486,9 @@ export const routeTree = rootRoute
     },
     "/code-editors/": {
       "filePath": "code-editors/index.tsx"
+    },
+    "/database-hosts/": {
+      "filePath": "database-hosts/index.tsx"
     },
     "/databases/": {
       "filePath": "databases/index.tsx"
@@ -461,6 +510,9 @@ export const routeTree = rootRoute
     },
     "/learning/": {
       "filePath": "learning/index.tsx"
+    },
+    "/mailing/": {
+      "filePath": "mailing/index.tsx"
     },
     "/orms/": {
       "filePath": "orms/index.tsx"

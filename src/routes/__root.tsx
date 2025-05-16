@@ -1,8 +1,8 @@
 import type { ReactNode } from "react";
 import { Outlet, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
-import { ThemeProvider } from "@/_components/ThemeProvider";
-import { SidebarInset, SidebarProvider } from "@/_components/ui/sidebar";
+import { Providers } from "@/_components/Providers";
 import { AppSidebar } from "@/_components/ui/nav/app-sidebar";
+import { SidebarInset } from "@/_components/ui/sidebar";
 import { Header } from "@/_components/ui/header/Header";
 import globalCss from "@/_styles/global.css?url";
 import fontsCss from "@/_styles/fonts.css?url";
@@ -44,15 +44,13 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
         <HeadContent />
       </head>
       <body>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <SidebarProvider>
-            <AppSidebar className="whitespace-nowrap" />
-            <SidebarInset className="max-w-screen-xl">
-              <Header />
-              <main className="flex flex-1 flex-col gap-32 p-4 pt-0">{children}</main>
-            </SidebarInset>
-          </SidebarProvider>
-        </ThemeProvider>
+        <Providers>
+          <AppSidebar className="whitespace-nowrap" />
+          <SidebarInset className="max-w-screen-xl">
+            <Header />
+            <main className="flex flex-1 flex-col gap-32 p-4 pt-0">{children}</main>
+          </SidebarInset>
+        </Providers>
         <Scripts />
       </body>
     </html>

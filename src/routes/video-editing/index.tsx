@@ -9,7 +9,10 @@ export const Route = createFileRoute("/video-editing/")({
 function PageVideoEditing() {
   return (
     <>
-      <Section title="DaVinci Resolve" id="davinci-resolve">
+      <Section
+        title="DaVinci Resolve"
+        id="davinci-resolve"
+        links={[{ label: "DaVinci Resolve", href: "https://www.blackmagicdesign.com/products/davinciresolve/" }]}>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
       </Section>
     </>
