@@ -1,8 +1,9 @@
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/_components/ui/hover-card";
 import { Globe, LucideProps, NotebookText } from "lucide-react";
+import { cn } from "@/_lib/utils";
 
 interface SectionProps extends React.ComponentProps<"section"> {
-  icon?: React.ReactElement<React.SVGProps<SVGSVGElement>>;
+  icon: React.ReactElement<React.SVGProps<SVGSVGElement>>;
   title: string;
   subTitle: string;
   description: string;
@@ -11,28 +12,34 @@ interface SectionProps extends React.ComponentProps<"section"> {
   children: React.ReactNode;
 }
 
-export function Section({ icon, title, subTitle, description, links, docsLinks, children, ...props }: SectionProps) {
+export function Section({
+  icon,
+  title,
+  subTitle,
+  description,
+  links,
+  docsLinks,
+  className,
+  children,
+  ...props
+}: SectionProps) {
   return (
-    <section className="bg-card flex flex-col gap-6 rounded-sm border p-4 shadow-sm">
-      <div className="flex gap-4">
-        {icon && (
-          <div className="bg-background rounded-xs p-2 row-span-2 w-12 h-12 [&>svg]:w-full [&>svg]:h-full">{icon}</div>
-        )}
-        <div>
-          <h2 className="text-2xl font-bold flex items-center gap-2 leading-none">
-            {title}
-            {links &&
-              links.map((l) => <LinkBadge key={l.href} href={l.href} Icon={Globe} title={`${l.label} Website`} />)}
-            {docsLinks &&
-              docsLinks.map((doc) => (
-                <LinkBadge key={doc.href} href={doc.href} Icon={NotebookText} title={`${doc.label} Documentation`} />
-              ))}
-          </h2>
-          <p className="text-muted-foreground text-sm">{subTitle}</p>
-        </div>
+    <section className="flex bg-card border rounded-sm shadow-sm overflow-hidden" {...props}>
+      <div className={cn("shrink-0 flex items-center justify-center w-28 [&>svg]:w-12 [&>svg]:h-12", className)}>
+        {icon}
       </div>
-      <div className="flex flex-col gap-2">
-        <p>{description}</p>
+      <div className="p-4">
+        <h2 className="text-2xl font-bold flex items-center gap-2 leading-none">
+          {title}
+          {links &&
+            links.map((l) => <LinkBadge key={l.href} href={l.href} Icon={Globe} title={`${l.label} Website`} />)}
+          {docsLinks &&
+            docsLinks.map((doc) => (
+              <LinkBadge key={doc.href} href={doc.href} Icon={NotebookText} title={`${doc.label} Documentation`} />
+            ))}
+        </h2>
+        <p className="text-muted-foreground text-sm mb-4">{subTitle}</p>
+        <p className="mb-4">{description}</p>
         {children}
       </div>
     </section>

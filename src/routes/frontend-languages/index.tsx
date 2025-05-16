@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/_components/Section";
 import { IconHTML, IconCSS, IconJavaScript, IconTypeScript } from "@/_components/Icons";
+import { Dot } from "lucide-react";
 
 export const Route = createFileRoute("/frontend-languages/")({
   component: PageFrontendLanguages,
@@ -12,6 +13,7 @@ function PageFrontendLanguages() {
     <>
       <Section
         id="html"
+        className="bg-[oklch(0.67_0.1852_41.15)]"
         icon={<IconHTML />}
         title="HTML5"
         subTitle="Hypertext Markup Language"
@@ -20,11 +22,26 @@ function PageFrontendLanguages() {
           { label: "W3Schools HTML", href: "https://www.w3schools.com/html/" },
           { label: "MDN HTML", href: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
         ]}>
-        Card content then goes inside here
+        <h3 className="text-lg font-bold">Key Features:</h3>
+        {/* The default bullet points suck, there's also too much space between bullet and text */}
+        <ul className="grid grid-cols-3 gap-2">
+          <li className="flex items-center">
+            <Dot className="h-4 w-4 mr-1" />
+            Arrow functions
+          </li>
+          <li className="flex items-center">
+            <Dot className="h-4 w-4 mr-1" />
+            Classes
+          </li>
+          <li className="flex items-center">
+            <Dot className="h-4 w-4 mr-1" />
+            Modules
+          </li>
+        </ul>
       </Section>
-
       <Section
         id="css"
+        className="bg-[oklch(0.44_0.1603_303.37)]"
         icon={<IconCSS />}
         title="CSS3"
         subTitle="Cascading Style Sheets"
@@ -38,6 +55,7 @@ function PageFrontendLanguages() {
 
       <Section
         id="javascript"
+        className="bg-[oklch(0.88_0.1565_100.66)]"
         icon={<IconJavaScript />}
         title="JavaScript (ES6+)"
         subTitle="ECMAScript 6 and beyond"
@@ -51,6 +69,7 @@ function PageFrontendLanguages() {
 
       <Section
         id="typescript"
+        className="bg-[oklch(0.57_0.1399_253.3)]"
         icon={<IconTypeScript />}
         title="TypeScript"
         subTitle="JavaScript with static types"
