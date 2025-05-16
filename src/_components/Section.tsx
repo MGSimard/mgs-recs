@@ -31,8 +31,8 @@ export function Section({ icon, title, subTitle, description, links, docsLinks, 
           <p className="text-muted-foreground text-sm">{subTitle}</p>
         </div>
       </div>
-      <div>
-        <p className="text-muted-foreground text-sm">{description}</p>
+      <div className="flex flex-col gap-2">
+        <p>{description}</p>
         {children}
       </div>
     </section>

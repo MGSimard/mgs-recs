@@ -30,8 +30,8 @@ function PageFrontendLanguages() {
         subTitle="Cascading Style Sheets"
         description="CSS3 extends CSS2.1 by introducing new modules and features for styling. These include advanced selectors, box model enhancements, flexible box layout (Flexbox), grid layout, animations, and transitions."
         docsLinks={[
-          { label: "W3Schools CSS", href: "https://www.w3schools.com/css/" },
           { label: "MDN CSS", href: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+          { label: "W3Schools CSS", href: "https://www.w3schools.com/css/" },
         ]}>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
       </Section>
