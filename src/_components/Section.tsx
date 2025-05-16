@@ -1,5 +1,5 @@
 import { Separator } from "@radix-ui/react-separator";
-import { Book, Link, LucideProps } from "lucide-react";
+import { Book, ExternalLink, Globe, Link, Link2, LucideProps, NotebookText } from "lucide-react";
 
 interface SectionProps extends React.ComponentProps<"section"> {
   title: string;
@@ -13,8 +13,8 @@ export function Section({ title, children, link, docsLink, ...props }: SectionPr
     <section {...props}>
       <h2 className="text-2xl font-bold flex items-center gap-2">
         {title}
-        {link && <LinkBadge href={link} Icon={Link} title="Official Website" />}
-        {docsLink && <LinkBadge href={docsLink} Icon={Book} title="Documentation" />}
+        {link && <LinkBadge href={link} Icon={Globe} title="Official Website" />}
+        {docsLink && <LinkBadge href={docsLink} Icon={NotebookText} title="Documentation" />}
       </h2>
 
       <Separator className="border-b-[1px] border-gray-200 max-w-48 mt-2 mb-4" />
@@ -32,7 +32,7 @@ interface LinkBadgeProps {
 function LinkBadge({ href, Icon, title }: LinkBadgeProps) {
   return (
     <a
-      className="inline-flex items-center text-muted-foreground h-4 w-4 hover:text-accent-foreground focus-visible:text-accent-foreground"
+      className="mb-0.5 inline-flex items-center text-muted-foreground h-4 w-4 hover:text-accent-foreground focus-visible:text-accent-foreground"
       href={href}
       title={title}
       target="_blank"
