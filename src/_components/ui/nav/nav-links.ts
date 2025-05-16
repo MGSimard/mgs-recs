@@ -128,8 +128,8 @@ export const NavLinks = {
             url: "/databases#redis",
           },
           {
-            title: "Dexie.js",
-            url: "/databases#dexiejs",
+            title: "IndexedDB",
+            url: "/databases#indexeddb",
           },
           {
             title: "localStorage",
