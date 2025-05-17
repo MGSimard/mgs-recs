@@ -3,30 +3,36 @@ import { Globe, LucideProps, NotebookText } from "lucide-react";
 import { cn } from "@/_lib/utils";
 
 interface SectionProps extends React.ComponentProps<"section"> {
-  icon: React.ReactElement<React.SVGProps<SVGSVGElement>>;
+  logo: React.ReactElement<React.SVGProps<SVGSVGElement>> | React.ReactElement<React.HTMLAttributes<HTMLImageElement>>;
   title: string;
-  subTitle: string;
-  description: string;
   links?: { label: string; href: string }[];
   docsLinks?: { label: string; href: string }[];
-  children: React.ReactNode;
+  subTitle: string;
+  description: string;
+  features: string[];
+  children?: React.ReactNode;
 }
 
 export function Section({
-  icon,
+  logo,
   title,
-  subTitle,
-  description,
   links,
   docsLinks,
+  subTitle,
+  description,
+  features,
   className,
   children,
   ...props
 }: SectionProps) {
   return (
     <section className="flex bg-card border rounded-sm shadow-sm overflow-hidden" {...props}>
-      <div className={cn("shrink-0 flex items-center justify-center w-28 [&>svg]:w-12 [&>svg]:h-12", className)}>
-        {icon}
+      <div
+        className={cn(
+          "shrink-0 flex items-center justify-center w-28 [&>svg]:w-12 [&>svg]:h-12 [&>img]:w-12 [&>img]:h-12",
+          className
+        )}>
+        {logo}
       </div>
       <div className="p-4">
         <h2 className="text-2xl font-bold flex items-center gap-2 leading-none">
@@ -40,7 +46,14 @@ export function Section({
         </h2>
         <p className="text-muted-foreground text-sm mb-4">{subTitle}</p>
         <p className="mb-4">{description}</p>
-        {children}
+        <h3 className="text-lg font-bold">Key Features:</h3>
+        <ul className="grid grid-cols-3 gap-2">
+          {features.map((feature) => (
+            <li key={feature} className="flex items-center">
+              {feature}
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

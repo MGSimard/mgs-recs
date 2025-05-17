@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/_components/Section";
+import { LogoCodeRabbit, LogoGitHubActions } from "@/_components/Icons";
 
 export const Route = createFileRoute("/ci-cd/")({
   component: PageCICD,
@@ -10,19 +11,26 @@ function PageCICD() {
   return (
     <>
       <Section
-        title="GitHub Actions"
         id="github-actions"
+        className="bg-[oklch(0.55_0.1474_146.26)]"
+        logo={<LogoGitHubActions />}
+        title="GitHub Actions"
         links={[{ label: "GitHub Actions", href: "https://github.com/features/actions" }]}
-        docsLinks={[{ label: "GitHub Actions", href: "https://docs.github.com/en/actions" }]}>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-      </Section>
+        docsLinks={[{ label: "GitHub Actions", href: "https://docs.github.com/en/actions" }]}
+        subTitle="Lorem ipsum dolor."
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+        features={[""]}></Section>
+
       <Section
-        title="CodeRabbit"
         id="coderabbit"
+        className="bg-[oklch(0.68_0.2153_38.76)]"
+        logo={<LogoCodeRabbit />}
+        title="CodeRabbit"
         links={[{ label: "CodeRabbit", href: "https://coderabbit.ai/" }]}
-        docsLinks={[{ label: "CodeRabbit", href: "https://docs.coderabbit.ai/" }]}>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-      </Section>
+        docsLinks={[{ label: "CodeRabbit", href: "https://docs.coderabbit.ai/" }]}
+        subTitle="Lorem ipsum dolor."
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+        features={[""]}></Section>
     </>
   );
 }

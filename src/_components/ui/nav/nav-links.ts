@@ -293,7 +293,7 @@ export const NavLinks = {
             url: "/learning#codevolution",
           },
           {
-            title: "Theo",
+            title: "Theo - t3.gg",
             url: "/learning#theo",
           },
           {
