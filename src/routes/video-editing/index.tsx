@@ -7,12 +7,6 @@ export const Route = createFileRoute("/video-editing/")({
   loader: () => ({ title: "Video Editing" }),
 });
 
-// #009bd8
-// #ff3044
-// #fcff7c
-
-//         className="bg-[conic-gradient(oklch(0.65_0.139197_235.5161),oklch(0.65_0.2372_22.81),oklch(0.97_0.1534_110.13))]"
-
 function PageVideoEditing() {
   return (
     <>
