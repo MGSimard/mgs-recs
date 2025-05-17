@@ -10,6 +10,7 @@ import {
   KeyRound,
   Layers,
   LayoutGrid,
+  Lightbulb,
   Mail,
   PenTool,
   Server,
@@ -310,7 +311,7 @@ export const NavLinks = {
       {
         title: "Design",
         url: "/design",
-        icon: PenTool,
+        icon: Lightbulb,
         items: [
           {
             title: "Excalidraw",
