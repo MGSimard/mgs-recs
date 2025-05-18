@@ -10,7 +10,7 @@ _This could've been a markdown file_
 - shadcn/ui
 - TailwindCSS
 
-Really was just looking for an excuse to try out ~~Mantine UI~~ shadcn/ui.
+Really was just looking for an excuse to try out ~~Mantine UI~~ ~~shadcn/ui~~ tailwindcss.
 
 ## Task List
 
