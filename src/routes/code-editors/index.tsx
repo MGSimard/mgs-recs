@@ -18,7 +18,7 @@ function PageCodeEditors() {
         links={[{ label: "Visual Studio Code", href: "https://code.visualstudio.com/" }]}
         docsLinks={[{ label: "Visual Studio Code", href: "https://code.visualstudio.com/docs" }]}
         subTitle="The industry standard."
-        description="Powerful and extensible, Visual Studio Code offers a vast marketplace of extensions, robust debugging tools, and an integrated terminal."
+        description="Powerful and extensible, Visual Studio Code offers a vast marketplace of extensions, robust debugging tools, and an integrated terminal. If you're transitioning from Phoenix Code (or other lightweight code editors), while it's more complex, it is a much more powerful editor overall. I do recommend getting well acquainted with the VSCode ecosystem before moving onto an AI-powered editor like Cursor. Make sure you check out the various functionalities and extensions, from Source Control to Prettier and Postman."
         features={[""]}></Section>
 
       <Section
@@ -29,7 +29,7 @@ function PageCodeEditors() {
         links={[{ label: "Cursor", href: "https://www.cursor.com/" }]}
         docsLinks={[{ label: "Cursor", href: "https://docs.cursor.com/" }]}
         subTitle="AI-loaded fork of Visual Studio Code."
-        description="As a fork of Visual Studio Code, Cursor integrates AI features to accelerate development workflows through intelligent code prediction autocomplete, coding agents and chat capabilities."
+        description="As a fork of Visual Studio Code, Cursor integrates AI features to accelerate development workflows through intelligent code autocomplete predictions, coding agents and chat capabilities. It offers a fairly generous free tier, if you aim to be a serious developer in any capacity, you should definitely give it a shot over standard VSCode. The tab code autocomplete alone is a huge game changer for memory and productivity. Whatever happens; always ask questions!"
         features={[""]}></Section>
 
       <Section
@@ -40,7 +40,7 @@ function PageCodeEditors() {
         links={[{ label: "Phoenix Code", href: "https://phcode.dev/" }]}
         docsLinks={[{ label: "Phoenix Code", href: "https://docs.phcode.dev/" }]}
         subTitle="Lightweight code editor for beginners."
-        description="Simple and fast, Phoenix Code is perfect for beginners learning HTML, CSS & JavaScript, or for users who prefer a minimalist coding environment."
+        description="Simple and fast, Phoenix Code is perfect for beginners learning HTML, CSS & JavaScript, or for users who prefer a minimalist coding environment. Just hop in, write some raw HTML, CSS & JavaScript, start the Live Preview and you're good to go. Works well enough until you start getting into React."
         features={[""]}></Section>
     </>
   );
