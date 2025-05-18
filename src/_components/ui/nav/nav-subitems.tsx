@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "@tanstack/react-router";
 import { SidebarMenuSubButton, SidebarMenuSubItem } from "@/_components/ui/sidebar";
 
-// Utility function to normalize paths by removing trailing slashes
 const normalizePath = (path: string) => path.replace(/\/$/, "");
 
 interface NavSubItemsProps {
