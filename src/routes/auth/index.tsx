@@ -20,6 +20,7 @@ function PageAuth() {
         subTitle="Self-hosted authentication and authorization"
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
         features={[""]}></Section>
+
       <Section
         id="clerk"
         className="bg-[oklch(0.69_0.1757_289.58)]"
