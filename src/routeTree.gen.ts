@@ -24,12 +24,14 @@ import { Route as HostingIndexImport } from './routes/hosting/index'
 import { Route as GraphicDesignIndexImport } from './routes/graphic-design/index'
 import { Route as FrontendLanguagesIndexImport } from './routes/frontend-languages/index'
 import { Route as FrameworksIndexImport } from './routes/frameworks/index'
+import { Route as DiagnosticsIndexImport } from './routes/diagnostics/index'
 import { Route as DesignIndexImport } from './routes/design/index'
 import { Route as DatabasesIndexImport } from './routes/databases/index'
 import { Route as DatabaseHostsIndexImport } from './routes/database-hosts/index'
 import { Route as CodeEditorsIndexImport } from './routes/code-editors/index'
 import { Route as CiCdIndexImport } from './routes/ci-cd/index'
 import { Route as AuthIndexImport } from './routes/auth/index'
+import { Route as AnalyticsIndexImport } from './routes/analytics/index'
 
 // Create/Update Routes
 
@@ -111,6 +113,12 @@ const FrameworksIndexRoute = FrameworksIndexImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
+const DiagnosticsIndexRoute = DiagnosticsIndexImport.update({
+  id: '/diagnostics/',
+  path: '/diagnostics/',
+  getParentRoute: () => rootRoute,
+} as any)
+
 const DesignIndexRoute = DesignIndexImport.update({
   id: '/design/',
   path: '/design/',
@@ -147,6 +155,12 @@ const AuthIndexRoute = AuthIndexImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
+const AnalyticsIndexRoute = AnalyticsIndexImport.update({
+  id: '/analytics/',
+  path: '/analytics/',
+  getParentRoute: () => rootRoute,
+} as any)
+
 // Populate the FileRoutesByPath interface
 
 declare module '@tanstack/react-router' {
@@ -156,6 +170,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/analytics/': {
+      id: '/analytics/'
+      path: '/analytics'
+      fullPath: '/analytics'
+      preLoaderRoute: typeof AnalyticsIndexImport
       parentRoute: typeof rootRoute
     }
     '/auth/': {
@@ -198,6 +219,13 @@ declare module '@tanstack/react-router' {
       path: '/design'
       fullPath: '/design'
       preLoaderRoute: typeof DesignIndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/diagnostics/': {
+      id: '/diagnostics/'
+      path: '/diagnostics'
+      fullPath: '/diagnostics'
+      preLoaderRoute: typeof DiagnosticsIndexImport
       parentRoute: typeof rootRoute
     }
     '/frameworks/': {
@@ -291,12 +319,14 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/analytics': typeof AnalyticsIndexRoute
   '/auth': typeof AuthIndexRoute
   '/ci-cd': typeof CiCdIndexRoute
   '/code-editors': typeof CodeEditorsIndexRoute
   '/database-hosts': typeof DatabaseHostsIndexRoute
   '/databases': typeof DatabasesIndexRoute
   '/design': typeof DesignIndexRoute
+  '/diagnostics': typeof DiagnosticsIndexRoute
   '/frameworks': typeof FrameworksIndexRoute
   '/frontend-languages': typeof FrontendLanguagesIndexRoute
   '/graphic-design': typeof GraphicDesignIndexRoute
@@ -313,12 +343,14 @@ export interface FileRoutesByFullPath {
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/analytics': typeof AnalyticsIndexRoute
   '/auth': typeof AuthIndexRoute
   '/ci-cd': typeof CiCdIndexRoute
   '/code-editors': typeof CodeEditorsIndexRoute
   '/database-hosts': typeof DatabaseHostsIndexRoute
   '/databases': typeof DatabasesIndexRoute
   '/design': typeof DesignIndexRoute
+  '/diagnostics': typeof DiagnosticsIndexRoute
   '/frameworks': typeof FrameworksIndexRoute
   '/frontend-languages': typeof FrontendLanguagesIndexRoute
   '/graphic-design': typeof GraphicDesignIndexRoute
@@ -336,12 +368,14 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
+  '/analytics/': typeof AnalyticsIndexRoute
   '/auth/': typeof AuthIndexRoute
   '/ci-cd/': typeof CiCdIndexRoute
   '/code-editors/': typeof CodeEditorsIndexRoute
   '/database-hosts/': typeof DatabaseHostsIndexRoute
   '/databases/': typeof DatabasesIndexRoute
   '/design/': typeof DesignIndexRoute
+  '/diagnostics/': typeof DiagnosticsIndexRoute
   '/frameworks/': typeof FrameworksIndexRoute
   '/frontend-languages/': typeof FrontendLanguagesIndexRoute
   '/graphic-design/': typeof GraphicDesignIndexRoute
@@ -360,12 +394,14 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/analytics'
     | '/auth'
     | '/ci-cd'
     | '/code-editors'
     | '/database-hosts'
     | '/databases'
     | '/design'
+    | '/diagnostics'
     | '/frameworks'
     | '/frontend-languages'
     | '/graphic-design'
@@ -381,12 +417,14 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/analytics'
     | '/auth'
     | '/ci-cd'
     | '/code-editors'
     | '/database-hosts'
     | '/databases'
     | '/design'
+    | '/diagnostics'
     | '/frameworks'
     | '/frontend-languages'
     | '/graphic-design'
@@ -402,12 +440,14 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/analytics/'
     | '/auth/'
     | '/ci-cd/'
     | '/code-editors/'
     | '/database-hosts/'
     | '/databases/'
     | '/design/'
+    | '/diagnostics/'
     | '/frameworks/'
     | '/frontend-languages/'
     | '/graphic-design/'
@@ -425,12 +465,14 @@ export interface FileRouteTypes {
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AnalyticsIndexRoute: typeof AnalyticsIndexRoute
   AuthIndexRoute: typeof AuthIndexRoute
   CiCdIndexRoute: typeof CiCdIndexRoute
   CodeEditorsIndexRoute: typeof CodeEditorsIndexRoute
   DatabaseHostsIndexRoute: typeof DatabaseHostsIndexRoute
   DatabasesIndexRoute: typeof DatabasesIndexRoute
   DesignIndexRoute: typeof DesignIndexRoute
+  DiagnosticsIndexRoute: typeof DiagnosticsIndexRoute
   FrameworksIndexRoute: typeof FrameworksIndexRoute
   FrontendLanguagesIndexRoute: typeof FrontendLanguagesIndexRoute
   GraphicDesignIndexRoute: typeof GraphicDesignIndexRoute
@@ -447,12 +489,14 @@ export interface RootRouteChildren {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AnalyticsIndexRoute: AnalyticsIndexRoute,
   AuthIndexRoute: AuthIndexRoute,
   CiCdIndexRoute: CiCdIndexRoute,
   CodeEditorsIndexRoute: CodeEditorsIndexRoute,
   DatabaseHostsIndexRoute: DatabaseHostsIndexRoute,
   DatabasesIndexRoute: DatabasesIndexRoute,
   DesignIndexRoute: DesignIndexRoute,
+  DiagnosticsIndexRoute: DiagnosticsIndexRoute,
   FrameworksIndexRoute: FrameworksIndexRoute,
   FrontendLanguagesIndexRoute: FrontendLanguagesIndexRoute,
   GraphicDesignIndexRoute: GraphicDesignIndexRoute,
@@ -478,12 +522,14 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
+        "/analytics/",
         "/auth/",
         "/ci-cd/",
         "/code-editors/",
         "/database-hosts/",
         "/databases/",
         "/design/",
+        "/diagnostics/",
         "/frameworks/",
         "/frontend-languages/",
         "/graphic-design/",
@@ -500,6 +546,9 @@ export const routeTree = rootRoute
     },
     "/": {
       "filePath": "index.tsx"
+    },
+    "/analytics/": {
+      "filePath": "analytics/index.tsx"
     },
     "/auth/": {
       "filePath": "auth/index.tsx"
@@ -518,6 +567,9 @@ export const routeTree = rootRoute
     },
     "/design/": {
       "filePath": "design/index.tsx"
+    },
+    "/diagnostics/": {
+      "filePath": "diagnostics/index.tsx"
     },
     "/frameworks/": {
       "filePath": "frameworks/index.tsx"

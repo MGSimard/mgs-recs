@@ -1,20 +1,26 @@
 import {
+  Activity,
   BookOpen,
   BookType,
+  ChartLine,
   Clapperboard,
   Code,
   Database,
   DatabaseZap,
   DollarSign,
   FileImage,
+  FileScan,
   KeyRound,
   Layers,
   LayoutGrid,
   Lightbulb,
   Mail,
   PenTool,
+  SearchCheck,
   Server,
   Shapes,
+  ShieldAlert,
+  Stethoscope,
   Table,
   Workflow,
 } from "lucide-react";
@@ -237,7 +243,48 @@ export const NavLinks = {
           },
         ],
       },
-
+      {
+        title: "Analytics",
+        url: "/analytics",
+        icon: ChartLine,
+        items: [
+          {
+            title: "PostHog",
+            url: "/analytics#posthog",
+          },
+          {
+            title: "Plausible",
+            url: "/analytics#plausible",
+          },
+          {
+            title: "Google Analytics",
+            url: "/analytics#google-analytics",
+          },
+        ],
+      },
+      {
+        title: "Diagnostics",
+        url: "/diagnostics",
+        icon: Activity,
+        items: [
+          {
+            title: "Sentry",
+            url: "/diagnostics#sentry",
+          },
+          {
+            title: "React Scan",
+            url: "/diagnostics#react-scan",
+          },
+          {
+            title: "Hey Meta",
+            url: "/diagnostics#hey-meta",
+          },
+          {
+            title: "Lighthouse",
+            url: "/diagnostics#lighthouse",
+          },
+        ],
+      },
       {
         title: "CI/CD",
         url: "/ci-cd",
