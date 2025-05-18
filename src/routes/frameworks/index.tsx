@@ -33,8 +33,8 @@ function PageFrameworks() {
             href: "https://github.com/TanStack/create-tsrouter-app/tree/main/cli/create-tsrouter-app",
           },
         ]}
-        subTitle="Lorem ipsum dolor."
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+        subTitle="Most recommended for both new & seasoned React devs."
+        description="This combination utilizes Vite for its modern build tooling, which employs native ES modules during development for a highly efficient workflow and optimized bundling for production. When paired with TanStack Router's type-safe routing capabilities, it provides a contemporary development experience. This Vite and TanStack Router setup can be scaffolded using `create-tsrouter-app`, offering a modern alternative to the older `create-react-app` (CRA) by focusing on an improved developer experience and performant application builds."
         features={[""]}></Section>
 
       <Section
@@ -50,8 +50,8 @@ function PageFrameworks() {
           { label: "TanStack Start", href: "https://tanstack.com/start/latest/docs/overview" },
           { label: "Vite", href: "https://vite.dev/guide/" },
         ]}
-        subTitle="Lorem ipsum dolor."
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+        subTitle="Full-stack development, no strings attached."
+        description="TanStack Start is a full-stack framework integrating Vite and various TanStack libraries. It provides comprehensive tools for client and server development. True to its 'no strings attached' philosophy, it avoids proprietary platform lock-in features, offering developers greater freedom in choosing their hosting and infrastructure, unlike Next.js and Vercel."
         features={[""]}></Section>
 
       <Section
@@ -61,8 +61,8 @@ function PageFrameworks() {
         title="Next.js"
         links={[{ label: "Next.js", href: "https://nextjs.org/" }]}
         docsLinks={[{ label: "Next.js", href: "https://nextjs.org/docs" }]}
-        subTitle="Lorem ipsum dolor."
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+        subTitle="The most popular full-stack framework."
+        description="Next.js is a React framework for building full-stack web applications, primarily using its App Router paradigm. This supports server-side rendering with Server Components, static site generation, and client-side rendering. It simplifies page creation with a file-system based router. A key feature is Server Actions, which enable server-side code execution directly within React components, streamlining data mutations and API interactions. For data fetching, the App Router allows direct `async/await` in Server Components and utilizes Route Handlers for creating API endpoints, facilitating seamless integration with any data source or library. Its notable ecosystem makes it suitable for a variety of project scales."
         features={[""]}></Section>
 
       <Section
@@ -72,8 +72,8 @@ function PageFrameworks() {
         title="Payload"
         links={[{ label: "Payload", href: "https://payloadcms.com/" }]}
         docsLinks={[{ label: "Payload", href: "https://payloadcms.com/docs" }]}
-        subTitle="Lorem ipsum dolor."
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+        subTitle="Headless CMS & app framework built on Next.js."
+        description="Payload is a headless CMS and application framework built with TypeScript. It features a customizable admin interface and provides tools for backend services, access control, and content APIs. It can be integrated with various front-end frameworks, including Next.js."
         features={[""]}></Section>
 
       <Section
@@ -83,8 +83,8 @@ function PageFrameworks() {
         title="Fumadocs"
         links={[{ label: "Fumadocs", href: "https://fumadocs.dev/" }]}
         docsLinks={[{ label: "Fumadocs", href: "https://fumadocs.dev/docs/" }]}
-        subTitle="Lorem ipsum dolor."
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+        subTitle="Next.js-based documentation generator."
+        description="Fumadocs is a documentation generator built on Next.js that uses MDX. It is designed to simplify the creation of documentation websites, focusing on readability and navigation, allowing developers to concentrate on content creation."
         features={[""]}></Section>
     </>
   );
