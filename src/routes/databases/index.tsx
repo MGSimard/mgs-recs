@@ -1,6 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/_components/Section";
-import { LogoDexieJs, LogoGoogleSheets, LogoMySQL, LogoPostgreSQL, LogoRedis } from "@/_components/Icons";
+import {
+  LogoDexieJs,
+  LogoGoogleSheets,
+  LogoLocalStorage,
+  LogoMySQL,
+  LogoPostgreSQL,
+  LogoRedis,
+} from "@/_components/Icons";
 
 export const Route = createFileRoute("/databases/")({
   component: PageDatabases,
@@ -56,8 +63,8 @@ function PageDatabases() {
 
       <Section
         id="localstorage"
-        className=""
-        icon=""
+        className="bg-[oklch(0.25_0_0)]"
+        logo={<LogoLocalStorage />}
         title="localStorage"
         docsLinks={[
           { label: "localStorage", href: "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" },
