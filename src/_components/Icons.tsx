@@ -363,7 +363,7 @@ export function LogoNeon(props: React.SVGProps<SVGSVGElement>) {
 
 export function LogoPlanetScale(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 256">
+    <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 256" {...props}>
       <path
         fill="#fff"
         d="M256 128a128 128 0 01-128 128zM128 0c52 0 96.7 31 116.8 75.5L75.5 244.8c-7.3-3.3-14.2-7.2-20.7-11.7L160 128h-32l-90.5 90.5A128 128 0 01128 0z"
@@ -374,7 +374,7 @@ export function LogoPlanetScale(props: React.SVGProps<SVGSVGElement>) {
 
 export function LogoPostgreSQL(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 432.071 445.383" xmlSpace="preserve">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 432.071 445.383" xmlSpace="preserve" {...props}>
       <g
         id="Layer_x0020_3"
         fillRule="nonzero"
@@ -454,9 +454,9 @@ export function LogoLocalStorage(props: React.SVGProps<SVGSVGElement>) {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...props}>
       <line x1="22" x2="2" y1="12" y2="12" />
       <path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" />
@@ -468,7 +468,7 @@ export function LogoLocalStorage(props: React.SVGProps<SVGSVGElement>) {
 
 export function LogoGoogleSheets(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74 100" fill="none">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74 100" fill="none" {...props}>
       <mask id="mask0_1:52" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="1" y="1" width="71" height="98">
         <path
           d="M45.398 1.43036H7.86688C4.22415 1.43036 1.24374 4.41077 1.24374 8.0535V91.9465C1.24374 95.5893 4.22415 98.5697 7.86688 98.5697H65.2674C68.9101 98.5697 71.8905 95.5893 71.8905 91.9465V27.9229L45.398 1.43036Z"
@@ -565,8 +565,8 @@ export function LogoGoogleSheets(props: React.SVGProps<SVGSVGElement>) {
           x2="59.6142"
           y2="50.5388"
           gradientUnits="userSpaceOnUse">
-          <stop stop-color="#333333" stop-opacity="0.2" />
-          <stop offset="1" stop-color="#333333" stop-opacity="0.02" />
+          <stop stopColor="#333333" stopOpacity="0.2" />
+          <stop offset="1" stopColor="#333333" stopOpacity="0.02" />
         </linearGradient>
         <radialGradient
           id="paint1_radial_1:52"
@@ -575,8 +575,8 @@ export function LogoGoogleSheets(props: React.SVGProps<SVGSVGElement>) {
           r="1"
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(3.48187 3.36121) scale(113.917)">
-          <stop stop-color="white" stop-opacity="0.1" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" stopOpacity="0.1" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </radialGradient>
       </defs>
     </svg>
@@ -724,8 +724,8 @@ export function LogoNextjs(props: React.SVGProps<SVGSVGElement>) {
           y2="-48.83"
           gradientTransform="translate(0 984.37) scale(1 -1)"
           gradientUnits="userSpaceOnUse">
-          <stop offset="0" stop-color="#fff" />
-          <stop offset="1" stop-color="#fff" stop-opacity="0" />
+          <stop offset="0" stopColor="#fff" />
+          <stop offset="1" stopColor="#fff" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="linear-gradient-2"
@@ -768,7 +768,7 @@ export function LogoPayload(props: React.SVGProps<SVGSVGElement>) {
 export function LogoFumaDocs(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" {...props}>
-      <circle cx="90" cy="90" r="89" fill="url(#fumadocs-gradient)" stroke="#fff" stroke-width="1"></circle>
+      <circle cx="90" cy="90" r="89" fill="url(#fumadocs-gradient)" stroke="#fff" strokeWidth="1"></circle>
       <defs>
         <linearGradient id="fumadocs-gradient" gradientTransform="rotate(45)">
           <stop offset="45%" stopColor="#000"></stop>
@@ -972,12 +972,12 @@ export function LogoStripe(props: React.SVGProps<SVGSVGElement>) {
 export function LogoPolar(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 300 300" {...props}>
-      <g clip-path="url(#a)">
+      <g clipPath="url(#a)">
         <path
           fill="#fff"
-          fill-rule="evenodd"
+          fillRule="evenodd"
           d="M66.428 274.26c68.448 46.333 161.497 28.406 207.83-40.041 46.335-68.448 28.408-161.497-40.04-207.83C165.77-19.946 72.721-2.019 26.388 66.428-19.948 134.878-2.02 227.928 66.427 274.26ZM47.956 116.67c-17.119 52.593-11.412 105.223 11.29 139.703C18.04 217.361 7.275 150.307 36.943 92.318c18.971-37.082 50.622-62.924 85.556-73.97-31.909 18.363-59.945 53.466-74.544 98.322Zm127.391 166.467c36.03-10.531 68.864-36.752 88.338-74.815 29.416-57.497 19.083-123.905-21.258-163.055 21.793 34.496 27.046 86.275 10.204 138.02-15.016 46.134-44.246 81.952-77.284 99.85Zm8.28-16.908c24.318-20.811 44.389-55.625 53.308-97.439 14.098-66.097-4.384-127.592-41.823-148.113 19.858 26.718 29.91 78.613 23.712 136.656-4.739 44.391-18.01 83.26-35.197 108.896ZM63.717 131.844c-14.201 66.586 4.66 128.501 42.657 148.561-20.378-26.396-30.777-78.891-24.498-137.694 4.661-43.657 17.574-81.974 34.349-107.614-23.957 20.886-43.687 55.392-52.507 96.747Zm136.117 17.717c1.074 67.912-20.244 123.317-47.612 123.748-27.369.433-50.425-54.27-51.498-122.182-1.073-67.913 20.244-123.318 47.613-123.75 27.368-.432 50.425 54.271 51.497 122.184Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
       </g>
       <defs>
@@ -992,7 +992,7 @@ export function LogoPolar(props: React.SVGProps<SVGSVGElement>) {
 export function LogoShadcn(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" {...props}>
-      <path fill="none" stroke="#fff" stroke-width="25" stroke-linecap="round" d="M208 128l-80 80M192 40L40 192" />
+      <path fill="none" stroke="#fff" strokeWidth="25" strokeLinecap="round" d="M208 128l-80 80M192 40L40 192" />
     </svg>
   );
 }
@@ -1096,7 +1096,7 @@ export function LogoSentry(props: React.SVGProps<SVGSVGElement>) {
 export function LogoReactScan(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 844 844" fill="none" {...props}>
-      <rect x="1" width="841" height="842" rx="115" fill="#fff" fill-opacity="0.1" />
+      <rect x="1" width="841" height="842" rx="115" fill="#fff" fillOpacity="0.1" />
       <g>
         <path
           d="M422.637 359.088C388.411 359.088 360.666 386.777 360.666 420.933C360.666 455.089 388.411 482.777 422.637 482.777C456.863 482.777 484.608 455.089 484.608 420.933C484.608 386.777 456.863 359.088 422.637 359.088Z"
@@ -1116,9 +1116,9 @@ export function LogoReactScan(props: React.SVGProps<SVGSVGElement>) {
         <path
           d="M644.5 21.5H733.5C757.104 21.5 779.742 30.8768 796.432 47.5675C813.123 64.2582 822.5 86.8957 822.5 110.5V199.5"
           stroke="#fff"
-          stroke-width="42.6667"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="42.6667"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M822.5 644.5V733.5C822.5 757.105 813.123 779.742 796.432 796.433C779.742 813.123 757.104 822.5 733.5 822.5H644.5"
