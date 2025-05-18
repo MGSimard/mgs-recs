@@ -131,6 +131,7 @@
   }
 }
 
+/**/
 html {
   font-family: var(--coreFont);
 }
@@ -145,7 +146,11 @@ h6 {
 p {
   letter-spacing: 0.008em;
 }
-
+#tailwind-sux {
+  scrollbar-width: thin;
+  scrollbar-color: var(--sidebar-border) transparent;
+}
+/**/
 /* * {
   outline: 1px solid red !important;
 } */
