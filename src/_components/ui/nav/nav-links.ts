@@ -75,7 +75,6 @@ export const NavLinks = {
         title: "Frameworks",
         url: "/frameworks",
         icon: Layers,
-        isActive: true,
         items: [
           {
             title: "Vite + TanStack Router",
