@@ -46,11 +46,11 @@ export function NavMain({
           return (
             <NavItem
               key={item.title}
-              {...item}
               isActive={isItemActive}
               isAnySubItemActive={isAnySubItemActive}
               state={state}
               isMobile={isMobile}
+              {...item}
             />
           );
         })}
