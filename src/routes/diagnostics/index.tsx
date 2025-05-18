@@ -44,7 +44,7 @@ function PageDiagnostics() {
 
       <Section
         id="lighthouse"
-        className="bg-[radial-gradient(circle_at_center_calc(50%-0.5rem),oklch(0.95_0.1242_103.05)0.5rem,transparent_2rem),linear-gradient(135deg,oklch(0.5_0.1858_265.53),oklch(0.42_0.2196_264.08))]"
+        className="bg-[radial-gradient(circle_at_center_calc(50%-0.5rem),oklch(0.95_0.1242_103.05)0.5rem,transparent_2rem),linear-gradient(135deg,oklch(0.5_0.1858_265.53),oklch(0.42_0.2196_264.08))] bg-blend-overlay"
         logo={<LogoLighthouse />}
         title="Lighthouse"
         links={[
