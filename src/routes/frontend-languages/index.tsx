@@ -33,7 +33,7 @@ function PageFrontendLanguages() {
           { label: "W3Schools CSS", href: "https://www.w3schools.com/css/" },
         ]}
         subTitle="Cascading Style Sheets"
-        description="CSS3 extends CSS2.1 by introducing new modules and features for styling. These include advanced selectors, box model enhancements, flexible box layout (Flexbox), grid layout, animations, and transitions."
+        description="CSS is a stylesheet language for styling web pages. CSS3 enhances this with new modules and features like advanced selectors, improved box model, layout systems (Flexbox, Grid), animations, and transitions for richer UIs."
         features={[""]}></Section>
 
       <Section
@@ -46,7 +46,7 @@ function PageFrontendLanguages() {
           { label: "W3Schools JavaScript", href: "https://www.w3schools.com/js/" },
         ]}
         subTitle="ECMAScript 6 and beyond"
-        description="JavaScript (ES6+) is a dynamic, high-level language for client-side interactivity and Document Object Model (DOM) manipulation. ECMAScript 2015 (ES6) and subsequent versions introduced features such as arrow functions, classes, and modules."
+        description="JavaScript is a dynamic, high-level language for client-side interactivity and Document Object Model (DOM) manipulation. ECMAScript 2015 (ES6) and subsequent versions introduced features such as arrow functions, classes, and modules."
         features={[""]}></Section>
 
       <Section
@@ -56,8 +56,8 @@ function PageFrontendLanguages() {
         title="TypeScript"
         links={[{ label: "TypeScript", href: "https://www.typescriptlang.org/" }]}
         docsLinks={[{ label: "TypeScript", href: "https://www.typescriptlang.org/docs/" }]}
-        subTitle="JavaScript with static types"
-        description="TypeScript is a superset of JavaScript that introduces optional static typing. This allows for type checking during compilation. It supports modern JavaScript features and integrates with existing JavaScript codebases."
+        subTitle="JavaScript with static types and more"
+        description="TypeScript enhances JavaScript with optional static typing for compile-time checks. It also provides OOP features (classes, interfaces), advanced types (generics, enums), and modern JS support, improving code quality and maintainability within large projects."
         features={[""]}></Section>
     </>
   );
