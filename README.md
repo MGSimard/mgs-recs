@@ -15,7 +15,6 @@ Really was just looking for an excuse to try out ~~Mantine UI~~ shadcn/ui.
 ## Task List
 
 - [ ] Build a card layout component for stuff
-- [ ] Fix bg color of sidebar hover tooltips
 - [ ] Thin scroll bar for sidebar
 - [ ] Neon acquired by databricks
 - [ ] Good info to relay https://www.youtube.com/watch?v=PgGV5dTNu9A
