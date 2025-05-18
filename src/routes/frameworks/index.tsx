@@ -73,7 +73,7 @@ function PageFrameworks() {
         links={[{ label: "Payload", href: "https://payloadcms.com/" }]}
         docsLinks={[{ label: "Payload", href: "https://payloadcms.com/docs" }]}
         subTitle="Headless CMS & app framework built on Next.js."
-        description="Payload is a headless CMS and application framework built with TypeScript. It features a customizable admin interface and provides tools for backend services, access control, and content APIs. It can be integrated with various front-end frameworks, including Next.js."
+        description="Payload is a flexible headless CMS and application framework designed for developers. It offers a highly customizable admin interface, robust tools for backend services, granular access control for content and operations, and extensible APIs. This allows for deep integration with various front-end frameworks, such as Next.js, to build tailored content-driven applications."
         features={[""]}></Section>
 
       <Section
@@ -84,7 +84,7 @@ function PageFrameworks() {
         links={[{ label: "Fumadocs", href: "https://fumadocs.dev/" }]}
         docsLinks={[{ label: "Fumadocs", href: "https://fumadocs.dev/docs/" }]}
         subTitle="Next.js-based documentation generator."
-        description="Fumadocs is a documentation generator built on Next.js that uses MDX. It is designed to simplify the creation of documentation websites, focusing on readability and navigation, allowing developers to concentrate on content creation."
+        description="Fumadocs is a documentation generator using MDX, built on Next.js. It is designed to simplify the creation of documentation websites, focusing on readability and navigation, allowing developers to concentrate on content creation."
         features={[""]}></Section>
     </>
   );
