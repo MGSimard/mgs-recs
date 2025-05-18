@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/_components/Section";
-import { LogoGoogleSheets, LogoHTML, LogoMySQL, LogoPostgreSQL, LogoRedis } from "@/_components/Icons";
+import { LogoDexieJs, LogoGoogleSheets, LogoMySQL, LogoPostgreSQL, LogoRedis } from "@/_components/Icons";
 
 export const Route = createFileRoute("/databases/")({
   component: PageDatabases,
@@ -20,6 +20,7 @@ function PageDatabases() {
         subTitle="Lorem ipsum dolor."
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
         features={[""]}></Section>
+
       <Section
         id="mysql"
         className="bg-[oklch(0.41_0.078072_224.3437)]"
@@ -30,6 +31,7 @@ function PageDatabases() {
         subTitle="Lorem ipsum dolor."
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
         features={[""]}></Section>
+
       <Section
         id="redis"
         className="bg-[oklch(0.66_0.2246_28.55)]"
@@ -40,15 +42,18 @@ function PageDatabases() {
         subTitle="Lorem ipsum dolor."
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
         features={[""]}></Section>
+
       <Section
-        id="indexeddb"
-        className=""
-        icon=""
-        title="IndexedDB"
-        docsLinks={[{ label: "IndexedDB", href: "https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API" }]}
+        id="dexiejs"
+        className="bg-[oklch(0.25_0_0)]"
+        logo={<LogoDexieJs />}
+        title="Dexie.js"
+        links={[{ label: "Dexie.js", href: "https://dexie.org/" }]}
+        docsLinks={[{ label: "Dexie.js", href: "https://dexie.org/docs/Tutorial/Getting-started" }]}
         subTitle="Lorem ipsum dolor."
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
         features={[""]}></Section>
+
       <Section
         id="localstorage"
         className=""
@@ -60,6 +65,7 @@ function PageDatabases() {
         subTitle="Lorem ipsum dolor."
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
         features={[""]}></Section>
+
       <Section
         id="google-sheets"
         className="bg-[oklch(0.61_0.1507_154.1)]"
