@@ -28,8 +28,8 @@ function PageDatabaseHosts() {
         title="Supabase"
         links={[{ label: "Supabase", href: "https://supabase.com/" }]}
         docsLinks={[{ label: "Supabase", href: "https://supabase.com/docs/" }]}
-        subTitle="Open-source alternative to Firebase."
-        description="Supabase is an open-source platform that provides a suite of tools to build backends, aiming to be an alternative to Firebase. At its core is a PostgreSQL database. Built on top of AWS infrastructure, Supabase offers a managed service with integrated authentication, real-time subscriptions, serverless functions, and storage alongside the database. It provides a comprehensive backend-as-a-service experience with the flexibility of open source."
+        subTitle="Open source alternative to Firebase."
+        description="Supabase is an open source platform that provides a suite of tools to build backends, aiming to be an alternative to Firebase. At its core is a PostgreSQL database. Built on top of AWS infrastructure, Supabase offers a managed service with integrated authentication, real-time subscriptions, serverless functions, and storage alongside the database. It provides a comprehensive backend-as-a-service experience with the flexibility of open source."
         features={[""]}></Section>
 
       <Section

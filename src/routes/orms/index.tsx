@@ -29,7 +29,7 @@ function PageOrms() {
         links={[{ label: "Prisma ORM", href: "https://www.prisma.io/orm/" }]}
         docsLinks={[{ label: "Prisma ORM", href: "https://www.prisma.io/docs/orm/" }]}
         subTitle="Schema-driven, type-safe database client."
-        description="Prisma is an open-source ORM and database toolkit focused on developer productivity and ease of use. Unlike Drizzle, which emphasizes writing SQL-like queries directly in TypeScript, Prisma uses a schema definition file to model your data and generates a type-safe client for database access. Prisma offers a polished visual database browser (Prisma Studio), robust migrations, and broad database support. Its approach is ideal for teams seeking a higher-level abstraction and automated client generation, while Drizzle appeals to those who prefer more direct, SQL-like control in their code."
+        description="Prisma is an open source ORM and database toolkit focused on developer productivity and ease of use. Unlike Drizzle, which emphasizes writing SQL-like queries directly in TypeScript, Prisma uses a schema definition file to model your data and generates a type-safe client for database access. Prisma offers a polished visual database browser (Prisma Studio), robust migrations, and broad database support. Its approach is ideal for teams seeking a higher-level abstraction and automated client generation, while Drizzle appeals to those who prefer more direct, SQL-like control in their code."
         features={[]}></Section>
     </>
   );
