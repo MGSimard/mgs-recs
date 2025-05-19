@@ -13,6 +13,7 @@
 import { Route as rootRoute } from './routes/__root'
 import { Route as IndexImport } from './routes/index'
 import { Route as VideoEditingIndexImport } from './routes/video-editing/index'
+import { Route as VersionControlIndexImport } from './routes/version-control/index'
 import { Route as VectorGraphicsIndexImport } from './routes/vector-graphics/index'
 import { Route as ValidationIndexImport } from './routes/validation/index'
 import { Route as UiLibrariesIndexImport } from './routes/ui-libraries/index'
@@ -45,6 +46,12 @@ const IndexRoute = IndexImport.update({
 const VideoEditingIndexRoute = VideoEditingIndexImport.update({
   id: '/video-editing/',
   path: '/video-editing/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const VersionControlIndexRoute = VersionControlIndexImport.update({
+  id: '/version-control/',
+  path: '/version-control/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -319,6 +326,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof VectorGraphicsIndexImport
       parentRoute: typeof rootRoute
     }
+    '/version-control/': {
+      id: '/version-control/'
+      path: '/version-control'
+      fullPath: '/version-control'
+      preLoaderRoute: typeof VersionControlIndexImport
+      parentRoute: typeof rootRoute
+    }
     '/video-editing/': {
       id: '/video-editing/'
       path: '/video-editing'
@@ -353,6 +367,7 @@ export interface FileRoutesByFullPath {
   '/ui-libraries': typeof UiLibrariesIndexRoute
   '/validation': typeof ValidationIndexRoute
   '/vector-graphics': typeof VectorGraphicsIndexRoute
+  '/version-control': typeof VersionControlIndexRoute
   '/video-editing': typeof VideoEditingIndexRoute
 }
 
@@ -378,6 +393,7 @@ export interface FileRoutesByTo {
   '/ui-libraries': typeof UiLibrariesIndexRoute
   '/validation': typeof ValidationIndexRoute
   '/vector-graphics': typeof VectorGraphicsIndexRoute
+  '/version-control': typeof VersionControlIndexRoute
   '/video-editing': typeof VideoEditingIndexRoute
 }
 
@@ -404,6 +420,7 @@ export interface FileRoutesById {
   '/ui-libraries/': typeof UiLibrariesIndexRoute
   '/validation/': typeof ValidationIndexRoute
   '/vector-graphics/': typeof VectorGraphicsIndexRoute
+  '/version-control/': typeof VersionControlIndexRoute
   '/video-editing/': typeof VideoEditingIndexRoute
 }
 
@@ -431,6 +448,7 @@ export interface FileRouteTypes {
     | '/ui-libraries'
     | '/validation'
     | '/vector-graphics'
+    | '/version-control'
     | '/video-editing'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -455,6 +473,7 @@ export interface FileRouteTypes {
     | '/ui-libraries'
     | '/validation'
     | '/vector-graphics'
+    | '/version-control'
     | '/video-editing'
   id:
     | '__root__'
@@ -479,6 +498,7 @@ export interface FileRouteTypes {
     | '/ui-libraries/'
     | '/validation/'
     | '/vector-graphics/'
+    | '/version-control/'
     | '/video-editing/'
   fileRoutesById: FileRoutesById
 }
@@ -505,6 +525,7 @@ export interface RootRouteChildren {
   UiLibrariesIndexRoute: typeof UiLibrariesIndexRoute
   ValidationIndexRoute: typeof ValidationIndexRoute
   VectorGraphicsIndexRoute: typeof VectorGraphicsIndexRoute
+  VersionControlIndexRoute: typeof VersionControlIndexRoute
   VideoEditingIndexRoute: typeof VideoEditingIndexRoute
 }
 
@@ -530,6 +551,7 @@ const rootRouteChildren: RootRouteChildren = {
   UiLibrariesIndexRoute: UiLibrariesIndexRoute,
   ValidationIndexRoute: ValidationIndexRoute,
   VectorGraphicsIndexRoute: VectorGraphicsIndexRoute,
+  VersionControlIndexRoute: VersionControlIndexRoute,
   VideoEditingIndexRoute: VideoEditingIndexRoute,
 }
 
@@ -564,6 +586,7 @@ export const routeTree = rootRoute
         "/ui-libraries/",
         "/validation/",
         "/vector-graphics/",
+        "/version-control/",
         "/video-editing/"
       ]
     },
@@ -629,6 +652,9 @@ export const routeTree = rootRoute
     },
     "/vector-graphics/": {
       "filePath": "vector-graphics/index.tsx"
+    },
+    "/version-control/": {
+      "filePath": "version-control/index.tsx"
     },
     "/video-editing/": {
       "filePath": "video-editing/index.tsx"

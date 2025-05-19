@@ -10,6 +10,7 @@ import {
   DatabaseZap,
   DollarSign,
   FileImage,
+  GitBranch,
   KeyRound,
   Layers,
   LayoutGrid,
@@ -236,6 +237,21 @@ export const NavLinks = {
           {
             title: "Resend",
             url: "/mailing#resend",
+          },
+        ],
+      },
+      {
+        title: "Version Control",
+        url: "/version-control",
+        icon: GitBranch,
+        items: [
+          {
+            title: "Git",
+            url: "/version-control#git",
+          },
+          {
+            title: "GitHub",
+            url: "/version-control#github",
           },
         ],
       },
