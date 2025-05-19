@@ -1,4 +1,10 @@
-@import "tailwindcss";
+@import "tailwindcss" source("../");
+/* 
+* @import "tailwindcss"; on its own causes hydration errors, 
+* server & client css module file name don't resolve as the same 
+* https://github.com/TanStack/router/issues/2899#issuecomment-2614144714
+* https://tailwindcss.com/docs/detecting-classes-in-source-files#setting-your-base-path
+*/
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
