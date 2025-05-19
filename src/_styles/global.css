@@ -150,7 +150,33 @@ p {
   scrollbar-width: thin;
   scrollbar-color: var(--sidebar-border) transparent;
 }
+.rdx-collapsible {
+  overflow: hidden;
+}
+.rdx-collapsible[data-state="open"] {
+  animation: slideDown 0.2s ease-out;
+}
+.rdx-collapsible[data-state="closed"] {
+  animation: slideUp 0.2s ease-out;
+}
+@keyframes slideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-collapsible-content-height);
+  }
+}
+@keyframes slideUp {
+  from {
+    height: var(--radix-collapsible-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
 /**/
+
 /* * {
   outline: 1px solid red !important;
 } */

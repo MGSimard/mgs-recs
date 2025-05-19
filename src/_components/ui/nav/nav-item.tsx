@@ -55,7 +55,7 @@ export function NavItem({
               </SidebarMenuButton>
             </CollapsibleTrigger>
             {items && (
-              <CollapsibleContent>
+              <CollapsibleContent className="rdx-collapsible">
                 <SidebarMenuSub>
                   <NavSubItems items={items} />
                 </SidebarMenuSub>
