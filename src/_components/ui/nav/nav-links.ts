@@ -119,12 +119,12 @@ export const NavLinks = {
         icon: Shapes,
         items: [
           {
-            title: "Heroicons",
-            url: "/icon-libraries#heroicons",
-          },
-          {
             title: "Lucide",
             url: "/icon-libraries#lucide",
+          },
+          {
+            title: "Heroicons",
+            url: "/icon-libraries#heroicons",
           },
           {
             title: "svgl",
