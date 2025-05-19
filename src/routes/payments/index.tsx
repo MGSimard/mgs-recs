@@ -16,9 +16,12 @@ function PagePayments() {
         logo={<LogoStripe />}
         title="Stripe"
         links={[{ label: "Stripe", href: "https://stripe.com/" }]}
-        docsLinks={[{ label: "Stripe", href: "https://docs.stripe.com/" }]}
-        subTitle="Lorem ipsum dolor."
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+        docsLinks={[
+          { label: "Stripe", href: "https://docs.stripe.com/" },
+          { label: "Theo's Stripe Recommendations", href: "https://github.com/t3dotgg/stripe-recommendations/" },
+        ]}
+        subTitle="Comprehensive payments infrastructure."
+        description="Stripe is a leading payments and financial infrastructure platform used by millions of businesses worldwide. It enables you to accept payments online and in person, manage subscriptions, automate revenue operations, and embed financial services with a unified API and prebuilt UI components. Stripe supports 100+ payment methods, 135+ currencies, and offers features like fraud prevention, tax automation, invoicing, and global payouts. While Stripe is powerful, integration can be complex. You are responsible for syncing payment state between Stripe and your own database, handling webhooks, and managing race conditions to avoid mismatches in subscription status. You also need to manage customer and subscription data, environment variables, price IDs, and free trials yourself. Despite these challenges, Stripe remains the industry standard for scalable, secure, and customizable payment solutions. More info on this can be found on the third linked resource at the top of this card."
         features={[]}></Section>
 
       <Section
@@ -28,8 +31,8 @@ function PagePayments() {
         title="Polar"
         links={[{ label: "Polar", href: "https://polar.sh/" }]}
         docsLinks={[{ label: "Polar", href: "https://docs.polar.sh/" }]}
-        subTitle="Lorem ipsum dolor."
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+        subTitle="Open source merchant-of-record platform."
+        description="Polar is a modern, open source payment and billing platform built for SaaS and digital products. It supports flexible pricing models, usage-based billing, automated benefits, and a robust entitlements engine for features like license keys, downloads, and Discord or GitHub access. As a global merchant of record, Polar manages tax compliance, invoicing, and payouts, and is easy to integrate via a developer-friendly API, no-code tools, and adapters for popular frameworks. Fees are transparent: 4% + 40¢ per transaction (including Stripe's fees), which is typically more cost-effective than combining Stripe with additional merchant-of-record services."
         features={[]}></Section>
     </>
   );

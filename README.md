@@ -21,3 +21,4 @@ Really was just looking for an excuse to try out ~~Mantine UI~~ ~~shadcn/ui~~ ta
 - [ ] Find a category type to shove in stuff like TanStack Query
 - [ ] Put that color picker stuff and color converters in creative section
 - [ ] Add git in ci/cd lol
+- [ ] Talk about Stripe & Polar integrations with Better Auth
