@@ -17,8 +17,8 @@ function PageHosting() {
         title="Cloudflare Pages"
         links={[{ label: "Cloudflare Pages", href: "https://pages.cloudflare.com/" }]}
         docsLinks={[{ label: "Cloudflare Pages", href: "https://developers.cloudflare.com/pages/" }]}
-        subTitle="Lorem ipsum dolor."
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+        subTitle="Effortless, virtually zero cost, scalable web hosting."
+        description="Cloudflare Pages is a JAMstack platform for frontend developers to build, collaborate, and deploy both static and dynamic sites. With deep Git integration, automated builds, and unlimited free collaborators, you can deploy directly from your repository with every push. Dynamic functionality is powered by Cloudflare Workers, enabling serverless functions and APIs alongside your static assets. Sites are served globally from Cloudflare's edge network for unmatched speed, security, and reliability, with automatic SSL and privacy-first analytics included. Cloudflare Pages can handle virtually unlimited traffic and bandwidth at no cost for most use cases, making it an ideal choice for effortless, infinitely scalable, and maintenance-free hosting."
         features={[""]}></Section>
 
       <Section
@@ -28,8 +28,8 @@ function PageHosting() {
         title="Vercel"
         links={[{ label: "Vercel", href: "https://vercel.com/" }]}
         docsLinks={[{ label: "Vercel", href: "https://vercel.com/docs/" }]}
-        subTitle="Lorem ipsum dolor."
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+        subTitle="Optimized for Next.js and full-stack edge applications."
+        description="Vercel is a cloud platform for deploying and hosting fullstack web applications, designed to deliver fast, reliable experiences at global scale. Its fluid compute technology bridges the gap between traditional servers and serverless, combining efficient resource usage with the flexibility to handle real-time, dynamic workloads like APIs, streaming, and AI. With in-function concurrency, Vercel Functions can process multiple requests simultaneously, reducing idle time and optimizing costs. Features like cold-start reduction, dynamic scaling, and cross-region failover ensure high performance and reliability. Vercel integrates deeply with Next.js for seamless server and client rendering, and its marketplace offers easy connections to databases like Neon and Redis. Developers benefit from instant Git-based deployments, collaborative previews, and a transparent pricing model based on actual execution time, making Vercel a robust choice for modern, data-driven web projects."
         features={[""]}></Section>
 
       <Section
