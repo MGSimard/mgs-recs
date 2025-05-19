@@ -17,8 +17,8 @@ function PageAuth() {
         title="Better Auth"
         links={[{ label: "Better Auth", href: "https://www.better-auth.com/" }]}
         docsLinks={[{ label: "Better Auth", href: "https://better-auth.com/docs/" }]}
-        subTitle="Self-hosted authentication and authorization"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+        subTitle="Own your authentication and authorization"
+        description="Better Auth is a framework-agnostic authentication and authorization library for TypeScript, designed to give you full control over your auth flow without the complexity of self-hosting or the limitations of managed services. It supports most popular frameworks out of the box and includes advanced features like two-factor authentication, multi-tenancy, social sign-on, rate limiting, and automatic database management. With a flexible plugin system and comprehensive documentation, Better Auth lets you keep user data in your own database, avoid third-party lock-in, and extend functionality as your needs grow. This approach helps reduce boilerplate and maintenance overhead. In my own words—just use Better Auth (real em dash btw). "
         features={[""]}></Section>
 
       <Section
@@ -29,7 +29,7 @@ function PageAuth() {
         links={[{ label: "Clerk", href: "https://clerk.com/" }]}
         docsLinks={[{ label: "Clerk", href: "https://clerk.com/docs" }]}
         subTitle="Managed authentication and authorization"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+        description="Clerk is a complete user management and authentication platform for web and mobile applications. It provides prebuilt UI components, flexible APIs, and admin dashboards for sign-in, sign-up, user profiles, and organization management. Clerk supports advanced features like multi-factor authentication, social sign-on, enterprise SSO, and session management, all with strong security and compliance standards. With SDKs for popular frontend and backend frameworks, Clerk makes it easy to add secure, customizable authentication and user management to any stack, while letting you tailor the experience to your brand and workflow. Clerk is essentially one of best options (if not the best) for managed authentication and authorization. If you're working on your first app, I'd recommend using Clerk. After that, experiment with Better Auth and see how you like having greater control over your auth process. As a final note, Clerk will be limited to dev mode UI in production unless you're paying for your own domain."
         features={[""]}></Section>
     </>
   );
