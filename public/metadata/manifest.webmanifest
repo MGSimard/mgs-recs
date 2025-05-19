@@ -1,0 +1,25 @@
+{
+  "name": "MGSimard Recommendations",
+  "short_name": "MGS-Recs",
+  "icons": [
+    {
+      "src": "/metadata/favicon.ico",
+      "sizes": "48x48 32x32 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/metadata/icon192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/metadata/icon512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#fa4242",
+  "background_color": "#18181d"
+}
