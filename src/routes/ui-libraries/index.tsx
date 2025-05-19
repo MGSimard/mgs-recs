@@ -18,7 +18,7 @@ function PageUILibraries() {
         links={[{ label: "shadcn/ui", href: "https://ui.shadcn.com/" }]}
         docsLinks={[{ label: "shadcn/ui", href: "https://ui.shadcn.com/docs/" }]}
         subTitle="Radix-based, Tailwind-friendly."
-        description="shadcn/ui targets developers who want full control over their UI design while maintaining accessibility and composability. Built on top of Radix UI primitives, it provides unstyled, accessible React components that are easy to customize with Tailwind CSS. What sets shadcn/ui apart is its focus on headless components, allowing you to bring your own styles and design system, and its commitment to accessibility and developer ergonomics. It is fully compatible with the latest Tailwind CSS v4 and supports React Server Components, making it a strong choice for projects using the latest React and Tailwind tooling."
+        description="shadcn/ui is for developers who want full control over UI design and accessibility. Built on Radix UI primitives, it provides unstyled, accessible React components meant to be customized with Tailwind CSS. Customization is encouraged, and you may need to adjust semantic tags for best accessibility. The library is fully compatible with Tailwind CSS v4 and React Server Components, making it ideal for modern, flexible React projects."
         features={[]}></Section>
 
       <Section
