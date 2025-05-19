@@ -19,3 +19,5 @@ Really was just looking for an excuse to try out ~~Mantine UI~~ ~~shadcn/ui~~ ta
 - [ ] Good info to relay https://www.youtube.com/watch?v=PgGV5dTNu9A
 - [ ] For UI libraries make sure you talk about compatibility with RSCs
 - [ ] Find a category type to shove in stuff like TanStack Query
+- [ ] Put that color picker stuff and color converters in creative section
+- [ ] Add git in ci/cd lol

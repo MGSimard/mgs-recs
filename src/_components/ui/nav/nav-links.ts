@@ -3,6 +3,7 @@ import {
   BookOpen,
   BookType,
   ChartLine,
+  Check,
   Clapperboard,
   Code,
   Database,
@@ -250,6 +251,21 @@ export const NavLinks = {
           {
             title: "CodeRabbit",
             url: "/ci-cd#coderabbit",
+          },
+        ],
+      },
+      {
+        title: "Validation",
+        url: "/validation",
+        icon: Check,
+        items: [
+          {
+            title: "Zod",
+            url: "/validation#zod",
+          },
+          {
+            title: "T3 Env",
+            url: "/validation#t3-env",
           },
         ],
       },

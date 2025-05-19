@@ -1160,3 +1160,65 @@ export function LogoLighthouse(props: React.SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export function LogoZod(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" {...props}>
+      <defs>
+        <linearGradient
+          id="linear-gradient"
+          x1="466.48"
+          y1="763.2"
+          x2="695.54"
+          y2="166.48"
+          gradientTransform="translate(-.14 -.02)"
+          gradientUnits="userSpaceOnUse">
+          <stop offset="0" stopColor="#fff" stopOpacity=".17" />
+          <stop offset=".48" stopColor="#fff" stopOpacity=".45" />
+          <stop offset="1" stopColor="#fff" stopOpacity=".76" />
+        </linearGradient>
+        <linearGradient
+          id="linear-gradient-2"
+          x1="236.6"
+          y1="709.51"
+          x2="786.88"
+          y2="709.51"
+          gradientUnits="userSpaceOnUse">
+          <stop offset="0" stopColor="#fff" />
+          <stop offset=".31" stopColor="#fff" stopOpacity=".99" />
+          <stop offset=".46" stopColor="#fff" stopOpacity=".96" />
+          <stop offset=".58" stopColor="#fff" stopOpacity=".91" />
+          <stop offset=".68" stopColor="#fff" stopOpacity=".84" />
+          <stop offset=".77" stopColor="#fff" stopOpacity=".74" />
+          <stop offset=".85" stopColor="#fff" stopOpacity=".63" />
+          <stop offset=".92" stopColor="#fff" stopOpacity=".49" />
+          <stop offset=".99" stopColor="#fff" stopOpacity=".33" />
+          <stop offset="1" stopColor="#fff" stopOpacity=".3" />
+        </linearGradient>
+      </defs>
+      <g id="BG">
+        <path
+          d="M821.59,101.3c18.29,0,35.88,5.55,50.86,16.05,14.98,10.5,26.2,25.14,32.44,42.33l103.14,284.12c5.74,15.82,6.56,32.79,2.36,49.09-4.2,16.3-13.11,30.77-25.78,41.85l-422.85,369.79c-13.78,12.05-31.45,18.69-49.76,18.69s-35.98-6.64-49.76-18.69L39.39,534.74c-12.67-11.08-21.58-25.55-25.78-41.85-4.2-16.3-3.38-33.27,2.36-49.09L119.12,159.68c6.24-17.19,17.46-31.83,32.44-42.33,14.98-10.5,32.57-16.05,50.86-16.05h619.18M821.59,92.3H202.41c-41.07,0-77.74,25.7-91.76,64.31L7.52,440.73c-12.97,35.73-2.66,75.76,25.95,100.78l422.85,369.79c15.94,13.94,35.81,20.91,55.69,20.91s39.74-6.97,55.69-20.91l422.85-369.79c28.61-25.02,38.92-65.05,25.95-100.78l-103.14-284.12c-14.01-38.6-50.69-64.31-91.76-64.31h0Z"
+          fill="#fff"
+        />
+      </g>
+      <g id="Z">
+        <path
+          id="Mid"
+          d="M236.6,597.07L848.42,225.19l49.95,138.78c8.97,24.89-.53,52.66-22.87,66.84l-480.59,304.95-158.32-138.69Z"
+          fill="url(#linear-gradient)"
+        />
+        <path
+          id="Bot"
+          d="M786.88,597.07l-242.15,212.54c-18.73,16.44-46.74,16.45-65.48.03l-242.65-212.57h550.28Z"
+          fill="url(#linear-gradient-2)"
+        />
+        <path
+          id="Top"
+          d="M125.23,362.25l52.37-145.29c8.76-24.31,31.82-40.51,57.66-40.51h552.47c25.84,0,48.9,16.2,57.66,40.51l52.99,147.01-773.14-1.72Z"
+          fill="#fff"
+        />
+      </g>
+    </svg>
+  );
+}

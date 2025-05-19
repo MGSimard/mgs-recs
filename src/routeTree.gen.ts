@@ -14,6 +14,7 @@ import { Route as rootRoute } from './routes/__root'
 import { Route as IndexImport } from './routes/index'
 import { Route as VideoEditingIndexImport } from './routes/video-editing/index'
 import { Route as VectorGraphicsIndexImport } from './routes/vector-graphics/index'
+import { Route as ValidationIndexImport } from './routes/validation/index'
 import { Route as UiLibrariesIndexImport } from './routes/ui-libraries/index'
 import { Route as PaymentsIndexImport } from './routes/payments/index'
 import { Route as OrmsIndexImport } from './routes/orms/index'
@@ -50,6 +51,12 @@ const VideoEditingIndexRoute = VideoEditingIndexImport.update({
 const VectorGraphicsIndexRoute = VectorGraphicsIndexImport.update({
   id: '/vector-graphics/',
   path: '/vector-graphics/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const ValidationIndexRoute = ValidationIndexImport.update({
+  id: '/validation/',
+  path: '/validation/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -298,6 +305,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof UiLibrariesIndexImport
       parentRoute: typeof rootRoute
     }
+    '/validation/': {
+      id: '/validation/'
+      path: '/validation'
+      fullPath: '/validation'
+      preLoaderRoute: typeof ValidationIndexImport
+      parentRoute: typeof rootRoute
+    }
     '/vector-graphics/': {
       id: '/vector-graphics/'
       path: '/vector-graphics'
@@ -337,6 +351,7 @@ export interface FileRoutesByFullPath {
   '/orms': typeof OrmsIndexRoute
   '/payments': typeof PaymentsIndexRoute
   '/ui-libraries': typeof UiLibrariesIndexRoute
+  '/validation': typeof ValidationIndexRoute
   '/vector-graphics': typeof VectorGraphicsIndexRoute
   '/video-editing': typeof VideoEditingIndexRoute
 }
@@ -361,6 +376,7 @@ export interface FileRoutesByTo {
   '/orms': typeof OrmsIndexRoute
   '/payments': typeof PaymentsIndexRoute
   '/ui-libraries': typeof UiLibrariesIndexRoute
+  '/validation': typeof ValidationIndexRoute
   '/vector-graphics': typeof VectorGraphicsIndexRoute
   '/video-editing': typeof VideoEditingIndexRoute
 }
@@ -386,6 +402,7 @@ export interface FileRoutesById {
   '/orms/': typeof OrmsIndexRoute
   '/payments/': typeof PaymentsIndexRoute
   '/ui-libraries/': typeof UiLibrariesIndexRoute
+  '/validation/': typeof ValidationIndexRoute
   '/vector-graphics/': typeof VectorGraphicsIndexRoute
   '/video-editing/': typeof VideoEditingIndexRoute
 }
@@ -412,6 +429,7 @@ export interface FileRouteTypes {
     | '/orms'
     | '/payments'
     | '/ui-libraries'
+    | '/validation'
     | '/vector-graphics'
     | '/video-editing'
   fileRoutesByTo: FileRoutesByTo
@@ -435,6 +453,7 @@ export interface FileRouteTypes {
     | '/orms'
     | '/payments'
     | '/ui-libraries'
+    | '/validation'
     | '/vector-graphics'
     | '/video-editing'
   id:
@@ -458,6 +477,7 @@ export interface FileRouteTypes {
     | '/orms/'
     | '/payments/'
     | '/ui-libraries/'
+    | '/validation/'
     | '/vector-graphics/'
     | '/video-editing/'
   fileRoutesById: FileRoutesById
@@ -483,6 +503,7 @@ export interface RootRouteChildren {
   OrmsIndexRoute: typeof OrmsIndexRoute
   PaymentsIndexRoute: typeof PaymentsIndexRoute
   UiLibrariesIndexRoute: typeof UiLibrariesIndexRoute
+  ValidationIndexRoute: typeof ValidationIndexRoute
   VectorGraphicsIndexRoute: typeof VectorGraphicsIndexRoute
   VideoEditingIndexRoute: typeof VideoEditingIndexRoute
 }
@@ -507,6 +528,7 @@ const rootRouteChildren: RootRouteChildren = {
   OrmsIndexRoute: OrmsIndexRoute,
   PaymentsIndexRoute: PaymentsIndexRoute,
   UiLibrariesIndexRoute: UiLibrariesIndexRoute,
+  ValidationIndexRoute: ValidationIndexRoute,
   VectorGraphicsIndexRoute: VectorGraphicsIndexRoute,
   VideoEditingIndexRoute: VideoEditingIndexRoute,
 }
@@ -540,6 +562,7 @@ export const routeTree = rootRoute
         "/orms/",
         "/payments/",
         "/ui-libraries/",
+        "/validation/",
         "/vector-graphics/",
         "/video-editing/"
       ]
@@ -600,6 +623,9 @@ export const routeTree = rootRoute
     },
     "/ui-libraries/": {
       "filePath": "ui-libraries/index.tsx"
+    },
+    "/validation/": {
+      "filePath": "validation/index.tsx"
     },
     "/vector-graphics/": {
       "filePath": "vector-graphics/index.tsx"
