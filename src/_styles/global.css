@@ -1,3 +1,4 @@
+/* Ignore error */
 @import "tailwindcss" source("../");
 /* 
 * @import "tailwindcss"; on its own causes hydration errors, 
