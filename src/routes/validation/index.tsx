@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/_components/Section";
-import { LogoZod } from "@/_components/Icons";
+import { LogoT3Env, LogoZod } from "@/_components/Icons";
 
 export const Route = createFileRoute("/validation/")({
   component: PageValidation,
@@ -22,13 +22,13 @@ function PageValidation() {
 
       <Section
         id="t3-env"
-        className=""
-        logo=""
+        className="bg-[linear-gradient(oklch(0.2795_0.1569_289.93),oklch(0.2072_0.0454_277.9))]"
+        logo={<LogoT3Env />}
         title="T3 Env"
         links={[{ label: "T3 Env", href: "https://env.t3.gg/" }]}
         docsLinks={[{ label: "T3 Env", href: "https://env.t3.gg/docs/introduction/" }]}
         subTitle="Type-safe environment variables."
-        description=""
+        description="T3 Env is a framework-agnostic library for validating and transforming environment variables using Zod. It lets you define a schema for your environment variables, supports transforms and default values, and works safely across both server and client environments. T3 Env helps prevent configuration errors and makes it easier to manage environment variables in TypeScript projects."
         features={[]}></Section>
     </>
   );
