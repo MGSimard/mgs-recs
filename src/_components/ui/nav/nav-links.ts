@@ -169,12 +169,12 @@ export const NavLinks = {
         icon: DatabaseZap,
         items: [
           {
-            title: "Supabase",
-            url: "/database-hosts#supabase",
-          },
-          {
             title: "Neon",
             url: "/database-hosts#neon",
+          },
+          {
+            title: "Supabase",
+            url: "/database-hosts#supabase",
           },
           {
             title: "PlanetScale",
