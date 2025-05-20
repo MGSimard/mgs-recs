@@ -36,7 +36,7 @@ function PageLearning() {
         logo={<img className="object-cover rounded-full" src="/assets/brands/theo.webp" alt="" />}
         title="Theo - t3.gg"
         links={[{ label: "t3dotgg (Youtube)", href: "https://www.youtube.com/@t3dotgg" }]}
-        subTitle="Tech insights and advanced full-stack tutorials."
+        subTitle="Tech insights and intermediate full-stack tutorials."
         description="Theo (t3dotgg) is a YouTube creator known for his engaging commentary on the latest happenings in tech and software development. Alongside his takes on industry trends, he occasionally produces in-depth, mid to advanced, 0-to-production full-stack tutorials that guide viewers through building real-world applications from scratch. His content is especially valuable for developers looking to deepen their understanding of modern full-stack workflows, (almost) best practices, and discovery of useful tools and libraries (sponsored btw)."
         features={[]}></Section>
 
