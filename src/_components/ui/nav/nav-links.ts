@@ -403,6 +403,14 @@ export const NavLinks = {
             title: "PureRef",
             url: "/design#pureref",
           },
+          {
+            title: "Image Color Picker",
+            url: "/design#image-color-picker",
+          },
+          {
+            title: "OKLCH Color Picker & Converter",
+            url: "/design#oklch-color-picker-converter",
+          },
         ],
       },
       {

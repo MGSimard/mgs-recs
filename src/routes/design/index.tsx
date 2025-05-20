@@ -1,6 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/_components/Section";
-import { LogoCanva, LogoExcalidraw, LogoFigma, LogoPureRef } from "@/_components/Icons";
+import {
+  LogoCanva,
+  LogoExcalidraw,
+  LogoFigma,
+  LogoImageColorPicker,
+  LogoOKLCH,
+  LogoPureRef,
+} from "@/_components/Icons";
 
 export const Route = createFileRoute("/design/")({
   component: PageDesign,
@@ -52,6 +59,29 @@ function PageDesign() {
         docsLinks={[{ label: "PureRef", href: "https://www.pureref.com/handbook/" }]}
         subTitle="Lorem ipsum dolor."
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+        features={[""]}></Section>
+
+      <Section
+        id="image-color-picker"
+        className="bg-[oklch(0.5686_0.229174_22.2279)]"
+        logo={<LogoImageColorPicker />}
+        title="Image Color Picker"
+        links={[{ label: "Image Color Picker", href: "https://imagecolorpicker.com/" }]}
+        subTitle="Pick colors from any image."
+        description="Image Color Picker is a free online tool that lets you pick colors directly from any image, right in your browser. Upload, paste, or link to an image, then click to get the exact HEX, RGB, or HSV color code of any pixel. No data is sent—everything happens locally for your privacy."
+        features={[""]}></Section>
+
+      <Section
+        id="oklch-color-picker-converter"
+        className="bg-[linear-gradient(45deg,oklch(70%_0.21_304.5),oklch(70%_0.21_0)50%,oklch(0.70_0.21_49.1),oklch(70%_0.21_49.1))]"
+        logo={<LogoOKLCH />}
+        title="OKLCH Color Picker & Converter"
+        links={[{ label: "OKLCH Color Picker & Converter", href: "https://oklch.com/" }]}
+        docsLinks={[
+          { label: "Why OKLCH?", href: "https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl/" },
+        ]}
+        subTitle="OKLCH is king."
+        description="OKLCH Color Picker & Converter is a modern tool for picking and converting colors in the OKLCH and LCH color spaces. It supports advanced color gamuts like P3 and Rec. 2020, and offers predictable contrast and great accessibility for palette generation. Unlike RGB or HSL, OKLCH is designed for modern CSS and always maintains color accuracy and consistency. Instantly convert between HEX, RGB, HSL, and OKLCH, and explore why OKLCH is the future of color on the web. Note that VSCode doesn't have a built-in OKLCH color preview, so you'll need to install an extension in order to see OKLCH color previews in your code. Curious about why OKLCH is recommended? See the second link at the top of this card for a deep dive into its advantages."
         features={[""]}></Section>
     </>
   );
