@@ -1139,23 +1139,30 @@ export function LogoReactScan(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export function LogoHeyMeta(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" {...props}>
-      <path
-        d="M310.91,24.93H49.28v974.14h261.63v-372.96h403.57v372.96h260.23V24.93h-260.23v381.31h-403.57s0-381.31,0-381.31Z"
-        fill="#fff"
-      />
-    </svg>
-  );
-}
-
 export function LogoLighthouse(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" {...props}>
       <path
         d="M708.77,454.25h46.37v-97.25h-48.63v-194.53l-194.51-121.56-194.52,121.56v194.53h-48.63v97.25h46.39l-67.98,458.85c78.06,44.54,168.43,69.99,264.74,69.99s186.68-25.45,264.74-69.99l-67.97-458.85ZM414.74,216.38l97.26-60.78,97.25,60.78v140.62h-194.51v-140.62Z"
         fill="#fff"
+      />
+    </svg>
+  );
+}
+
+export function LogoCheckSiteMeta(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      {...props}>
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
       />
     </svg>
   );
@@ -1254,7 +1261,7 @@ export function LogoGit(props: React.SVGProps<SVGSVGElement>) {
 
 export function LogoGitHub(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="none" {...props}>
       <path
         fill-rule="evenodd"
         clip-rule="evenodd"

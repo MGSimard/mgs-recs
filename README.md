@@ -22,3 +22,6 @@ Really was just looking for an excuse to try out ~~Mantine UI~~ ~~shadcn/ui~~ ta
 - [ ] Put that color picker stuff and color converters in creative section
 - [ ] Add git in ci/cd lol
 - [ ] Talk about Stripe & Polar integrations with Better Auth
+- [ ] Ray.so for code screenshots
+- [ ] Also make my own ray.so for markdown previews, ray.so only has the precompiled md functionality
+- [ ] Same functionalities just for markdown, also toggle line number column
