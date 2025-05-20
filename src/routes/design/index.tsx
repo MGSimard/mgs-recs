@@ -24,8 +24,8 @@ function PageDesign() {
         title="Excalidraw"
         links={[{ label: "Excalidraw", href: "https://excalidraw.com/" }]}
         docsLinks={[{ label: "Excalidraw", href: "https://docs.excalidraw.com/" }]}
-        subTitle="Lorem ipsum dolor."
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+        subTitle="Sketch, collaborate, and embed your ideas."
+        description="Excalidraw is an open source virtual whiteboard for sketching ideas, diagrams, and doodles in a hand-drawn style. It's great for solo or collaborative brainstorming, and you can even embed it in your own projects or self-host it if you want."
         features={[""]}></Section>
 
       <Section
@@ -35,8 +35,8 @@ function PageDesign() {
         title="Figma"
         links={[{ label: "Figma", href: "https://www.figma.com/" }]}
         docsLinks={[{ label: "Figma", href: "https://help.figma.com/" }]}
-        subTitle="Lorem ipsum dolor."
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+        subTitle="Design, prototype, and collaborate."
+        description="Figma is a collaborative design platform where teams can brainstorm, create, and refine products together in real time. From wireframes to polished prototypes, Figma keeps everyone, including designers, developers, and stakeholders, on the same page, making teamwork seamless and handoff a breeze."
         features={[""]}></Section>
 
       <Section
@@ -46,8 +46,8 @@ function PageDesign() {
         title="Canva"
         links={[{ label: "Canva", href: "https://www.canva.com/" }]}
         docsLinks={[{ label: "Canva", href: "https://www.canva.com/help/" }]}
-        subTitle="Lorem ipsum dolor."
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+        subTitle="Templates, AI, and team design."
+        description="Canva is a design tool for creating graphics, presentations, documents, and prints. It offers templates for a wide range of projects, supports real-time collaboration, and includes AI features for generating and editing content. Canva is available on web, desktop, and mobile, and you can print designs directly from the platform."
         features={[""]}></Section>
 
       <Section
@@ -56,9 +56,9 @@ function PageDesign() {
         logo={<LogoPureRef />}
         title="PureRef"
         links={[{ label: "PureRef", href: "https://www.pureref.com/" }]}
-        docsLinks={[{ label: "PureRef", href: "https://www.pureref.com/handbook/" }]}
-        subTitle="Lorem ipsum dolor."
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+        docsLinks={[{ label: "PureRef", href: "https://www.pureref.com/support.php" }]}
+        subTitle="Reference images, organized."
+        description="PureRef is a standalone app for Windows, Mac, and Linux that helps you collect, organize, and view reference images. It's useful for mood boards, inspiration, and creative projects. You can drag and drop images from anywhere, keep PureRef always on top of your workspace, and use its minimal interface to focus on your work."
         features={[""]}></Section>
 
       <Section
