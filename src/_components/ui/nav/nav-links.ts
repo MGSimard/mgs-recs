@@ -345,8 +345,8 @@ export const NavLinks = {
             url: "/diagnostics#react-scan",
           },
           {
-            title: "Hey Meta",
-            url: "/diagnostics#hey-meta",
+            title: "check-site-meta",
+            url: "/diagnostics#check-site-meta",
           },
           {
             title: "Lighthouse",
