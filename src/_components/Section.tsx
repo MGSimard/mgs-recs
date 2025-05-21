@@ -1,5 +1,5 @@
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/_components/ui/hover-card";
-import { Globe, LucideProps, NotebookText } from "lucide-react";
+import { Globe, LucideProps, NotebookText, CircleCheck, CircleAlert } from "lucide-react";
 import { cn } from "@/_lib/utils";
 
 interface SectionProps extends React.ComponentProps<"section"> {
@@ -10,7 +10,7 @@ interface SectionProps extends React.ComponentProps<"section"> {
   subTitle: string;
   description: string;
   features: string[];
-  issues: string[];
+  issues?: string[];
   children?: React.ReactNode;
 }
 
@@ -51,22 +51,31 @@ export function Section({
         <div className="grid grid-cols-2 gap-4">
           <div>
             <h3 className="text-lg font-bold">Key Features:</h3>
-            <ul>
+            <ul className="list-inside">
               {features.map((feature) => (
-                <li key={feature} className="list-inside list-disc">
-                  {feature}
+                <li key={feature} className="flex items-center gap-2">
+                  <CircleCheck className="w-4 h-4 text-green-500" aria-hidden="true" />
+                  <span>{feature}</span>
                 </li>
               ))}
             </ul>
           </div>
           <div>
             <h3 className="text-lg font-bold">Issues:</h3>
-            <ul>
-              {issues.map((issue) => (
-                <li key={issue} className="list-inside list-disc">
-                  {issue}
+            <ul className="list-inside list-disc">
+              {issues && issues.length > 0 ? (
+                issues.map((issue) => (
+                  <li key={issue} className="flex items-center gap-2">
+                    <CircleAlert className="w-[1em] h-[1em] text-orange-500" aria-hidden="true" />
+                    <span>{issue}</span>
+                  </li>
+                ))
+              ) : (
+                <li className="flex items-center gap-2 text-muted-foreground">
+                  <CircleAlert className="w-[1em] h-[1em]" aria-hidden="true" />
+                  <span>N/A</span>
                 </li>
-              ))}
+              )}
             </ul>
           </div>
         </div>

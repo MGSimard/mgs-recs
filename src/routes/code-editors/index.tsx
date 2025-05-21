@@ -28,8 +28,7 @@ function PageCodeEditors() {
           "Multi-language support & debugging",
           "Real-time collaboration via Live Share",
           "Open source AI development",
-        ]}
-        issues={["N/A"]}></Section>
+        ]}></Section>
 
       <Section
         id="cursor"

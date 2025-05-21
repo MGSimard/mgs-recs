@@ -34,8 +34,16 @@ function PageFrameworks() {
           },
         ]}
         subTitle="Most recommended for both new & seasoned React devs."
-        description="This combination utilizes Vite for its modern build tooling and TanStack Router's type-safe routing capabilities, it provides an unmatched React development experience. This Vite and TanStack Router setup can be scaffolded using `create-tsrouter-app`, offering a modern alternative to the older `create-react-app` (CRA) by focusing on an improved developer experience and performant application builds. Note that any one of these apps can easily be upgraded to a full-stack framework with TanStack Start (even if all you want is server-side rendering which improves SEO, amongst other things)."
-        features={[""]}></Section>
+        description="This combination utilizes Vite for its modern build tooling and TanStack Router's type-safe routing capabilities, it provides an unmatched React development experience. This Vite and TanStack Router setup can be scaffolded through create-tsrouter-app, offering a modern alternative to the older create-react-app (CRA) by focusing on an improved developer experience and performant application builds. This setup can easily be upgraded to a full-stack framework with TanStack Start (even if all you want is server-side rendering which improves SEO, amongst other things)."
+        features={[
+          "100% type-safe file-based routing",
+          "Lightning-fast HMR",
+          "Parallel route loaders",
+          "First-class search param APIs & schemas",
+          "Optimized production builds",
+          "Modern CSS & asset support",
+          "Automatic prefetching & suspense support",
+        ]}></Section>
 
       <Section
         id="tanstack-start"
@@ -52,7 +60,18 @@ function PageFrameworks() {
         ]}
         subTitle="Full-stack development, no strings attached."
         description="TanStack Start is a full-stack framework integrating Vite and various TanStack libraries. It provides comprehensive tools for client and server development. While Next.js has a tendency to take fundamental features away from the developer, pretending like their abstractions are always preferable, TanStack Start on the other hand allows you to retain fine control of everything. Two examples are image preloading for CSS backgrounds and local font implementation, which are miserable at best in Next.js compared to the traditional methods. You'll also find that TanStack Start projects integrate seamlessly with all other TanStack libraries."
-        features={[""]}></Section>
+        features={[
+          "Enterprise-grade, type-safe routing",
+          "Full-stack SSR & streaming",
+          "Server functions & RPCs",
+          "Client-side first, 100% server capable",
+          "Deploy anywhere",
+          "Bundling & optimized builds",
+          "Integrated with TanStack ecosystem",
+          "Streaming data & real-time ready",
+          "Modern DX: File-based routing, hot reload & more",
+        ]}
+        issues={["Beta, expect potential issues and changes"]}></Section>
 
       <Section
         id="nextjs"
@@ -63,7 +82,22 @@ function PageFrameworks() {
         docsLinks={[{ label: "Next.js", href: "https://nextjs.org/docs" }]}
         subTitle="The most popular full-stack framework."
         description="Next.js is a full-stack React framework maintained by Vercel. It supports server-side rendering with Server Components, static site generation, client-side rendering, and advanced features like Incremental Static Regeneration. Next.js simplifies routing structures through a file-system based router. A key feature is Server Actions, which enable server-side code execution directly within React components, streamlining data mutations and API interactions. While there is a common misconception that using Next.js requires vendor lock-in to Vercel hosting, Next.js can in fact be self-hosted or deployed to a variety of platforms, giving developers flexibility in their deployment choices. Vercel as a platform does provide additional QoL features, but those are not inherently tied to Next.js."
-        features={[""]}></Section>
+        features={[
+          "File-based routing & nested layouts",
+          "React Server Components",
+          "Server Actions",
+          "Dynamic HTML streaming",
+          "Flexible data fetching",
+          "Incremental Static Regeneration (ISR)",
+          "Built-in optimizations (images, fonts, scripts)",
+          "API routes & middleware",
+          "Production-grade tooling (Turbopack, SWC)",
+        ]}
+        issues={[
+          "Ecosystem changes regularly",
+          "Can't reliably preload images used as CSS backgrounds",
+          "Local font setup is untraditional",
+        ]}></Section>
 
       <Section
         id="payload"
@@ -73,8 +107,18 @@ function PageFrameworks() {
         links={[{ label: "Payload", href: "https://payloadcms.com/" }]}
         docsLinks={[{ label: "Payload", href: "https://payloadcms.com/docs" }]}
         subTitle="Headless CMS & app framework built on Next.js."
-        description="Payload is a flexible headless CMS and application framework designed for developers. It offers a highly customizable admin interface, robust tools for backend services, granular access control for content and operations, and extensible APIs. This allows for deep integration with various front-end frameworks, such as Next.js, to build tailored content-driven applications. If you're used to platforms like WordPress, you'll find Payload a much more powerful, performant and hands-on alternative."
-        features={[""]}></Section>
+        description="Payload is a flexible headless CMS and application framework designed for developers, built entirely on Next.js. It offers a highly customizable admin interface, robust tools for backend services, granular access control, and extensible APIs. While the full app framework and admin panel are exclusive to Next.js, you can fetch and manage content from any frontend via Payload's APIs, or use its Local API in scripts and backend services. If you're used to platforms like WordPress, you'll find Payload a much more powerful, performant, and hands-on alternative."
+        features={[
+          "Code-first, TypeScript-native config",
+          "Powerful admin panel out of the box",
+          "Built-in authentication & access control",
+          "Local API for direct server access",
+          "Multi-tenancy & localization",
+          "Custom components & extensibility",
+          "Versioning, drafts & file uploads",
+          "Next.js native & serverless ready",
+          "Open source & no vendor lock-in",
+        ]}></Section>
 
       <Section
         id="fumadocs"
@@ -85,7 +129,17 @@ function PageFrameworks() {
         docsLinks={[{ label: "Fumadocs", href: "https://fumadocs.dev/docs/" }]}
         subTitle="Next.js-based documentation generator."
         description="Fumadocs is a documentation generator using MDX, built on Next.js. It is designed to simplify the creation of documentation websites, focusing on readability and navigation, allowing developers to concentrate on writing content rather than code."
-        features={[""]}></Section>
+        features={[
+          "Next.js-first, React Server Component support",
+          "Source agnostic content (MDX, collections, CMS)",
+          "Beautiful, customizable UI",
+          "Full-text search integration (Orama, Algolia)",
+          "Automation & type-safe data validation",
+          "Syntax highlighting & interactive examples",
+          "Accessibility & UX first",
+          "CLI for instant project setup",
+          "Open source & actively maintained",
+        ]}></Section>
     </>
   );
 }
