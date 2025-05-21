@@ -78,11 +78,7 @@ function PageFrontendLanguages() {
           "Runs in all major browsers and on servers (Node.js)",
           "Can be used for both front and backend development",
         ]}
-        issues={[
-          "Lacks types (solved by TypeScript)",
-          "Async complexity (callbacks, promises, async/await)",
-          "Browser differences and quirks",
-        ]}></Section>
+        issues={["Lacks types (solved by TypeScript)", "Browser differences and quirks"]}></Section>
 
       <Section
         id="typescript"
@@ -103,12 +99,7 @@ function PageFrontendLanguages() {
           "Modern JS support (all ES6+ features)",
           "Tooling: type checking, autocompletion, refactoring",
         ]}
-        issues={[
-          "Learning curve for beginners",
-          "Build tooling/setup required",
-          "Misuse of 'any' defeats type safety",
-          "ts-node is a pain",
-        ]}></Section>
+        issues={["Misuse of 'any' defeats type safety", "ts-node is a pain (not necessary)"]}></Section>
     </>
   );
 }
