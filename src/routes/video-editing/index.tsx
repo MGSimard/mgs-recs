@@ -16,8 +16,8 @@ function PageVideoEditing() {
         logo={<LogoDaVinciResolve className="drop-shadow-md" />}
         title="DaVinci Resolve"
         links={[{ label: "DaVinci Resolve", href: "https://www.blackmagicdesign.com/products/davinciresolve/" }]}
-        subTitle="Lorem ipsum dolor."
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+        subTitle="All-in-one editing, color, VFX, and audio."
+        description="DaVinci Resolve is a professional video editing suite that combines editing, color correction, visual effects, motion graphics, and audio post production in one app. It features advanced tools for editing, color grading, VFX, and audio, plus powerful AI features and real-time collaboration. Available in a free version and a paid Studio version with extra features. Widely used in Hollywood and by independent creators."
         features={[]}
       />
     </>
