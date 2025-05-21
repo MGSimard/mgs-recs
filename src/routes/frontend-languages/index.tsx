@@ -97,7 +97,7 @@ function PageFrontendLanguages() {
           "Type inference",
           "Advanced type system (union, intersection, mapped types)",
           "Modern JS support (all ES6+ features)",
-          "Tooling: type checking, autocompletion, refactoring",
+          "Tooling: type checking, autocompletion",
         ]}
         issues={["Misuse of 'any' defeats type safety", "ts-node is a pain (not necessary)"]}></Section>
     </>
