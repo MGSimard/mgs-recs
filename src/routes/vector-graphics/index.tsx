@@ -22,8 +22,8 @@ function PageVectorGraphics() {
             href: "https://helpx.adobe.com/illustrator/user-guide.html",
           },
         ]}
-        subTitle="Lorem ipsum dolor."
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+        subTitle="Industry standard."
+        description="Adobe Illustrator is the industry standard for vector graphics and illustration. It offers advanced tools for creating logos, icons, typography, and complex illustrations, and integrates with other Adobe Creative Cloud apps."
         features={[]}></Section>
 
       <Section
@@ -33,12 +33,9 @@ function PageVectorGraphics() {
         title="Inkscape"
         links={[{ label: "Inkscape", href: "https://inkscape.org/" }]}
         docsLinks={[{ label: "Inkscape", href: "https://inkscape-manuals.readthedocs.io/" }]}
-        subTitle="Lorem ipsum dolor."
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+        subTitle="Free alternative to Illustrator."
+        description="Inkscape is a free, open source vector graphics editor for creating and editing SVG files, illustrations, and designs. It supports a wide range of features, extensions, and plugins, making it a strong alternative to Illustrator for those who want professional vector tools without a subscription."
         features={[]}></Section>
     </>
   );
 }
-
-/*         className="bg-[linear-gradient(to_right,oklch(0.5_0.0079_286.11),oklch(0.08_0.0325_276.31),oklch(0.52_0.0389_272.26))]"
- */
