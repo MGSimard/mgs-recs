@@ -48,10 +48,10 @@ export function Section({
         </h2>
         <p className="text-muted-foreground text-sm mb-4">{subTitle}</p>
         <p className="mb-4">{description}</p>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-8">
           <div>
-            <h3 className="text-lg font-bold">Key Features:</h3>
-            <ul className="list-inside">
+            <h3 className="text-lg font-bold mb-2">Key Features:</h3>
+            <ul className="list-inside flex flex-col gap-4 leading-4 font-medium">
               {features.map((feature) => (
                 <li key={feature} className="flex items-center gap-2">
                   <CircleCheck className="shrink-0 w-[1em] h-[1em] text-green-500" aria-hidden="true" />
@@ -61,8 +61,8 @@ export function Section({
             </ul>
           </div>
           <div>
-            <h3 className="text-lg font-bold">Issues:</h3>
-            <ul className="list-inside list-disc">
+            <h3 className="text-lg font-bold mb-2">Issues:</h3>
+            <ul className="list-inside list-disc flex flex-col gap-2">
               {issues && issues.length > 0 ? (
                 issues.map((issue) => (
                   <li key={issue} className="flex items-center gap-2">
