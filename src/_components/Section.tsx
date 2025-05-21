@@ -49,9 +49,9 @@ export function Section({
         <p className="text-muted-foreground text-sm mb-4">{subTitle}</p>
         <p className="mb-4">{description}</p>
         <h3 className="text-lg font-bold mb-2">Key Features:</h3>
-        <ul className="grid grid-cols-3 gap-4 list-inside leading-4 font-medium mb-4">
+        <ul className="grid grid-cols-3 gap-4 list-inside leading-4 font-medium mb-4 items-start">
           {features.map((feature) => (
-            <li key={feature} className="flex items-center gap-2">
+            <li key={feature} className="flex items-start gap-2">
               <CircleCheck className="shrink-0 w-[1em] h-[1em] text-green-500" aria-hidden="true" />
               <span>{feature}</span>
             </li>
@@ -61,13 +61,13 @@ export function Section({
         <ul className="grid grid-cols-3 gap-4 list-inside leading-4 font-medium">
           {issues && issues.length > 0 ? (
             issues.map((issue) => (
-              <li key={issue} className="flex items-center gap-2">
+              <li key={issue} className="flex items-start gap-2">
                 <CircleAlert className="shrink-0 w-[1em] h-[1em] text-orange-500 " aria-hidden="true" />
                 <span>{issue}</span>
               </li>
             ))
           ) : (
-            <li className="flex items-center gap-2 text-muted-foreground">
+            <li className="flex items-start gap-2 text-muted-foreground">
               <CircleAlert className="shrink-0 w-[1em] h-[1em]" aria-hidden="true" />
               <span>N/A</span>
             </li>
