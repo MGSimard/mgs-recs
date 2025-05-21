@@ -47,7 +47,9 @@ export function Section({
             ))}
         </h2>
         <p className="text-muted-foreground text-sm mb-4">{subTitle}</p>
+
         <p className="mb-4">{description}</p>
+
         <h3 className="text-lg font-bold mb-2">Key Features:</h3>
         <ul className="grid grid-cols-3 gap-4 list-inside leading-4 font-medium mb-4 items-start">
           {features.map((feature) => (
@@ -57,6 +59,7 @@ export function Section({
             </li>
           ))}
         </ul>
+
         <h3 className="text-lg font-bold mb-2">Issues:</h3>
         <ul className="grid grid-cols-3 gap-4 list-inside leading-4 font-medium">
           {issues && issues.length > 0 ? (
