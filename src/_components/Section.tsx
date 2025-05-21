@@ -10,6 +10,7 @@ interface SectionProps extends React.ComponentProps<"section"> {
   subTitle: string;
   description: string;
   features: string[];
+  issues: string[];
   children?: React.ReactNode;
 }
 
@@ -21,6 +22,7 @@ export function Section({
   subTitle,
   description,
   features,
+  issues,
   className,
   children,
   ...props
@@ -46,14 +48,28 @@ export function Section({
         </h2>
         <p className="text-muted-foreground text-sm mb-4">{subTitle}</p>
         <p className="mb-4">{description}</p>
-        <h3 className="text-lg font-bold">Key Features:</h3>
-        <ul className="grid grid-cols-3 gap-2">
-          {features.map((feature) => (
-            <li key={feature} className="flex items-center">
-              {feature}
-            </li>
-          ))}
-        </ul>
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <h3 className="text-lg font-bold">Key Features:</h3>
+            <ul>
+              {features.map((feature) => (
+                <li key={feature} className="list-inside list-disc">
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-lg font-bold">Issues:</h3>
+            <ul>
+              {issues.map((issue) => (
+                <li key={issue} className="list-inside list-disc">
+                  {issue}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   );
