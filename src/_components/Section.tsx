@@ -54,7 +54,7 @@ export function Section({
             <ul className="list-inside">
               {features.map((feature) => (
                 <li key={feature} className="flex items-center gap-2">
-                  <CircleCheck className="w-4 h-4 text-green-500" aria-hidden="true" />
+                  <CircleCheck className="shrink-0 w-[1em] h-[1em] text-green-500" aria-hidden="true" />
                   <span>{feature}</span>
                 </li>
               ))}
@@ -66,13 +66,13 @@ export function Section({
               {issues && issues.length > 0 ? (
                 issues.map((issue) => (
                   <li key={issue} className="flex items-center gap-2">
-                    <CircleAlert className="w-[1em] h-[1em] text-orange-500" aria-hidden="true" />
+                    <CircleAlert className="shrink-0 w-[1em] h-[1em] text-orange-500 " aria-hidden="true" />
                     <span>{issue}</span>
                   </li>
                 ))
               ) : (
                 <li className="flex items-center gap-2 text-muted-foreground">
-                  <CircleAlert className="w-[1em] h-[1em]" aria-hidden="true" />
+                  <CircleAlert className="shrink-0 w-[1em] h-[1em]" aria-hidden="true" />
                   <span>N/A</span>
                 </li>
               )}
