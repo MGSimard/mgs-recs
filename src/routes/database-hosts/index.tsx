@@ -3,11 +3,11 @@ import { Section } from "@/_components/Section";
 import { LogoNeon, LogoPlanetScale, LogoSupabase } from "@/_components/Icons";
 
 export const Route = createFileRoute("/database-hosts/")({
-  component: PageDatabaseHosts,
-  loader: async () => ({ title: "Database Hosts" }),
+  component: PageDatabaseProviders,
+  loader: async () => ({ title: "Database Providers" }),
 });
 
-function PageDatabaseHosts() {
+function PageDatabaseProviders() {
   return (
     <>
       <Section

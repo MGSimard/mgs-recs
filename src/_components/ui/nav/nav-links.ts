@@ -182,21 +182,21 @@ export const NavLinks = {
         ],
       },
       {
-        title: "Database Hosts",
-        url: "/database-hosts",
+        title: "Database Providers",
+        url: "/database-providers",
         icon: DatabaseZap,
         items: [
           {
             title: "Neon",
-            url: "/database-hosts#neon",
+            url: "/database-providers#neon",
           },
           {
             title: "Supabase",
-            url: "/database-hosts#supabase",
+            url: "/database-providers#supabase",
           },
           {
             title: "PlanetScale",
-            url: "/database-hosts#planetscale",
+            url: "/database-providers#planetscale",
           },
         ],
       },
