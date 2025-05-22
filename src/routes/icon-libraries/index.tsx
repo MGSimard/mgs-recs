@@ -19,7 +19,13 @@ function PageIconLibraries() {
         docsLinks={[{ label: "Lucide", href: "https://lucide.dev/guide/" }]}
         subTitle="Standardized, optimized, community-designed icons."
         description="An open source icon library offering 1000+ SVG icons with multiple variants and states. Lucide is community-driven, follows strict design standards, and supports both manual copying of single icons and usage via official packages for every major frontend framework. Features include code optimization for minimal bundle size, accessibility support, and a responsive community for icon requests."
-        features={[]}
+        features={[
+          "1000+ SVG icons",
+          "Optimized for minimal bundle size",
+          "Official packages for major frameworks",
+          "Accessibility support",
+          "SVG, PNG, Data URL & JSX",
+        ]}
         issues={[]}></Section>
 
       <Section
@@ -31,7 +37,12 @@ function PageIconLibraries() {
         docsLinks={[{ label: "Heroicons", href: "https://github.com/tailwindlabs/heroicons/" }]}
         subTitle="By the makers of Tailwind CSS."
         description="A free, MIT-licensed set of 300+ hand-crafted SVG icons for UI development, made by the makers of Tailwind CSS. Available as basic SVGs and first-party React & Vue libraries, designed for easy styling and seamless integration."
-        features={[]}
+        features={[
+          "300+ hand-crafted icons",
+          "Outline, solid, mini & micro versions",
+          "SVG & JSX copy",
+          "React & Vue libraries",
+        ]}
         issues={[]}></Section>
 
       <Section
@@ -43,7 +54,7 @@ function PageIconLibraries() {
         docsLinks={[{ label: "svgl", href: "https://svgl.app/api/" }]}
         subTitle="Open source, community-driven company logo directory."
         description="An open source directory of company logos. Contains a sizeable amount of logos, and is updated regularly. Users can also submit logos to the directory for approval."
-        features={[]}
+        features={["500+ logos", "Copy for SVG & all major frameworks", "Extensions", "API access"]}
         issues={[]}></Section>
     </>
   );
