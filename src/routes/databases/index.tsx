@@ -119,8 +119,13 @@ function PageDatabases() {
         links={[{ label: "Google Sheets", href: "https://www.google.com/sheets/about/" }]}
         docsLinks={[{ label: "Google Sheets", href: "https://developers.google.com/sheets" }]}
         subTitle="Cloud-based spreadsheet as a database."
-        description="Cloud spreadsheet for simple, collaborative data management for non-sensitive data. Easy to use and share. Can act as a basic data source for apps by integrating with services like SheetDB.io to create callable JSON APIs. Used this method to store & display ~800 Rise of Kingdoms players' stats in a custom table, since Sheets iframes aren't very practical or nice to look at. Only recommended for read-only, changes reflected instantly, inputs done manually orthrough Google Forms."
-        features={["Collaborative cloud spreadsheet", "Easy API integration", "Good for simple, non-sensitive data"]}
+        description="Cloud spreadsheet for simple, collaborative data management for non-sensitive data. Easy to use and share. Can act as a basic data source for apps by integrating with services like SheetDB.io to create callable JSON APIs. Used this method to store & display ~800 Rise of Kingdoms players' stats in a custom table, since Google Sheets iframes aren't very practical or nice to look at. Only recommended for read-only, changes reflected instantly, inputs done manually orthrough Google Forms."
+        features={[
+          "Good for simple, non-sensitive data",
+          "Collaborative cloud spreadsheet",
+          "Easy API integration",
+          "Integration with other Google services (i.e. Looker Studio)",
+        ]}
         issues={[
           "Not designed as a traditional database",
           "Limited data types & relationships",
