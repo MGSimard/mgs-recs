@@ -72,7 +72,7 @@ function PageDesign() {
         title="Image Color Picker"
         links={[{ label: "Image Color Picker", href: "https://imagecolorpicker.com/" }]}
         subTitle="Pick colors from any image."
-        description="Image Color Picker is a free online tool that lets you pick colors directly from any image, right in your browser. Upload, paste, or link to an image, then click to get the exact HEX, RGB, or HSV color code of any pixel. No data is sent—everything happens locally for your privacy."
+        description="Image Color Picker is a free online tool that lets you pick colors directly from any image, right in your browser. Upload, paste, or link to an image, then click to get the exact HEX, RGB, or HSV color code of any pixel. No data is sent, everything happens locally for your privacy."
         features={[""]}
         issues={[]}></Section>
 

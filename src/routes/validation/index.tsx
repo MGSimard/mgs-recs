@@ -17,7 +17,7 @@ function PageValidation() {
         title="Zod"
         links={[{ label: "Zod", href: "https://zod.dev/" }]}
         subTitle="TypeScript-first schema validation with static type inference."
-        description="Zod is a TypeScript-first schema validation library that enables you to define and validate data structures with static type inference. With zero external dependencies and a tiny core bundle, Zod works seamlessly in both Node.js and all modern browsers—making it an excellent choice for validating data on the backend or enforcing input constraints in frontend applications. Its concise, immutable API lets you build schemas for everything from simple strings to complex nested objects, ensuring your data is both validated and type-safe. Zod also supports built-in JSON Schema conversion and has a growing ecosystem, making it a popular choice for robust, type-safe validation in TypeScript and JavaScript projects."
+        description="Zod is a TypeScript-first schema validation library that enables you to define and validate data structures with static type inference. With zero external dependencies and a tiny core bundle, Zod works seamlessly in both Node.js and all modern browsers, making it an excellent choice for validating data on the backend or enforcing input constraints in frontend applications. Its concise, immutable API lets you build schemas for everything from simple strings to complex nested objects, ensuring your data is both validated and type-safe. Zod also supports built-in JSON Schema conversion and has a growing ecosystem, making it a popular choice for robust, type-safe validation in TypeScript and JavaScript projects."
         features={[]}
         issues={[]}></Section>
 
