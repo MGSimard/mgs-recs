@@ -28,3 +28,16 @@ Really was just looking for an excuse to try out ~~Mantine UI~~ ~~shadcn/ui~~ ta
 ## HOMEWORK
 
 - [ ] Stop putting off tRPC, try it out next fullstack project so I can decide if I recommend it or not
+- [ ] Steal the hero canvas technique from https://clerk.com/ai-authentication
+
+<!-- -webkit-mask: radial-gradient(50% 50% at 50% 50%, #000 23.06%, transparent);
+mask: radial-gradient(50% 50% at 50% 50%, #000 23.06%, transparent); -->
+
+Constraints:
+
+- Dual digit numbers
+- Single digits change at random intervals, slow
+- Matrix rain sets digit lightness or opacity up
+- Overlay image sets lightness or opacity up, but only when completely encompassed (no partials)
+- Mask out boundaries
+- BG digits don't resize, let overflow and hide overflow (static BG size, like a cover)
