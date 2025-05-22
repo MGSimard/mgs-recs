@@ -29,7 +29,7 @@ import { Route as FrameworksIndexImport } from './routes/frameworks/index'
 import { Route as DiagnosticsIndexImport } from './routes/diagnostics/index'
 import { Route as DesignIndexImport } from './routes/design/index'
 import { Route as DatabasesIndexImport } from './routes/databases/index'
-import { Route as DatabaseHostsIndexImport } from './routes/database-hosts/index'
+import { Route as DatabaseProvidersIndexImport } from './routes/database-providers/index'
 import { Route as CssLibrariesIndexImport } from './routes/css-libraries/index'
 import { Route as CodeEditorsIndexImport } from './routes/code-editors/index'
 import { Route as CiCdIndexImport } from './routes/ci-cd/index'
@@ -146,9 +146,9 @@ const DatabasesIndexRoute = DatabasesIndexImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
-const DatabaseHostsIndexRoute = DatabaseHostsIndexImport.update({
-  id: '/database-hosts/',
-  path: '/database-hosts/',
+const DatabaseProvidersIndexRoute = DatabaseProvidersIndexImport.update({
+  id: '/database-providers/',
+  path: '/database-providers/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -228,11 +228,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CssLibrariesIndexImport
       parentRoute: typeof rootRoute
     }
-    '/database-hosts/': {
-      id: '/database-hosts/'
-      path: '/database-hosts'
-      fullPath: '/database-hosts'
-      preLoaderRoute: typeof DatabaseHostsIndexImport
+    '/database-providers/': {
+      id: '/database-providers/'
+      path: '/database-providers'
+      fullPath: '/database-providers'
+      preLoaderRoute: typeof DatabaseProvidersIndexImport
       parentRoute: typeof rootRoute
     }
     '/databases/': {
@@ -366,7 +366,7 @@ export interface FileRoutesByFullPath {
   '/ci-cd': typeof CiCdIndexRoute
   '/code-editors': typeof CodeEditorsIndexRoute
   '/css-libraries': typeof CssLibrariesIndexRoute
-  '/database-hosts': typeof DatabaseHostsIndexRoute
+  '/database-providers': typeof DatabaseProvidersIndexRoute
   '/databases': typeof DatabasesIndexRoute
   '/design': typeof DesignIndexRoute
   '/diagnostics': typeof DiagnosticsIndexRoute
@@ -393,7 +393,7 @@ export interface FileRoutesByTo {
   '/ci-cd': typeof CiCdIndexRoute
   '/code-editors': typeof CodeEditorsIndexRoute
   '/css-libraries': typeof CssLibrariesIndexRoute
-  '/database-hosts': typeof DatabaseHostsIndexRoute
+  '/database-providers': typeof DatabaseProvidersIndexRoute
   '/databases': typeof DatabasesIndexRoute
   '/design': typeof DesignIndexRoute
   '/diagnostics': typeof DiagnosticsIndexRoute
@@ -421,7 +421,7 @@ export interface FileRoutesById {
   '/ci-cd/': typeof CiCdIndexRoute
   '/code-editors/': typeof CodeEditorsIndexRoute
   '/css-libraries/': typeof CssLibrariesIndexRoute
-  '/database-hosts/': typeof DatabaseHostsIndexRoute
+  '/database-providers/': typeof DatabaseProvidersIndexRoute
   '/databases/': typeof DatabasesIndexRoute
   '/design/': typeof DesignIndexRoute
   '/diagnostics/': typeof DiagnosticsIndexRoute
@@ -450,7 +450,7 @@ export interface FileRouteTypes {
     | '/ci-cd'
     | '/code-editors'
     | '/css-libraries'
-    | '/database-hosts'
+    | '/database-providers'
     | '/databases'
     | '/design'
     | '/diagnostics'
@@ -476,7 +476,7 @@ export interface FileRouteTypes {
     | '/ci-cd'
     | '/code-editors'
     | '/css-libraries'
-    | '/database-hosts'
+    | '/database-providers'
     | '/databases'
     | '/design'
     | '/diagnostics'
@@ -502,7 +502,7 @@ export interface FileRouteTypes {
     | '/ci-cd/'
     | '/code-editors/'
     | '/css-libraries/'
-    | '/database-hosts/'
+    | '/database-providers/'
     | '/databases/'
     | '/design/'
     | '/diagnostics/'
@@ -530,7 +530,7 @@ export interface RootRouteChildren {
   CiCdIndexRoute: typeof CiCdIndexRoute
   CodeEditorsIndexRoute: typeof CodeEditorsIndexRoute
   CssLibrariesIndexRoute: typeof CssLibrariesIndexRoute
-  DatabaseHostsIndexRoute: typeof DatabaseHostsIndexRoute
+  DatabaseProvidersIndexRoute: typeof DatabaseProvidersIndexRoute
   DatabasesIndexRoute: typeof DatabasesIndexRoute
   DesignIndexRoute: typeof DesignIndexRoute
   DiagnosticsIndexRoute: typeof DiagnosticsIndexRoute
@@ -557,7 +557,7 @@ const rootRouteChildren: RootRouteChildren = {
   CiCdIndexRoute: CiCdIndexRoute,
   CodeEditorsIndexRoute: CodeEditorsIndexRoute,
   CssLibrariesIndexRoute: CssLibrariesIndexRoute,
-  DatabaseHostsIndexRoute: DatabaseHostsIndexRoute,
+  DatabaseProvidersIndexRoute: DatabaseProvidersIndexRoute,
   DatabasesIndexRoute: DatabasesIndexRoute,
   DesignIndexRoute: DesignIndexRoute,
   DiagnosticsIndexRoute: DiagnosticsIndexRoute,
@@ -593,7 +593,7 @@ export const routeTree = rootRoute
         "/ci-cd/",
         "/code-editors/",
         "/css-libraries/",
-        "/database-hosts/",
+        "/database-providers/",
         "/databases/",
         "/design/",
         "/diagnostics/",
@@ -631,8 +631,8 @@ export const routeTree = rootRoute
     "/css-libraries/": {
       "filePath": "css-libraries/index.tsx"
     },
-    "/database-hosts/": {
-      "filePath": "database-hosts/index.tsx"
+    "/database-providers/": {
+      "filePath": "database-providers/index.tsx"
     },
     "/databases/": {
       "filePath": "databases/index.tsx"

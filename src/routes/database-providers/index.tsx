@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/_components/Section";
 import { LogoNeon, LogoPlanetScale, LogoSupabase } from "@/_components/Icons";
 
-export const Route = createFileRoute("/database-hosts/")({
+export const Route = createFileRoute("/database-providers/")({
   component: PageDatabaseProviders,
   loader: async () => ({ title: "Database Providers" }),
 });
