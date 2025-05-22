@@ -26,6 +26,9 @@ function PageUILibraries() {
           "Beautiful Defaults",
           "Framework Agnostic",
           "Easy Theming",
+          "React 19 compatible",
+          "SSR support",
+          "Next.js support",
         ]}
         issues={[
           "Components may sometimes be over-nested",
