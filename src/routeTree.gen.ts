@@ -30,6 +30,7 @@ import { Route as DiagnosticsIndexImport } from './routes/diagnostics/index'
 import { Route as DesignIndexImport } from './routes/design/index'
 import { Route as DatabasesIndexImport } from './routes/databases/index'
 import { Route as DatabaseHostsIndexImport } from './routes/database-hosts/index'
+import { Route as CssLibrariesIndexImport } from './routes/css-libraries/index'
 import { Route as CodeEditorsIndexImport } from './routes/code-editors/index'
 import { Route as CiCdIndexImport } from './routes/ci-cd/index'
 import { Route as AuthIndexImport } from './routes/auth/index'
@@ -151,6 +152,12 @@ const DatabaseHostsIndexRoute = DatabaseHostsIndexImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
+const CssLibrariesIndexRoute = CssLibrariesIndexImport.update({
+  id: '/css-libraries/',
+  path: '/css-libraries/',
+  getParentRoute: () => rootRoute,
+} as any)
+
 const CodeEditorsIndexRoute = CodeEditorsIndexImport.update({
   id: '/code-editors/',
   path: '/code-editors/',
@@ -212,6 +219,13 @@ declare module '@tanstack/react-router' {
       path: '/code-editors'
       fullPath: '/code-editors'
       preLoaderRoute: typeof CodeEditorsIndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/css-libraries/': {
+      id: '/css-libraries/'
+      path: '/css-libraries'
+      fullPath: '/css-libraries'
+      preLoaderRoute: typeof CssLibrariesIndexImport
       parentRoute: typeof rootRoute
     }
     '/database-hosts/': {
@@ -351,6 +365,7 @@ export interface FileRoutesByFullPath {
   '/auth': typeof AuthIndexRoute
   '/ci-cd': typeof CiCdIndexRoute
   '/code-editors': typeof CodeEditorsIndexRoute
+  '/css-libraries': typeof CssLibrariesIndexRoute
   '/database-hosts': typeof DatabaseHostsIndexRoute
   '/databases': typeof DatabasesIndexRoute
   '/design': typeof DesignIndexRoute
@@ -377,6 +392,7 @@ export interface FileRoutesByTo {
   '/auth': typeof AuthIndexRoute
   '/ci-cd': typeof CiCdIndexRoute
   '/code-editors': typeof CodeEditorsIndexRoute
+  '/css-libraries': typeof CssLibrariesIndexRoute
   '/database-hosts': typeof DatabaseHostsIndexRoute
   '/databases': typeof DatabasesIndexRoute
   '/design': typeof DesignIndexRoute
@@ -404,6 +420,7 @@ export interface FileRoutesById {
   '/auth/': typeof AuthIndexRoute
   '/ci-cd/': typeof CiCdIndexRoute
   '/code-editors/': typeof CodeEditorsIndexRoute
+  '/css-libraries/': typeof CssLibrariesIndexRoute
   '/database-hosts/': typeof DatabaseHostsIndexRoute
   '/databases/': typeof DatabasesIndexRoute
   '/design/': typeof DesignIndexRoute
@@ -432,6 +449,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/ci-cd'
     | '/code-editors'
+    | '/css-libraries'
     | '/database-hosts'
     | '/databases'
     | '/design'
@@ -457,6 +475,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/ci-cd'
     | '/code-editors'
+    | '/css-libraries'
     | '/database-hosts'
     | '/databases'
     | '/design'
@@ -482,6 +501,7 @@ export interface FileRouteTypes {
     | '/auth/'
     | '/ci-cd/'
     | '/code-editors/'
+    | '/css-libraries/'
     | '/database-hosts/'
     | '/databases/'
     | '/design/'
@@ -509,6 +529,7 @@ export interface RootRouteChildren {
   AuthIndexRoute: typeof AuthIndexRoute
   CiCdIndexRoute: typeof CiCdIndexRoute
   CodeEditorsIndexRoute: typeof CodeEditorsIndexRoute
+  CssLibrariesIndexRoute: typeof CssLibrariesIndexRoute
   DatabaseHostsIndexRoute: typeof DatabaseHostsIndexRoute
   DatabasesIndexRoute: typeof DatabasesIndexRoute
   DesignIndexRoute: typeof DesignIndexRoute
@@ -535,6 +556,7 @@ const rootRouteChildren: RootRouteChildren = {
   AuthIndexRoute: AuthIndexRoute,
   CiCdIndexRoute: CiCdIndexRoute,
   CodeEditorsIndexRoute: CodeEditorsIndexRoute,
+  CssLibrariesIndexRoute: CssLibrariesIndexRoute,
   DatabaseHostsIndexRoute: DatabaseHostsIndexRoute,
   DatabasesIndexRoute: DatabasesIndexRoute,
   DesignIndexRoute: DesignIndexRoute,
@@ -570,6 +592,7 @@ export const routeTree = rootRoute
         "/auth/",
         "/ci-cd/",
         "/code-editors/",
+        "/css-libraries/",
         "/database-hosts/",
         "/databases/",
         "/design/",
@@ -604,6 +627,9 @@ export const routeTree = rootRoute
     },
     "/code-editors/": {
       "filePath": "code-editors/index.tsx"
+    },
+    "/css-libraries/": {
+      "filePath": "css-libraries/index.tsx"
     },
     "/database-hosts/": {
       "filePath": "database-hosts/index.tsx"

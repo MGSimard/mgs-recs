@@ -16,6 +16,7 @@ import {
   LayoutGrid,
   Lightbulb,
   Mail,
+  Paintbrush,
   PenTool,
   Server,
   Shapes,
@@ -112,6 +113,21 @@ export const NavLinks = {
           {
             title: "Ant Design",
             url: "/ui-libraries#ant-design",
+          },
+        ],
+      },
+      {
+        title: "CSS Libraries",
+        url: "/css-libraries",
+        icon: Paintbrush,
+        items: [
+          {
+            title: "Tailwind CSS",
+            url: "/css-libraries#tailwind-css",
+          },
+          {
+            title: "PostCSS",
+            url: "/css-libraries#postcss",
           },
         ],
       },
