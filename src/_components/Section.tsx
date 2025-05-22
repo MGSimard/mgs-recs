@@ -50,6 +50,8 @@ export function Section({
 
         <p className="mb-4">{description}</p>
 
+        <hr className="my-4 border-muted" />
+
         <h3 className="text-lg font-bold mb-2">Key Features:</h3>
         <ul className="grid grid-cols-3 gap-4 list-inside leading-4 font-medium mb-4 items-start">
           {features.map((feature) => (
