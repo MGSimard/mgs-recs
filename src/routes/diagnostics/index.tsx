@@ -19,7 +19,8 @@ function PageDiagnostics() {
         docsLinks={[{ label: "Sentry", href: "https://docs.sentry.io/" }]}
         subTitle="Error and performance monitoring for every stack."
         description="Sentry is a full-stack application monitoring platform used by millions of developers to identify, debug, and resolve errors and performance issues across web, mobile, backend, and distributed systems. It provides error monitoring, distributed tracing, session replay, profiling, code coverage, uptime and cron monitoring, and release health tracking, all in one place. Sentry automatically captures unhandled exceptions, groups similar errors, and connects issues to the relevant code and commit authors. With support for over 100 platforms and frameworks, Sentry integrates with popular developer tools like GitHub, GitLab, Slack, and Jira. Its tracing and performance monitoring features help pinpoint bottlenecks from frontend to backend, while session replay and user feedback provide visual context for debugging. Sentry can be set up with just a few lines of code and supports both cloud and self-hosted deployments, making it suitable for teams of any size who want to improve code quality and fix problems faster."
-        features={[""]}></Section>
+        features={[""]}
+        issues={[]}></Section>
 
       <Section
         id="react-scan"
@@ -30,7 +31,8 @@ function PageDiagnostics() {
         docsLinks={[{ label: "React Scan", href: "https://github.com/aidenybai/react-scan#readme/" }]}
         subTitle="Free React performance diagnostics."
         description="React Scan is an open source tool that automatically detects and highlights performance issues in your React app, such as unnecessary renders, without requiring any code changes. It visually identifies which components need optimization and can be integrated via script tag, npm, CLI, or browser extension. React Scan works with frameworks like Next.js, Vite, Remix, and more, and is designed to provide actionable insights for developers directly in their workflow. Unlike traditional tools that require manual setup or lack actionable visual cues, React Scan makes it easy to spot and fix slow components, helping you keep your React apps fast and efficient."
-        features={[""]}></Section>
+        features={[""]}
+        issues={[]}></Section>
 
       <Section
         id="check-site-meta"
@@ -40,7 +42,8 @@ function PageDiagnostics() {
         links={[{ label: "check-site-meta", href: "https://github.com/alfonsusac/check-site-meta/" }]}
         subTitle="Local metadata and link preview checker."
         description="check-site-meta is a command-line tool for inspecting website metadata and generating link previews without requiring deployment. It runs a local Node.js backend to bypass CORS restrictions and caching issues, providing accurate retrieval of OpenGraph and Twitter metadata from any URL, including localhost. The tool supports previewing how your site will appear on X (Twitter), Discord, Google, and Facebook, and can also check sitemaps and robots.txt. To use, run pnpx check-site-meta or npx check-site-meta in your terminal."
-        features={[""]}></Section>
+        features={[""]}
+        issues={[]}></Section>
 
       <Section
         id="lighthouse"
@@ -56,7 +59,8 @@ function PageDiagnostics() {
         docsLinks={[{ label: "Lighthouse", href: "https://developer.chrome.com/docs/lighthouse/overview" }]}
         subTitle="Website audits built into Chrome."
         description="Lighthouse is an open source tool for auditing web pages, built directly into Chrome DevTools. It analyzes performance, accessibility, SEO, best practices, and progressive web app features, providing detailed reports and suggestions for improvement. You can run Lighthouse on any page from the Chrome browser without installing anything extra, making it a standard choice for web diagnostics and optimization."
-        features={[""]}></Section>
+        features={[""]}
+        issues={[]}></Section>
     </>
   );
 }

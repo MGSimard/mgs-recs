@@ -24,7 +24,8 @@ function PageVectorGraphics() {
         ]}
         subTitle="Industry standard."
         description="Adobe Illustrator is the industry standard for vector graphics and illustration. It offers advanced tools for creating logos, icons, typography, and complex illustrations, and integrates with other Adobe Creative Cloud apps."
-        features={[]}></Section>
+        features={[]}
+        issues={[]}></Section>
 
       <Section
         id="inkscape"
@@ -35,7 +36,8 @@ function PageVectorGraphics() {
         docsLinks={[{ label: "Inkscape", href: "https://inkscape-manuals.readthedocs.io/" }]}
         subTitle="Free alternative to Illustrator."
         description="Inkscape is a free, open source vector graphics editor for creating and editing SVG files, illustrations, and designs. It supports a wide range of features, extensions, and plugins, making it a strong alternative to Illustrator for those who want professional vector tools without a subscription."
-        features={[]}></Section>
+        features={[]}
+        issues={[]}></Section>
     </>
   );
 }

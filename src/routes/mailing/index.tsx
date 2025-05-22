@@ -19,7 +19,8 @@ function PageMailing() {
         docsLinks={[{ label: "Resend", href: "https://resend.com/docs/" }]}
         subTitle="Email delivery platform for developers."
         description="Resend is an email delivery platform built for developers, focused on making it easy to send transactional and marketing emails that reach inboxes instead of spam folders. With a simple API, SDKs for popular languages, and a modern dashboard, Resend lets you integrate email sending in minutes. Features include proactive blocklist tracking, managed dedicated IPs, dynamic suppression lists, and detailed analytics. You can build emails visually or with React components using their open source library, react-email. Resend also offers robust contact management, modular webhooks, and tools to monitor and protect your domain reputation, all designed to provide a reliable and developer-friendly email experience."
-        features={[]}></Section>
+        features={[]}
+        issues={[]}></Section>
     </>
   );
 }

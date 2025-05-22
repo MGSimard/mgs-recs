@@ -43,7 +43,8 @@ function PageFrameworks() {
           "Optimized production builds",
           "Modern CSS & asset support",
           "Automatic prefetching & suspense support",
-        ]}></Section>
+        ]}
+        issues={[]}></Section>
 
       <Section
         id="tanstack-start"
@@ -118,7 +119,8 @@ function PageFrameworks() {
           "Versioning, drafts & file uploads",
           "Next.js native & serverless ready",
           "Open source & no vendor lock-in",
-        ]}></Section>
+        ]}
+        issues={[]}></Section>
 
       <Section
         id="fumadocs"
@@ -139,7 +141,8 @@ function PageFrameworks() {
           "Accessibility & UX first",
           "CLI for instant project setup",
           "Open source & actively maintained",
-        ]}></Section>
+        ]}
+        issues={[]}></Section>
     </>
   );
 }

@@ -10,7 +10,7 @@ interface SectionProps extends React.ComponentProps<"section"> {
   subTitle: string;
   description: string;
   features: string[];
-  issues?: string[];
+  issues: string[];
   children?: React.ReactNode;
 }
 
@@ -62,7 +62,7 @@ export function Section({
 
         <h3 className="text-lg font-bold mb-2">Issues:</h3>
         <ul className="grid grid-cols-3 gap-4 list-inside leading-4 font-medium">
-          {issues && issues.length > 0 ? (
+          {issues.length > 0 ? (
             issues.map((issue) => (
               <li key={issue} className="flex items-start gap-2">
                 <CircleAlert className="shrink-0 w-[1em] h-[1em] text-orange-500 " aria-hidden="true" />
