@@ -1,5 +1,20 @@
 import { useRef } from "react";
 
+/* CONSTRAINTS
+ * 1. Digits are visually in paired columns, within a grid
+ * 2. Each digit and its opacity is randomized at random intervals
+ * 3. Idle digits limit 5-20% opacity, lit digits limit 70-100% opacity
+ * 4. Limit to 1 Matrix rain per column at a time (preferably)
+ * 5. Center logo mask lights up fully covered digit pairs
+ * 6.
+ * 7.
+ * 8.
+ * 9.
+ */
+
+/* RESOURCES
+ * Random noise function: https://stackoverflow.com/questions/4200224/random-noise-functions-for-glsl/28095165#28095165
+ */
 export function HeroWebGL() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
