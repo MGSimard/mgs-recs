@@ -29,7 +29,7 @@ function PageDatabaseProviders() {
           "Scale to zero when idle to save costs",
           "Built-in authentication and row-level security",
         ]}
-        issues={["Bad cold start latency"]}></Section>
+        issues={["High downtime", "Bad cold start latency"]}></Section>
 
       <Section
         id="supabase"
