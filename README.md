@@ -23,6 +23,7 @@ Really was just looking for an excuse to try out ~~Mantine UI~~ ~~shadcn/ui~~ ta
 - [ ] Add stylelint & stylelint-gamut
 - [ ] Prettier, ESLint, that sorta stuff
 - [ ] Move the nav toggle in the nav
+- [ ] Add neon downtime to issues
 
 ## Other thing
 

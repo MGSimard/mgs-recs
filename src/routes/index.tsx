@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Hero } from "@/_components/Hero";
-import { HeroWebGL } from "@/_components/HeroWebGL";
+import { HeroWebGL } from "@/_components/HeroWebGL/HeroWebGL";
 
 export const Route = createFileRoute("/")({
   component: PageHome,
@@ -9,7 +8,7 @@ export const Route = createFileRoute("/")({
 function PageHome() {
   return (
     <>
-      <Hero />
+      <HeroWebGL />
     </>
   );
 }
