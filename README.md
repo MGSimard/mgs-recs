@@ -21,6 +21,7 @@ Really was just looking for an excuse to try out ~~Mantine UI~~ ~~shadcn/ui~~ ta
 - [ ] Add stylelint & stylelint-gamut
 - [ ] Prettier, ESLint, that sorta stuff
 - [ ] Package managers? Envs? Etc?
+- [ ] Uploadthing and stuff
 
 ## Other thing
 
