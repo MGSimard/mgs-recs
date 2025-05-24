@@ -18,8 +18,16 @@ function PageLearning() {
         links={[{ label: "freeCodeCamp", href: "https://www.freecodecamp.org/" }]}
         subTitle="A free, all-in-one, project-based development curriculum."
         description="freeCodeCamp is a massive, donor-supported nonprofit that helps people learn to code for free. Their comprehensive, self-paced curriculum covers web development, data science, Python, JavaScript, databases, and more, with hands-on projects and industry-recognized certifications. The platform uses a test-based approach with a built-in IDE in the browser, making it interactive and fun to progress through challenges. This is often more approachable than alternatives like The Odin Project, which can be a bit more complex. The community is large and supportive, and thousands of graduates have landed jobs in tech. Note: The React curriculum is very outdated (pre-hooks era). I still recommend learning the basics needed to complete it, even if only to understand legacy class-based code and appreciate how modern React has evolved."
-        features={[]}
-        issues={[]}></Section>
+        features={[
+          "Completely free, nonprofit coding education",
+          "Comprehensive, self-paced curriculum",
+          "Covers HTML, CSS, JavaScript, Python, SQL, and more",
+          "Project-based learning with real-world challenges",
+          "Integrated browser IDE and test suite for instant feedback",
+          "Large, supportive global community and forums",
+          "Thousands of tutorials, videos, and articles",
+        ]}
+        issues={["React curriculum is very outdated (pre-hooks era), working on an updated version"]}></Section>
 
       <Section
         id="codevolution"
