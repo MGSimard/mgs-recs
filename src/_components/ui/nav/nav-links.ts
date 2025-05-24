@@ -236,12 +236,12 @@ export const NavLinks = {
         icon: DollarSign,
         items: [
           {
-            title: "Stripe",
-            url: "/payments#stripe",
-          },
-          {
             title: "Polar",
             url: "/payments#polar",
+          },
+          {
+            title: "Stripe",
+            url: "/payments#stripe",
           },
         ],
       },
