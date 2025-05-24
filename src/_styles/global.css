@@ -135,6 +135,7 @@
   }
   html {
     font-family: var(--coreFont);
+    scrollbar-gutter: stable;
   }
   body {
     @apply bg-background text-foreground;
