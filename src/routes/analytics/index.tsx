@@ -19,8 +19,19 @@ function PageAnalytics() {
         docsLinks={[{ label: "PostHog", href: "https://posthog.com/docs/" }]}
         subTitle="Best option for both free and paid users."
         description="PostHog is an open source analytics suite for product and web analytics. Unlike Plausible, which is only free for the first 30 days, PostHog provides a recurring free tier of 1 million events, 5,000 session recordings, and more every month, even on paid plans. Data can be collected via a web snippet or developer-friendly APIs, with libraries for most major languages and frameworks. PostHog supports both cloud and self-hosted deployments and offers full SQL access to your data. To avoid analytics being blocked by adblockers like uBlock Origin, you need to reverse-proxy requests through your own domain, which applies to both PostHog and Plausible. PostHog also includes features such as session replay, feature flags, A/B testing, and error tracking, all integrated into a single platform. Compared to Plausible, PostHog offers broader integrations, including support for mobile and backend event capture, data warehouse imports and exports, and connections to tools like Stripe, Hubspot, S3, Zapier, and Sentry, as well as more advanced API capabilities. For GDPR compliance, PostHog offers EU-based hosting, options for cookieless tracking, and tools to help you manage user consent and data deletion. You are responsible for obtaining unambiguous consent if you collect personal data, and PostHog provides documentation and features to support secure, compliant analytics deployments. For self-hosting, you can run PostHog on Hetzner or any other VPS provider."
-        features={[""]}
-        issues={[]}></Section>
+        features={[
+          "Product and web analytics with autocapture",
+          "Session replay and heatmaps",
+          "Feature flags and A/B testing",
+          "Error tracking and issue management",
+          "Surveys and product tours",
+          "SQL access and custom reports",
+          "Data pipelines and warehouse integrations",
+          "API, webhooks, and reverse proxy support",
+          "Cloud or self-hosted, open source platform",
+          "Cookieless tracking, EU/US hosting, consent management",
+        ]}
+        issues={["Need to reverse-proxy analytics to bypass adblockers"]}></Section>
 
       <Section
         id="plausible"
@@ -31,8 +42,17 @@ function PageAnalytics() {
         docsLinks={[{ label: "Plausible", href: "https://plausible.io/docs/" }]}
         subTitle="Simple, privacy-first web analytics as a GA4 alternative."
         description="Plausible is an open source, privacy-focused web analytics tool that provides simple, essential website metrics on a single dashboard without using cookies or collecting personal data. It is fully compliant with GDPR, CCPA, and PECR, and all data is processed and stored in the EU on European-owned infrastructure. The lightweight tracking script minimizes impact on site speed and reduces your site's carbon footprint. Plausible supports goal and event tracking, funnels, UTM campaign analysis, and integrations with tools like WordPress and Google Search Console. You can invite team members, share dashboards, and choose between managed hosting or self-hosting. For self-hosting, you can run Plausible on Hetzner or any other VPS provider. Pricing is based on monthly pageviews, with plans that scale as your traffic grows, and a free 30-day trial is available."
-        features={[""]}
-        issues={[]}></Section>
+        features={[
+          "Simple, one-page dashboard with essential metrics",
+          "Lightweight script for fast site performance",
+          "No cookies or personal data, privacy-first by design",
+          "Open source and self-hostable, EU-based hosting",
+          "GDPR, CCPA, and PECR compliant out of the box",
+          "Goal and event tracking, funnels, and UTM analysis",
+          "Public or private stats sharing and white-label options",
+          "Accurate bot filtering and adblocker bypass via proxy",
+        ]}
+        issues={["Free tier limited to 30 days"]}></Section>
 
       <Section
         id="google-analytics"
@@ -45,8 +65,24 @@ function PageAnalytics() {
         ]}
         subTitle="The default, but not the favorite."
         description="Google Analytics is the most widely used analytics platform and is deeply integrated into the web and advertising ecosystem, offering advanced reporting, machine learning insights, and seamless connections to other Google products like Ads and Search Console. Despite its powerful features and global infrastructure, the developer and user experience is notoriously poor: the interface is complex, slow, and often confusing, and cookie consent requirements are tightly coupled with its use for advertising and personalization. While its dominance and integrations are significant, especially for organizations that rely on Google's ad stack or need cross-platform attribution, it is hard to recommend for most use cases due to its frustrating day-to-day experience."
-        features={[""]}
-        issues={[]}></Section>
+        features={[
+          "Advanced reporting and real-time analytics",
+          "Cross-platform and cross-device tracking",
+          "Machine learning insights and predictive metrics",
+          "Custom dashboards, explorations, and funnel analysis",
+          "Seamless integration with Google Ads and Search Console",
+          "Flexible data collection via APIs and Tag Manager",
+          "Attribution modeling and advertising ROI analysis",
+          "Global infrastructure and scalable data processing",
+        ]}
+        issues={[
+          "Confusing, slow, and user-hostile interface",
+          "Reports vs Explorations split, inconsistent and limited",
+          "Complex event tracking and dataLayer setup",
+          "Data sampling, reporting delays, and cardinality limits",
+          "Blocked by adblockers and strict privacy requirements",
+          "Limited transparency, closed source",
+        ]}></Section>
     </>
   );
 }
