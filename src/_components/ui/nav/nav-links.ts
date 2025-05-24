@@ -353,20 +353,20 @@ export const NavLinks = {
         icon: Activity,
         items: [
           {
-            title: "Sentry",
-            url: "/diagnostics#sentry",
-          },
-          {
             title: "React Scan",
             url: "/diagnostics#react-scan",
           },
           {
-            title: "check-site-meta",
-            url: "/diagnostics#check-site-meta",
-          },
-          {
             title: "Lighthouse",
             url: "/diagnostics#lighthouse",
+          },
+          {
+            title: "Sentry",
+            url: "/diagnostics#sentry",
+          },
+          {
+            title: "check-site-meta",
+            url: "/diagnostics#check-site-meta",
           },
         ],
       },
