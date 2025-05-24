@@ -20,6 +20,7 @@ Really was just looking for an excuse to try out ~~Mantine UI~~ ~~shadcn/ui~~ ta
 - [ ] Find a category type to shove in stuff like TanStack Query
 - [ ] Add stylelint & stylelint-gamut
 - [ ] Prettier, ESLint, that sorta stuff
+- [ ] Package managers? Envs? Etc?
 
 ## Other thing
 
