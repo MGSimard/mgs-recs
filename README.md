@@ -14,16 +14,12 @@ Really was just looking for an excuse to try out ~~Mantine UI~~ ~~shadcn/ui~~ ta
 
 ## Task List
 
-- [ ] Build a card layout component for stuff
 - [ ] Neon acquired by databricks
 - [ ] Good info to relay https://www.youtube.com/watch?v=PgGV5dTNu9A
 - [ ] For UI libraries make sure you talk about compatibility with RSCs
 - [ ] Find a category type to shove in stuff like TanStack Query
-- [ ] Tailwind somewhere
 - [ ] Add stylelint & stylelint-gamut
 - [ ] Prettier, ESLint, that sorta stuff
-- [ ] Move the nav toggle in the nav
-- [ ] Add neon downtime to issues
 
 ## Other thing
 
@@ -34,4 +30,3 @@ Really was just looking for an excuse to try out ~~Mantine UI~~ ~~shadcn/ui~~ ta
 ## HOMEWORK
 
 - [ ] Stop putting off tRPC, try it out next fullstack project so I can decide if I recommend it or not
-- [ ] Steal the hero canvas technique from https://clerk.com/ai-authentication
