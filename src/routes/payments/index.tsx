@@ -18,7 +18,7 @@ function PagePayments() {
         links={[{ label: "Polar", href: "https://polar.sh/" }]}
         docsLinks={[{ label: "Polar", href: "https://docs.polar.sh/" }]}
         subTitle="Open source merchant-of-record platform."
-        description="Polar is a modern, open source payment and billing platform built for SaaS and digital products. It supports flexible pricing models, usage-based billing, automated benefits, and a robust entitlements engine for features like license keys, downloads, and Discord or GitHub access. As a global merchant of record, Polar manages tax compliance, invoicing, and payouts, and is easy to integrate via a developer-friendly API, no-code tools, and adapters for popular frameworks. Fees are transparent: 4% + 40¢ per transaction (including Stripe's fees), which is typically more cost-effective than combining Stripe with additional merchant-of-record services."
+        description="Polar is a modern, open source payment and billing platform built for SaaS and digital products. It is built on top of Stripe, using Stripe for payment processing while adding automation, compliance, and developer tooling. Polar supports flexible pricing models, usage-based billing, automated benefits, and a robust entitlements engine for features like license keys, downloads, and Discord or GitHub access. As a global merchant of record, Polar manages tax compliance, invoicing, and payouts, and is easy to integrate via a developer-friendly API, no-code tools, and adapters for popular frameworks. Fees are transparent: 4% + 40¢ per transaction (including Stripe's fees), which is typically more cost-effective than combining Stripe with additional merchant-of-record services."
         features={[
           "Flexible billing for SaaS and digital products",
           "Supports multiple pricing models and discounts",
@@ -30,7 +30,11 @@ function PagePayments() {
           "Open source platform with framework adapters",
           "Fast setup and migration with CLI tools",
         ]}
-        issues={[]}></Section>
+        issues={[
+          "Infancy stage",
+          "Slightly higher fees (worth the MoR)",
+          "$15 dispute fee (due to CCs & PSPs)",
+        ]}></Section>
 
       <Section
         id="stripe"
@@ -59,11 +63,12 @@ function PagePayments() {
           "Split-brain: must sync Stripe & DB via webhooks",
           "250+ event types, inconsistent data/order",
           "Race conditions: possible status mismatches",
-          "Manual STRIPE_PRICE_IDs for all tiers/envs",
           "Free trials & usage tracking are your job",
           "Preventing duplicate subs is unintuitive",
           "Webhook data is complex/unreliable",
           "Cash App Pay: high fraud/cancellation risk",
+          "Doesn't include Merchant of Record",
+          "$15 dispute fee (due to CCs & PSPs)",
         ]}></Section>
     </>
   );
