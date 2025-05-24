@@ -18,7 +18,17 @@ function PageVideoEditing() {
         links={[{ label: "DaVinci Resolve", href: "https://www.blackmagicdesign.com/products/davinciresolve/" }]}
         subTitle="All-in-one editing, color, VFX, and audio."
         description="DaVinci Resolve is a professional video editing suite that combines editing, color correction, visual effects, motion graphics, and audio post production in one app. It features advanced tools for editing, color grading, VFX, and audio, plus powerful AI features and real-time collaboration. Available in a free version and a paid Studio version with extra features. Widely used in Hollywood and by independent creators."
-        features={[]}
+        features={[
+          "All-in-one editing, color, VFX, audio, and delivery",
+          "Hollywood-grade color correction & grading",
+          "AI tools: IntelliScript, Magic Mask, audio assistant, more",
+          "Fusion: node-based VFX & motion graphics",
+          "Fairlight: pro audio post & mixing",
+          "Multi-user real-time collaboration",
+          "Wide format support, up to 8K+",
+          "Free & Studio (paid) versions",
+          "Cross-platform: Windows, Mac, Linux",
+        ]}
         issues={[]}
       />
     </>
