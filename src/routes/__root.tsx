@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
-import { Outlet, createRootRoute, HeadContent, Scripts, ErrorComponent } from "@tanstack/react-router";
+import { Outlet, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { Providers } from "@/_components/Providers";
+import { NavMobileTrigger } from "@/_components/ui/nav/nav-mobile-trigger";
 import { AppSidebar } from "@/_components/ui/nav/app-sidebar";
 import { SidebarInset } from "@/_components/ui/sidebar";
 import { Header } from "@/_components/ui/header/Header";
@@ -116,6 +117,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
       </head>
       <body>
         <Providers>
+          <NavMobileTrigger />
           <AppSidebar className="whitespace-nowrap" />
           <SidebarInset className="max-w-screen-xl mx-auto">
             <Header />
