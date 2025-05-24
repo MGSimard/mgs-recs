@@ -380,6 +380,10 @@ export const NavLinks = {
             url: "/learning#freecodecamp",
           },
           {
+            title: "Frontend Mentor",
+            url: "/learning#frontend-mentor",
+          },
+          {
             title: "Codevolution",
             url: "/learning#codevolution",
           },
