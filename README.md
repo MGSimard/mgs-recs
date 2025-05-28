@@ -22,6 +22,8 @@ Really was just looking for an excuse to try out ~~Mantine UI~~ ~~shadcn/ui~~ ta
 - [ ] Prettier, ESLint, that sorta stuff
 - [ ] Package managers? Envs? Etc?
 - [ ] Uploadthing and stuff
+- [ ] GSAP
+- [ ] Regraph
 
 ## HOMEWORK
 
