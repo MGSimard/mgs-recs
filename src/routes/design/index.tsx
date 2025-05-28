@@ -82,7 +82,7 @@ function PageDesign() {
           "Multi-format export & print",
           "Integrations (Google Drive, Slack, YouTube, etc.)",
         ]}
-        issues={[]}></Section>
+        issues={["Adding your own fonts requires pro subscription"]}></Section>
 
       <Section
         id="pureref"
