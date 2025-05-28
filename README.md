@@ -6,7 +6,7 @@ _This could've been a markdown file_
 
 - TanStack Start (React 19, Vite, Nitro, H3, Vinxi)
 - TypeScript
-- Cloudflare Pages
+- Cloudflare Workers
 - shadcn/ui
 - TailwindCSS
 
