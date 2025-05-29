@@ -28,3 +28,4 @@ Really was just looking for an excuse to try out ~~Mantine UI~~ ~~shadcn/ui~~ ta
 ## HOMEWORK
 
 - [ ] Stop putting off tRPC, try it out next fullstack project so I can decide if I recommend it or not
+- [ ] Convex
