@@ -52,11 +52,16 @@ export const Shader = forwardRef<ShaderHandle, ShaderProps>(function ShaderCompo
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const offscreenCanvas = document.createElement("canvas");
-    let dpr = setCanvasSize(canvas, offscreenCanvas);
+    let offscreenCanvas: HTMLCanvasElement | OffscreenCanvas;
+    if (typeof window.OffscreenCanvas === "function") {
+      offscreenCanvas = new window.OffscreenCanvas(canvas.offsetWidth, canvas.offsetHeight);
+    } else {
+      offscreenCanvas = document.createElement("canvas");
+    }
+    let dpr = setCanvasSize(canvas, offscreenCanvas as any);
 
     let animationId: number;
-    let gl = offscreenCanvas.getContext("webgl2");
+    let gl = (offscreenCanvas as any).getContext("webgl2");
     let ctx = canvas.getContext("2d");
 
     if (!gl || !ctx) return;
@@ -198,7 +203,7 @@ export const Shader = forwardRef<ShaderHandle, ShaderProps>(function ShaderCompo
     })();
     const resizeObserver = new window.ResizeObserver(() => {
       if (!canvas || !gl) return;
-      dpr = setCanvasSize(canvas, offscreenCanvas);
+      dpr = setCanvasSize(canvas, offscreenCanvas as any);
       gl.uniform2f(uResolution, canvas.width / dpr, canvas.height / dpr);
     });
     resizeObserver.observe(canvas);
