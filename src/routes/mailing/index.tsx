@@ -5,6 +5,7 @@ import { LogoResend } from "@/_components/Icons";
 export const Route = createFileRoute("/mailing/")({
   component: PageMailing,
   loader: () => ({ title: "Mailing" }),
+  head: () => ({ meta: [{ title: "MGS RECS - Mailing" }] }),
 });
 
 function PageMailing() {

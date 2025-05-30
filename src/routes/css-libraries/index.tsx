@@ -5,6 +5,7 @@ import { LogoPostCSS, LogoTailwindCSS } from "@/_components/Icons";
 export const Route = createFileRoute("/css-libraries/")({
   component: PageCSSLibraries,
   loader: () => ({ title: "CSS Libraries" }),
+  head: () => ({ meta: [{ title: "MGS RECS - CSS Libraries" }] }),
 });
 
 function PageCSSLibraries() {

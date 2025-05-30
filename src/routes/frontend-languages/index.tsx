@@ -5,6 +5,7 @@ import { LogoHTML, LogoCSS, LogoJavaScript, LogoTypeScript } from "@/_components
 export const Route = createFileRoute("/frontend-languages/")({
   component: PageFrontendLanguages,
   loader: () => ({ title: "Frontend Languages" }),
+  head: () => ({ meta: [{ title: "MGS RECS - Frontend Languages" }] }),
 });
 
 function PageFrontendLanguages() {

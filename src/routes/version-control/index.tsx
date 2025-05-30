@@ -5,6 +5,7 @@ import { LogoGit, LogoGitHub } from "@/_components/Icons";
 export const Route = createFileRoute("/version-control/")({
   component: PageVersionControl,
   loader: () => ({ title: "Version Control" }),
+  head: () => ({ meta: [{ title: "MGS RECS - Version Control" }] }),
 });
 
 function PageVersionControl() {

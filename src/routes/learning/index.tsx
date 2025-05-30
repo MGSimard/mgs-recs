@@ -5,6 +5,7 @@ import { LogoFreecodecamp, LogoFrontendMentor } from "@/_components/Icons";
 export const Route = createFileRoute("/learning/")({
   component: PageLearning,
   loader: () => ({ title: "Learning" }),
+  head: () => ({ meta: [{ title: "MGS RECS - Learning" }] }),
 });
 
 function PageLearning() {

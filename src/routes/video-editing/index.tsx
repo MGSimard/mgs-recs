@@ -5,6 +5,7 @@ import { LogoDaVinciResolve } from "@/_components/Icons";
 export const Route = createFileRoute("/video-editing/")({
   component: PageVideoEditing,
   loader: () => ({ title: "Video Editing" }),
+  head: () => ({ meta: [{ title: "MGS RECS - Video Editing" }] }),
 });
 
 function PageVideoEditing() {

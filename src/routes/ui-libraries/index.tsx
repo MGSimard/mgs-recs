@@ -5,6 +5,7 @@ import { LogoAntDesign, LogoMantine, LogoShadcn } from "@/_components/Icons";
 export const Route = createFileRoute("/ui-libraries/")({
   component: PageUILibraries,
   loader: async () => ({ title: "UI Libraries" }),
+  head: () => ({ meta: [{ title: "MGS RECS - UI Libraries" }] }),
 });
 
 function PageUILibraries() {

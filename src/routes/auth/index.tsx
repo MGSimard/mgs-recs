@@ -5,6 +5,7 @@ import { LogoBetterAuth, LogoClerk } from "@/_components/Icons";
 export const Route = createFileRoute("/auth/")({
   component: PageAuth,
   loader: () => ({ title: "Auth" }),
+  head: () => ({ meta: [{ title: "MGS RECS - Auth" }] }),
 });
 
 function PageAuth() {

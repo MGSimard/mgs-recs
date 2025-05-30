@@ -5,6 +5,7 @@ import { LogoESLint, LogoNodejs, LogoPnpm, LogoPrettier } from "@/_components/Ic
 export const Route = createFileRoute("/environment/")({
   component: PageEnvironment,
   loader: () => ({ title: "Environment" }),
+  head: () => ({ meta: [{ title: "MGS RECS - Environment" }] }),
 });
 
 function PageEnvironment() {

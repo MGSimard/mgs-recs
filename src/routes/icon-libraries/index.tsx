@@ -5,6 +5,7 @@ import { LogoHeroicons, LogoLucide, LogoSvgl } from "@/_components/Icons";
 export const Route = createFileRoute("/icon-libraries/")({
   component: PageIconLibraries,
   loader: () => ({ title: "Icon Libraries" }),
+  head: () => ({ meta: [{ title: "MGS RECS - Icon Libraries" }] }),
 });
 
 function PageIconLibraries() {

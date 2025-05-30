@@ -12,6 +12,7 @@ import {
 export const Route = createFileRoute("/databases/")({
   component: PageDatabases,
   loader: () => ({ title: "Databases" }),
+  head: () => ({ meta: [{ title: "MGS RECS - Databases" }] }),
 });
 
 function PageDatabases() {

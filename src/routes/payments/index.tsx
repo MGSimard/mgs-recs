@@ -5,6 +5,7 @@ import { LogoPolar, LogoStripe } from "@/_components/Icons";
 export const Route = createFileRoute("/payments/")({
   component: PagePayments,
   loader: () => ({ title: "Payments" }),
+  head: () => ({ meta: [{ title: "MGS RECS - Payments" }] }),
 });
 
 function PagePayments() {

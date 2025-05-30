@@ -5,6 +5,7 @@ import { LogoCloudflarePages, LogoCoolify, LogoHetzner, LogoNetlify, LogoVercel 
 export const Route = createFileRoute("/hosting/")({
   component: PageHosting,
   loader: () => ({ title: "Hosting" }),
+  head: () => ({ meta: [{ title: "MGS RECS - Hosting" }] }),
 });
 
 function PageHosting() {

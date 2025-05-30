@@ -5,6 +5,7 @@ import { LogoFumaDocs, LogoNextjs, LogoPayload, LogoTanStackStart, LogoViteTanSt
 export const Route = createFileRoute("/frameworks/")({
   component: PageFrameworks,
   loader: () => ({ title: "Frameworks" }),
+  head: () => ({ meta: [{ title: "MGS RECS - Frameworks" }] }),
 });
 
 function PageFrameworks() {

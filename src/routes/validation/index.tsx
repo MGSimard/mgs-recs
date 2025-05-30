@@ -5,6 +5,7 @@ import { LogoT3Env, LogoZod } from "@/_components/Icons";
 export const Route = createFileRoute("/validation/")({
   component: PageValidation,
   loader: () => ({ title: "Validation" }),
+  head: () => ({ meta: [{ title: "MGS RECS - Validation" }] }),
 });
 
 function PageValidation() {

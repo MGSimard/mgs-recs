@@ -5,6 +5,7 @@ import { LogoAdobePhotoshop, LogoGIMP } from "@/_components/Icons";
 export const Route = createFileRoute("/graphic-design/")({
   component: PageGraphicDesign,
   loader: () => ({ title: "Graphic Design" }),
+  head: () => ({ meta: [{ title: "MGS RECS - Graphic Design" }] }),
 });
 
 function PageGraphicDesign() {

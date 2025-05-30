@@ -5,6 +5,7 @@ import { LogoAdobeIllustrator, LogoInkscape } from "@/_components/Icons";
 export const Route = createFileRoute("/vector-graphics/")({
   component: PageVectorGraphics,
   loader: () => ({ title: "Vector Graphics" }),
+  head: () => ({ meta: [{ title: "MGS RECS - Vector Graphics" }] }),
 });
 
 function PageVectorGraphics() {

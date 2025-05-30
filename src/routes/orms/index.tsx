@@ -5,6 +5,7 @@ import { LogoDrizzleOrm, LogoPrisma } from "@/_components/Icons";
 export const Route = createFileRoute("/orms/")({
   component: PageOrms,
   loader: () => ({ title: "ORMs" }),
+  head: () => ({ meta: [{ title: "MGS RECS - ORMs" }] }),
 });
 
 function PageOrms() {

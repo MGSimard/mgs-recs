@@ -5,6 +5,7 @@ import { LogoCheckSiteMeta, LogoLighthouse, LogoReactScan, LogoSentry } from "@/
 export const Route = createFileRoute("/diagnostics/")({
   component: PageDiagnostics,
   loader: () => ({ title: "Diagnostics" }),
+  head: () => ({ meta: [{ title: "MGS RECS - Diagnostics" }] }),
 });
 
 function PageDiagnostics() {

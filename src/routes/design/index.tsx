@@ -12,6 +12,7 @@ import {
 export const Route = createFileRoute("/design/")({
   component: PageDesign,
   loader: () => ({ title: "Design" }),
+  head: () => ({ meta: [{ title: "MGS RECS - Design" }] }),
 });
 
 function PageDesign() {

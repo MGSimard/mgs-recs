@@ -5,6 +5,7 @@ import { LogoCursor, LogoPhoenixCode, LogoVisualStudioCode } from "@/_components
 export const Route = createFileRoute("/code-editors/")({
   component: PageCodeEditors,
   loader: () => ({ title: "Code Editors" }),
+  head: () => ({ meta: [{ title: "MGS RECS - Code Editors" }] }),
 });
 
 function PageCodeEditors() {

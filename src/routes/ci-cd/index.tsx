@@ -5,6 +5,7 @@ import { LogoCodeRabbit, LogoGitHubActions } from "@/_components/Icons";
 export const Route = createFileRoute("/ci-cd/")({
   component: PageCICD,
   loader: () => ({ title: "CI/CD" }),
+  head: () => ({ meta: [{ title: "MGS RECS - CI/CD" }] }),
 });
 
 function PageCICD() {

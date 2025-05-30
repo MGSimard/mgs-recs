@@ -5,6 +5,7 @@ import { LogoGoogleAnalytics, LogoPlausible, LogoPostHog } from "@/_components/I
 export const Route = createFileRoute("/analytics/")({
   component: PageAnalytics,
   loader: () => ({ title: "Analytics" }),
+  head: () => ({ meta: [{ title: "MGS RECS - Analytics" }] }),
 });
 
 function PageAnalytics() {
