@@ -26,6 +26,7 @@ import { Route as HostingIndexImport } from './routes/hosting/index'
 import { Route as GraphicDesignIndexImport } from './routes/graphic-design/index'
 import { Route as FrontendLanguagesIndexImport } from './routes/frontend-languages/index'
 import { Route as FrameworksIndexImport } from './routes/frameworks/index'
+import { Route as EnvironmentIndexImport } from './routes/environment/index'
 import { Route as DiagnosticsIndexImport } from './routes/diagnostics/index'
 import { Route as DesignIndexImport } from './routes/design/index'
 import { Route as DatabasesIndexImport } from './routes/databases/index'
@@ -125,6 +126,12 @@ const FrontendLanguagesIndexRoute = FrontendLanguagesIndexImport.update({
 const FrameworksIndexRoute = FrameworksIndexImport.update({
   id: '/frameworks/',
   path: '/frameworks/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const EnvironmentIndexRoute = EnvironmentIndexImport.update({
+  id: '/environment/',
+  path: '/environment/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -256,6 +263,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DiagnosticsIndexImport
       parentRoute: typeof rootRoute
     }
+    '/environment/': {
+      id: '/environment/'
+      path: '/environment'
+      fullPath: '/environment'
+      preLoaderRoute: typeof EnvironmentIndexImport
+      parentRoute: typeof rootRoute
+    }
     '/frameworks/': {
       id: '/frameworks/'
       path: '/frameworks'
@@ -370,6 +384,7 @@ export interface FileRoutesByFullPath {
   '/databases': typeof DatabasesIndexRoute
   '/design': typeof DesignIndexRoute
   '/diagnostics': typeof DiagnosticsIndexRoute
+  '/environment': typeof EnvironmentIndexRoute
   '/frameworks': typeof FrameworksIndexRoute
   '/frontend-languages': typeof FrontendLanguagesIndexRoute
   '/graphic-design': typeof GraphicDesignIndexRoute
@@ -397,6 +412,7 @@ export interface FileRoutesByTo {
   '/databases': typeof DatabasesIndexRoute
   '/design': typeof DesignIndexRoute
   '/diagnostics': typeof DiagnosticsIndexRoute
+  '/environment': typeof EnvironmentIndexRoute
   '/frameworks': typeof FrameworksIndexRoute
   '/frontend-languages': typeof FrontendLanguagesIndexRoute
   '/graphic-design': typeof GraphicDesignIndexRoute
@@ -425,6 +441,7 @@ export interface FileRoutesById {
   '/databases/': typeof DatabasesIndexRoute
   '/design/': typeof DesignIndexRoute
   '/diagnostics/': typeof DiagnosticsIndexRoute
+  '/environment/': typeof EnvironmentIndexRoute
   '/frameworks/': typeof FrameworksIndexRoute
   '/frontend-languages/': typeof FrontendLanguagesIndexRoute
   '/graphic-design/': typeof GraphicDesignIndexRoute
@@ -454,6 +471,7 @@ export interface FileRouteTypes {
     | '/databases'
     | '/design'
     | '/diagnostics'
+    | '/environment'
     | '/frameworks'
     | '/frontend-languages'
     | '/graphic-design'
@@ -480,6 +498,7 @@ export interface FileRouteTypes {
     | '/databases'
     | '/design'
     | '/diagnostics'
+    | '/environment'
     | '/frameworks'
     | '/frontend-languages'
     | '/graphic-design'
@@ -506,6 +525,7 @@ export interface FileRouteTypes {
     | '/databases/'
     | '/design/'
     | '/diagnostics/'
+    | '/environment/'
     | '/frameworks/'
     | '/frontend-languages/'
     | '/graphic-design/'
@@ -534,6 +554,7 @@ export interface RootRouteChildren {
   DatabasesIndexRoute: typeof DatabasesIndexRoute
   DesignIndexRoute: typeof DesignIndexRoute
   DiagnosticsIndexRoute: typeof DiagnosticsIndexRoute
+  EnvironmentIndexRoute: typeof EnvironmentIndexRoute
   FrameworksIndexRoute: typeof FrameworksIndexRoute
   FrontendLanguagesIndexRoute: typeof FrontendLanguagesIndexRoute
   GraphicDesignIndexRoute: typeof GraphicDesignIndexRoute
@@ -561,6 +582,7 @@ const rootRouteChildren: RootRouteChildren = {
   DatabasesIndexRoute: DatabasesIndexRoute,
   DesignIndexRoute: DesignIndexRoute,
   DiagnosticsIndexRoute: DiagnosticsIndexRoute,
+  EnvironmentIndexRoute: EnvironmentIndexRoute,
   FrameworksIndexRoute: FrameworksIndexRoute,
   FrontendLanguagesIndexRoute: FrontendLanguagesIndexRoute,
   GraphicDesignIndexRoute: GraphicDesignIndexRoute,
@@ -597,6 +619,7 @@ export const routeTree = rootRoute
         "/databases/",
         "/design/",
         "/diagnostics/",
+        "/environment/",
         "/frameworks/",
         "/frontend-languages/",
         "/graphic-design/",
@@ -642,6 +665,9 @@ export const routeTree = rootRoute
     },
     "/diagnostics/": {
       "filePath": "diagnostics/index.tsx"
+    },
+    "/environment/": {
+      "filePath": "environment/index.tsx"
     },
     "/frameworks/": {
       "filePath": "frameworks/index.tsx"

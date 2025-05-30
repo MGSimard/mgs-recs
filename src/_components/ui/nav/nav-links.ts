@@ -16,6 +16,7 @@ import {
   LayoutGrid,
   Lightbulb,
   Mail,
+  MonitorCog,
   Paintbrush,
   PenTool,
   Server,
@@ -253,6 +254,29 @@ export const NavLinks = {
           {
             title: "Resend",
             url: "/mailing#resend",
+          },
+        ],
+      },
+      {
+        title: "Environment",
+        url: "/environment",
+        icon: MonitorCog,
+        items: [
+          {
+            title: "Node.js",
+            url: "/environment#nodejs",
+          },
+          {
+            title: "pnpm",
+            url: "/environment#pnpm",
+          },
+          {
+            title: "Prettier",
+            url: "/environment#prettier",
+          },
+          {
+            title: "ESLint",
+            url: "/environment#eslint",
           },
         ],
       },
