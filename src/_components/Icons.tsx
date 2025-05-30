@@ -1324,3 +1324,163 @@ export function LogoFrontendMentor(props: React.SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export function LogoNodejs(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 292" {...props}>
+      <defs>
+        <linearGradient id="a" x1="68.188%" x2="27.823%" y1="17.487%" y2="89.755%">
+          <stop offset="0%" stopColor="#b0b0b0" />
+          <stop offset="32.88%" stopColor="#b3b3b3" />
+          <stop offset="63.52%" stopColor="#b8b8b8" />
+          <stop offset="93.19%" stopColor="#c2c2c2" />
+          <stop offset="100%" stopColor="#c5c5c5" />
+        </linearGradient>
+        <linearGradient id="c" x1="43.277%" x2="159.245%" y1="55.169%" y2="-18.306%">
+          <stop offset="13.76%" stopColor="#b0b0b0" />
+          <stop offset="40.32%" stopColor="#d0d0d0" />
+          <stop offset="71.36%" stopColor="#e0e0e0" />
+          <stop offset="90.81%" stopColor="#e5e5e5" />
+        </linearGradient>
+        <linearGradient id="f" x1="-4.389%" x2="101.499%" y1="49.997%" y2="49.997%">
+          <stop offset="9.192%" stopColor="#e5e5e5" />
+          <stop offset="28.64%" stopColor="#e0e0e0" />
+          <stop offset="59.68%" stopColor="#d0d0d0" />
+          <stop offset="86.24%" stopColor="#b0b0b0" />
+        </linearGradient>
+        <path
+          id="b"
+          d="M134.923 1.832c-4.344-2.443-9.502-2.443-13.846 0L6.787 67.801C2.443 70.244 0 74.859 0 79.745v132.208c0 4.887 2.715 9.502 6.787 11.945l114.29 65.968c4.344 2.444 9.502 2.444 13.846 0l114.29-65.968c4.344-2.443 6.787-7.058 6.787-11.945V79.745c0-4.886-2.715-9.501-6.787-11.944L134.923 1.832Z"
+        />
+        <path
+          id="e"
+          d="M134.923 1.832c-4.344-2.443-9.502-2.443-13.846 0L6.787 67.801C2.443 70.244 0 74.859 0 79.745v132.208c0 4.887 2.715 9.502 6.787 11.945l114.29 65.968c4.344 2.444 9.502 2.444 13.846 0l114.29-65.968c4.344-2.443 6.787-7.058 6.787-11.945V79.745c0-4.886-2.715-9.501-6.787-11.944L134.923 1.832Z"
+        />
+      </defs>
+      <path
+        fill="url(#a)"
+        d="M134.923 1.832c-4.344-2.443-9.502-2.443-13.846 0L6.787 67.801C2.443 70.244 0 74.859 0 79.745v132.208c0 4.887 2.715 9.502 6.787 11.945l114.29 65.968c4.344 2.444 9.502 2.444 13.846 0l114.29-65.968c4.344-2.443 6.787-7.058 6.787-11.945V79.745c0-4.886-2.715-9.501-6.787-11.944L134.923 1.832Z"
+      />
+      <mask id="d" fill="#fff">
+        <use xlinkHref="#b" />
+      </mask>
+      <path
+        fill="url(#c)"
+        d="M249.485 67.8 134.65 1.833c-1.086-.542-2.443-1.085-3.529-1.357L2.443 220.912c1.086 1.357 2.444 2.443 3.8 3.258l114.834 65.968c3.258 1.9 7.059 2.443 10.588 1.357L252.47 70.515c-.815-1.086-1.9-1.9-2.986-2.714Z"
+        mask="url(#d)"
+      />
+      <mask id="g" fill="#fff">
+        <use xlinkHref="#e" />
+      </mask>
+      <path
+        fill="url(#f)"
+        d="M249.756 223.898c3.258-1.9 5.701-5.158 6.787-8.687L130.579.204c-3.258-.543-6.787-.272-9.773 1.628L6.786 67.53l122.979 224.238c1.628-.272 3.529-.815 5.158-1.63l114.833-66.239Z"
+        mask="url(#g)"
+      />
+    </svg>
+  );
+}
+
+export function LogoPnpm(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="76.58987244897958 44 164.00775510204068 164"
+      preserveAspectRatio="xMidYMid meet"
+      {...props}>
+      <path fill="#7c7c7c" d="M237.6 95L187.6 95L187.6 45L237.6 45L237.6 95Z"></path>
+      <path fill="#7c7c7c" d="M182.59 95L132.59 95L132.59 45L182.59 45L182.59 95Z"></path>
+      <path fill="#7c7c7c" d="M127.59 95L77.59 95L77.59 45L127.59 45L127.59 95Z"></path>
+      <path fill="#7c7c7c" d="M237.6 150L187.6 150L187.6 100L237.6 100L237.6 150Z"></path>
+      <path fill="#fff" d="M182.59 150L132.59 150L132.59 100L182.59 100L182.59 150Z"></path>
+      <path fill="#fff" d="M182.59 205L132.59 205L132.59 155L182.59 155L182.59 205Z"></path>
+      <path fill="#fff" d="M237.6 205L187.6 205L187.6 155L237.6 155L237.6 205Z"></path>
+      <path fill="#fff" d="M127.59 205L77.59 205L77.59 155L127.59 155L127.59 205Z"></path>
+    </svg>
+  );
+}
+
+export function LogoPrettier(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 210" {...props}>
+      <g fill="none" fill-rule="evenodd">
+        <g transform="translate(0 200)">
+          <rect width="60" height="10" x="150" fill="#6b6b6b" opacity=".5" rx="5" />
+          <rect width="70" height="10" x="70" fill="#6b6b6b" opacity=".5" rx="5" />
+          <rect width="60" height="10" fill="#fff" rx="5" />
+        </g>
+        <g transform="translate(0 180)">
+          <rect width="50" height="10" x="160" fill="#6b6b6b" opacity=".5" rx="5" />
+          <rect width="20" height="10" x="130" fill="#6b6b6b" opacity=".5" rx="5" />
+          <rect width="50" height="10" x="70" fill="#6b6b6b" opacity=".5" rx="5" />
+          <rect width="20" height="10" x="40" fill="#fff" rx="5" />
+          <rect width="30" height="10" fill="#fff" rx="5" />
+        </g>
+        <g transform="translate(0 160)">
+          <rect width="100" height="10" x="110" fill="#6b6b6b" opacity=".5" rx="5" />
+          <rect width="30" height="10" x="70" fill="#6b6b6b" opacity=".5" rx="5" />
+          <rect width="60" height="10" fill="#fff" rx="5" />
+        </g>
+        <g transform="translate(0 140)">
+          <rect width="30" height="10" x="180" fill="#6b6b6b" opacity=".5" rx="5" />
+          <rect width="30" height="10" x="140" fill="#6b6b6b" opacity=".5" rx="5" />
+          <rect width="100" height="10" x="30" fill="#fff" rx="5" />
+          <rect width="20" height="10" fill="#fff" rx="5" />
+        </g>
+        <g transform="translate(0 120)">
+          <rect width="40" height="10" x="170" fill="#6b6b6b" opacity=".5" rx="5" />
+          <rect width="40" height="10" x="120" fill="#fff" rx="5" />
+          <rect width="50" height="10" x="60" fill="#fff" rx="5" />
+          <rect width="50" height="10" fill="#fff" rx="5" />
+        </g>
+        <g transform="translate(0 100)">
+          <rect width="30" height="10" x="180" fill="#6b6b6b" opacity=".5" rx="5" />
+          <rect width="90" height="10" x="80" fill="#fff" rx="5" />
+          <rect width="40" height="10" x="30" fill="#fff" rx="5" />
+          <rect width="20" height="10" fill="#fff" rx="5" />
+        </g>
+        <g transform="translate(0 80)">
+          <rect width="20" height="10" x="190" fill="#6b6b6b" opacity=".5" rx="5" />
+          <rect width="60" height="10" x="120" fill="#fff" rx="5" />
+          <rect width="40" height="10" x="70" fill="#6b6b6b" opacity=".5" rx="5" />
+          <rect width="60" height="10" fill="#fff" rx="5" />
+        </g>
+        <g transform="translate(0 60)">
+          <rect width="20" height="10" x="190" fill="#6b6b6b" opacity=".5" rx="5" />
+          <rect width="60" height="10" x="120" fill="#fff" rx="5" />
+          <rect width="40" height="10" x="70" fill="#6b6b6b" opacity=".5" rx="5" />
+          <rect width="20" height="10" x="40" fill="#fff" rx="5" />
+          <rect width="30" height="10" fill="#fff" rx="5" />
+        </g>
+        <g transform="translate(0 40)">
+          <rect width="30" height="10" x="180" fill="#6b6b6b" opacity=".5" rx="5" />
+          <rect width="20" height="10" x="150" fill="#fff" rx="5" />
+          <rect width="50" height="10" x="90" fill="#fff" rx="5" />
+          <rect width="80" height="10" fill="#fff" rx="5" />
+        </g>
+        <g transform="translate(0 20)">
+          <rect width="40" height="10" x="170" fill="#6b6b6b" opacity=".5" rx="5" />
+          <rect width="110" height="10" x="50" fill="#fff" rx="5" />
+          <rect width="40" height="10" fill="#fff" rx="5" />
+        </g>
+        <rect width="70" height="10" x="140" fill="#6b6b6b" opacity=".5" rx="5" />
+        <rect width="130" height="10" fill="#fff" rx="5" />
+      </g>
+    </svg>
+  );
+}
+
+export function LogoESLint(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" {...props}>
+      <path
+        d="M705.1,391.84l-185.59-107.15c-4.64-2.68-10.37-2.68-15.01,0l-185.6,107.15c-4.64,2.68-7.51,7.64-7.51,13v214.3c0,5.36,2.87,10.32,7.51,13.01l185.6,107.15c4.64,2.68,10.37,2.68,15.01,0l185.59-107.15c4.64-2.68,7.51-7.64,7.51-13.01v-214.3c0-5.36-2.87-10.32-7.51-13Z"
+        fill="#9f9f9f"
+      />
+      <path
+        d="M29.46,492.83L251.2,107.05c8.06-13.95,22.93-24.24,39.04-24.24h443.5c16.11,0,30.99,10.29,39.05,24.24l221.75,384.93c8.06,13.95,8.06,31.56,0,45.51l-221.75,382.62c-8.06,13.95-22.94,21.08-39.05,21.08h-443.5c-16.11,0-30.99-6.92-39.04-20.87L29.46,537.08c-8.06-13.94-8.06-30.3,0-44.25ZM213.08,678.34c0,5.67,3.41,10.92,8.33,13.76l282.46,162.96c4.91,2.84,11.07,2.84,15.98,0l282.68-162.96c4.91-2.84,8.35-8.08,8.35-13.76v-325.93c0-5.67-3.39-10.92-8.3-13.76l-282.45-162.96c-4.91-2.84-11.06-2.84-15.97,0l-282.7,162.96c-4.92,2.84-8.38,8.08-8.38,13.76v325.93h0Z"
+        fill="#fff"
+      />
+    </svg>
+  );
+}
