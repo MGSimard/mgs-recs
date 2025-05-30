@@ -4,6 +4,10 @@ import tsConfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   server: {
+    prerender: {
+      routes: ["/"],
+      crawlLinks: true,
+    },
     preset: "cloudflare-pages",
     unenv: cloudflare,
   },
