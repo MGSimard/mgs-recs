@@ -17,7 +17,7 @@ function PageStateManagement() {
         logo={<LogoReact />}
         title="React Defaults"
         links={[]}
-        docsLinks={[{ label: "React: State Management", href: "https://react.dev/learn/managing-state" }]}
+        docsLinks={[{ label: "React State Management", href: "https://react.dev/learn/managing-state" }]}
         subTitle="Simple state management"
         description="React's built-in state management uses hooks like useState, useReducer, and useContext to manage local and shared state. State is typically local to a component, but can be lifted up or shared via context. For centralized state management, or more complex global state management, it's generally advised to use a state management library like Zustand."
         features={[

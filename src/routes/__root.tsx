@@ -32,7 +32,7 @@ export const Route = createRootRoute({
       {
         title: "MGS RECS",
       },
-      { description: "MGS RECS: Collection of my recommended webdev things." },
+      { description: "MGS RECS - Collection of my recommended webdev things." },
       { name: "application-name", content: "MGS RECS" },
       { name: "apple-mobile-web-app-title", content: "MGS RECS" },
       { name: "mobile-web-app-capable", content: "yes" },
@@ -46,7 +46,7 @@ export const Route = createRootRoute({
       { property: "og:site_name", content: "MGS RECS" },
       {
         property: "og:description",
-        content: "MGS RECS: Collection of my recommended webdev things.",
+        content: "MGS RECS - Collection of my recommended webdev things.",
       },
       { property: "og:image", content: "https://mgs-recs.pages.dev/metadata/opengraph-image.png" },
       { property: "og:image:width", content: "1200" },
@@ -58,7 +58,7 @@ export const Route = createRootRoute({
       { name: "twitter:title", content: "MGS RECS" },
       {
         name: "twitter:description",
-        content: "MGS RECS: Collection of my recommended webdev things.",
+        content: "MGS RECS - Collection of my recommended webdev things.",
       },
       { name: "twitter:image", content: "https://mgs-recs.pages.dev/metadata/twitter-image.png" },
     ],

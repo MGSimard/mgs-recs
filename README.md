@@ -2,15 +2,17 @@
 
 _This could've been a markdown file_
 
+Collection of my recommended webdev things.
+
 ## Stack
 
 - TanStack Start (React 19, Vite, Nitro, H3, Vinxi)
 - TypeScript
 - Cloudflare Workers
 - shadcn/ui
-- TailwindCSS
+- Tailwind CSS
 
-Really was just looking for an excuse to try out ~~Mantine UI~~ ~~shadcn/ui~~ Tailwind css.
+Really was just looking for an excuse to try out ~~Mantine UI~~ ~~shadcn/ui~~ Tailwind CSS.
 
 ## Task List
 
