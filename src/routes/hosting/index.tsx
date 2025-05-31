@@ -19,7 +19,7 @@ function PageHosting() {
         links={[{ label: "Cloudflare Pages", href: "https://pages.cloudflare.com/" }]}
         docsLinks={[{ label: "Cloudflare Pages", href: "https://developers.cloudflare.com/pages/" }]}
         subTitle="Effortless, virtually zero cost, scalable web hosting."
-        description="Cloudflare Pages is a JAMstack platform for frontend developers to build, collaborate, and deploy both static and dynamic sites. With deep Git integration, automated builds, and unlimited free collaborators, you can deploy directly from your repository with every push. Dynamic functionality is powered by Cloudflare Workers, enabling serverless functions and APIs alongside your static assets. Sites are served globally from Cloudflare's edge network for unmatched speed, security, and reliability, with automatic SSL and privacy-first analytics included. Cloudflare Pages can handle virtually unlimited traffic and bandwidth at no cost for most use cases, making it an ideal choice for effortless, infinitely scalable, and maintenance-free hosting."
+        description="Cloudflare Pages is a platform for building and deploying static sites with automated Git integration and global edge delivery. For projects that need serverless functionality or APIs, you can add Cloudflare Workers (using Pages Functions) to run dynamic code alongside your static assets. This upgrade path allows you to combine static hosting with serverless features, all delivered from Cloudflare's edge network. Automatic SSL and privacy-first analytics are included, and most sites benefit from generous free usage and scaling."
         features={[
           "Effortless Git integration for automated deployments",
           "Unlimited free collaborators and preview links",
