@@ -19,7 +19,7 @@ function PagePayments() {
         links={[{ label: "Polar", href: "https://polar.sh/" }]}
         docsLinks={[{ label: "Polar", href: "https://docs.polar.sh/" }]}
         subTitle="Open source billing platform."
-        description="Polar is a modern, open source payment and billing platform built for SaaS and digital products. It is built on top of Stripe, using Stripe for payment processing while adding automation, compliance, and developer tooling. Polar supports flexible pricing models, usage-based billing, automated benefits, and a robust entitlements engine for features like license keys, downloads, and Discord or GitHub access. As a global merchant of record, Polar manages tax compliance, invoicing, and payouts, and is easy to integrate via a developer-friendly API, no-code tools, and adapters for popular frameworks. Fees are transparent: 4% + 40¢ per transaction (including Stripe's fees), which is typically more cost-effective than combining Stripe with additional merchant-of-record services."
+        description="Polar is an open source billing platform for SaaS and digital products, built on Stripe. It adds automation, compliance, and developer tools, supporting flexible pricing, usage-based billing, and entitlements (like license keys and downloads). As a merchant of record, Polar handles tax, invoicing, and payouts, with easy integration and transparent fees."
         features={[
           "Flexible billing for SaaS and digital products",
           "Supports multiple pricing models and discounts",

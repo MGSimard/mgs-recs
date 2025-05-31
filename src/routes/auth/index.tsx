@@ -19,7 +19,7 @@ function PageAuth() {
         links={[{ label: "Better Auth", href: "https://www.better-auth.com/" }]}
         docsLinks={[{ label: "Better Auth", href: "https://better-auth.com/docs/" }]}
         subTitle="Own your authentication and authorization"
-        description="Better Auth is a framework-agnostic authentication and authorization library for TypeScript, designed to give you full control over your auth flow without the complexity of self-hosting or the limitations of managed services. It supports most popular frameworks out of the box and includes advanced features like two-factor authentication, multi-tenancy, social sign-on, rate limiting, and automatic database management. With a flexible plugin system (including Stripe and Polar support) and comprehensive documentation, Better Auth lets you keep user data in your own database, avoid third-party lock-in, and extend functionality as your needs grow. This approach helps reduce boilerplate and maintenance overhead. In my own words—just use Better Auth (real em dash btw). "
+        description="Better Auth is a TypeScript authentication and authorization library that gives you full control without managed service limitations. It supports major frameworks, advanced features (2FA, multi-tenancy, social sign-on), and a flexible plugin system. Keep user data in your own database, avoid lock-in, and reduce boilerplate."
         features={[
           "Framework agnostic",
           "Email & password",

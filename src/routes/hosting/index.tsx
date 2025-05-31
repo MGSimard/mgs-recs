@@ -19,7 +19,7 @@ function PageHosting() {
         links={[{ label: "Cloudflare Pages", href: "https://pages.cloudflare.com/" }]}
         docsLinks={[{ label: "Cloudflare Pages", href: "https://developers.cloudflare.com/pages/" }]}
         subTitle="Effortless, virtually zero cost, scalable web hosting."
-        description="Cloudflare Pages is a platform for building and deploying static sites with automated Git integration and global edge delivery. For projects that need serverless functionality or APIs, you can add Cloudflare Workers (using Pages Functions) to run dynamic code alongside your static assets. This upgrade path allows you to combine static hosting with serverless features, all delivered from Cloudflare's edge network. Automatic SSL and privacy-first analytics are included, and most sites benefit from generous free usage and scaling."
+        description="Cloudflare Pages lets you build and deploy static sites with automated Git integration and global edge delivery. Add Cloudflare Workers for serverless functions or APIs, combining static hosting with dynamic features. Includes automatic SSL, privacy-first analytics, and generous free usage and scaling."
         features={[
           "Effortless Git integration for automated deployments",
           "Unlimited free collaborators and preview links",
@@ -40,7 +40,7 @@ function PageHosting() {
         links={[{ label: "Vercel", href: "https://vercel.com/" }]}
         docsLinks={[{ label: "Vercel", href: "https://vercel.com/docs/" }]}
         subTitle="Optimized for Next.js and full-stack edge applications."
-        description="Vercel is a cloud platform for deploying and hosting fullstack web applications, designed to deliver fast, reliable experiences at global scale. Its fluid compute technology bridges the gap between traditional servers and serverless, combining efficient resource usage with the flexibility to handle real-time, dynamic workloads like APIs, streaming, and AI. With in-function concurrency, Vercel Functions can process multiple requests simultaneously, reducing idle time and optimizing costs. Features like cold-start reduction, dynamic scaling, and cross-region failover ensure high performance and reliability. Vercel integrates deeply with Next.js for seamless server and client rendering, and its marketplace offers easy connections to databases like Neon and Redis. Developers benefit from instant Git-based deployments, preview builds for every deployment, collaborative previews, and a transparent pricing model based on actual execution time, making Vercel a robust choice for modern, data-driven web projects."
+        description="Vercel is a cloud platform for deploying fullstack web apps, optimized for speed and reliability at scale. Its fluid compute bridges serverless and traditional servers, supporting real-time workloads like APIs and AI. Features include in-function concurrency, dynamic scaling, cold-start reduction, and deep Next.js integration. Developers get instant Git-based deployments, preview builds, and transparent usage-based pricing."
         features={[
           "Zero-config Git-based deployments and instant rollbacks",
           "Global edge network for fast, scalable delivery",
@@ -61,7 +61,7 @@ function PageHosting() {
         links={[{ label: "Netlify", href: "https://www.netlify.com/" }]}
         docsLinks={[{ label: "Netlify", href: "https://docs.netlify.com/" }]}
         subTitle="All your sites, stores, & apps."
-        description="Netlify is a cloud platform for deploying, hosting, and scaling modern web projects, supporting everything from static sites to dynamic apps and e-commerce. With deep Git integration, every push triggers an automated build and deploy to a global edge network, providing instant rollbacks, live previews, and collaborative workflows. Netlify offers flexible serverless infrastructure, including edge functions and background jobs, and integrates with a wide range of frameworks, databases, and third-party services through its marketplace. Teams benefit from built-in security, granular access controls, and real-time analytics, while automatic scaling and advanced caching ensure fast, reliable performance for projects of any size."
+        description="Netlify is a cloud platform for deploying and scaling modern web projects, from static sites to dynamic apps. Automated Git-based builds deploy to a global edge network with instant rollbacks and live previews. Netlify offers serverless functions, edge features, marketplace integrations, built-in security, and real-time analytics for fast, reliable performance."
         features={[
           "Automated Git-based CI/CD and instant rollbacks",
           "Global edge network for fast, reliable delivery",
@@ -82,7 +82,7 @@ function PageHosting() {
         links={[{ label: "Coolify", href: "https://coolify.io/" }]}
         docsLinks={[{ label: "Coolify", href: "https://coolify.io/docs/" }]}
         subTitle="Open source self-hosting with superpowers."
-        description="Coolify is an open source platform for deploying, managing, and scaling web applications, databases, and services on your own infrastructure or in the cloud. As a self-hostable alternative to platforms like Netlify and Vercel, Coolify supports any language or framework and can deploy to any server you control, such as a VPS, Raspberry Pi, or major cloud providers, via SSH. I recommend hosting on Hetzner, and you can get a €20 free credit to get started. With Coolify, you can easily self-host databases and applications built with frameworks like Next.js, Nuxt.js, Remix, SvelteKit, and Wordpress. With push-to-deploy Git integration, free SSL, automatic backups, and no vendor lock-in, you maintain full control over your data and costs. Coolify Cloud offers a managed control panel hosted by the Coolify team, so you do not have to maintain the dashboard yourself, but you still bring your own deployment servers. This hybrid approach gives you high availability, free email notifications, and priority support, while keeping your deployments flexible and under your control. Features like real-time monitoring, collaborative team management, and a powerful API make Coolify a robust choice for developers who want the benefits of self-hosting with less maintenance."
+        description="Coolify is an open source platform for deploying and managing web apps, databases, and services on your own infrastructure or in the cloud. It supports any language or framework, deploys to any server via SSH, and offers push-to-deploy Git integration, free SSL, and automatic backups. Coolify Cloud provides a managed control panel while you keep control of your servers. Features include real-time monitoring, team management, and a powerful API—ideal for developers wanting self-hosting with less maintenance."
         features={[
           "Managed cloud or self-managed (still your servers)",
           "Deploy any language, framework, or Docker service",
@@ -105,7 +105,7 @@ function PageHosting() {
         links={[{ label: "Hetzner", href: "https://www.hetzner.com/" }]}
         docsLinks={[{ label: "Hetzner", href: "https://docs.hetzner.com/" }]}
         subTitle="Enterprise infrastructure at budget-friendly prices."
-        description="Ever heard of that saying that all you need is a $5 VPS? They're talking about Hetzner. As a German infrastructure provider known for exceptional value, Hetzner offers everything from budget-friendly cloud instances to high-performance dedicated servers and cutting-edge GPU solutions for AI workloads. Their cloud platform features NVMe SSDs in RAID10, AMD EPYC and Intel Xeon processors, and a robust 10 Gbit network, all backed by their own data centers in Germany, Finland, USA, and Singapore. With included DDoS protection, extensive API support, and GDPR compliance, Hetzner delivers enterprise-grade features at prices that make self-hosting accessible to everyone. Whether you need a simple VPS for development, dedicated CPU power for production workloads, or GPU servers for AI applications, Hetzner's transparent pricing and reliable infrastructure make it a go-to choice for developers and businesses alike."
+        description="Hetzner is a German provider offering budget-friendly cloud instances, high-performance servers, and GPU solutions for AI. Their platform features NVMe SSDs, AMD EPYC/Intel Xeon CPUs, a 10 Gbit network, and global data centers. With DDoS protection, API support, and GDPR compliance, Hetzner delivers enterprise features at accessible prices for developers and businesses."
         features={[
           "Exceptional price-to-performance for cloud and dedicated servers",
           "Wide range of server types: shared, dedicated, GPU, and ARM64",
