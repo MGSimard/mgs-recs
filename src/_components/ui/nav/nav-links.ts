@@ -12,6 +12,7 @@ import {
   DatabaseZap,
   DollarSign,
   FileImage,
+  FileUp,
   GitBranch,
   KeyRound,
   Layers,
@@ -275,6 +276,17 @@ export const NavLinks = {
           {
             title: "Resend",
             url: "/mailing#resend",
+          },
+        ],
+      },
+      {
+        title: "File Storage",
+        url: "/file-storage",
+        icon: FileUp,
+        items: [
+          {
+            title: "UploadThing",
+            url: "/file-storage#uploadthing",
           },
         ],
       },

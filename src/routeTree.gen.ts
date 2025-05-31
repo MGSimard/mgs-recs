@@ -27,6 +27,7 @@ import { Route as HostingIndexImport } from './routes/hosting/index'
 import { Route as GraphicDesignIndexImport } from './routes/graphic-design/index'
 import { Route as FrontendLanguagesIndexImport } from './routes/frontend-languages/index'
 import { Route as FrameworksIndexImport } from './routes/frameworks/index'
+import { Route as FileStorageIndexImport } from './routes/file-storage/index'
 import { Route as EnvironmentIndexImport } from './routes/environment/index'
 import { Route as DiagnosticsIndexImport } from './routes/diagnostics/index'
 import { Route as DesignIndexImport } from './routes/design/index'
@@ -133,6 +134,12 @@ const FrontendLanguagesIndexRoute = FrontendLanguagesIndexImport.update({
 const FrameworksIndexRoute = FrameworksIndexImport.update({
   id: '/frameworks/',
   path: '/frameworks/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const FileStorageIndexRoute = FileStorageIndexImport.update({
+  id: '/file-storage/',
+  path: '/file-storage/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -277,6 +284,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EnvironmentIndexImport
       parentRoute: typeof rootRoute
     }
+    '/file-storage/': {
+      id: '/file-storage/'
+      path: '/file-storage'
+      fullPath: '/file-storage'
+      preLoaderRoute: typeof FileStorageIndexImport
+      parentRoute: typeof rootRoute
+    }
     '/frameworks/': {
       id: '/frameworks/'
       path: '/frameworks'
@@ -399,6 +413,7 @@ export interface FileRoutesByFullPath {
   '/design': typeof DesignIndexRoute
   '/diagnostics': typeof DiagnosticsIndexRoute
   '/environment': typeof EnvironmentIndexRoute
+  '/file-storage': typeof FileStorageIndexRoute
   '/frameworks': typeof FrameworksIndexRoute
   '/frontend-languages': typeof FrontendLanguagesIndexRoute
   '/graphic-design': typeof GraphicDesignIndexRoute
@@ -428,6 +443,7 @@ export interface FileRoutesByTo {
   '/design': typeof DesignIndexRoute
   '/diagnostics': typeof DiagnosticsIndexRoute
   '/environment': typeof EnvironmentIndexRoute
+  '/file-storage': typeof FileStorageIndexRoute
   '/frameworks': typeof FrameworksIndexRoute
   '/frontend-languages': typeof FrontendLanguagesIndexRoute
   '/graphic-design': typeof GraphicDesignIndexRoute
@@ -458,6 +474,7 @@ export interface FileRoutesById {
   '/design/': typeof DesignIndexRoute
   '/diagnostics/': typeof DiagnosticsIndexRoute
   '/environment/': typeof EnvironmentIndexRoute
+  '/file-storage/': typeof FileStorageIndexRoute
   '/frameworks/': typeof FrameworksIndexRoute
   '/frontend-languages/': typeof FrontendLanguagesIndexRoute
   '/graphic-design/': typeof GraphicDesignIndexRoute
@@ -489,6 +506,7 @@ export interface FileRouteTypes {
     | '/design'
     | '/diagnostics'
     | '/environment'
+    | '/file-storage'
     | '/frameworks'
     | '/frontend-languages'
     | '/graphic-design'
@@ -517,6 +535,7 @@ export interface FileRouteTypes {
     | '/design'
     | '/diagnostics'
     | '/environment'
+    | '/file-storage'
     | '/frameworks'
     | '/frontend-languages'
     | '/graphic-design'
@@ -545,6 +564,7 @@ export interface FileRouteTypes {
     | '/design/'
     | '/diagnostics/'
     | '/environment/'
+    | '/file-storage/'
     | '/frameworks/'
     | '/frontend-languages/'
     | '/graphic-design/'
@@ -575,6 +595,7 @@ export interface RootRouteChildren {
   DesignIndexRoute: typeof DesignIndexRoute
   DiagnosticsIndexRoute: typeof DiagnosticsIndexRoute
   EnvironmentIndexRoute: typeof EnvironmentIndexRoute
+  FileStorageIndexRoute: typeof FileStorageIndexRoute
   FrameworksIndexRoute: typeof FrameworksIndexRoute
   FrontendLanguagesIndexRoute: typeof FrontendLanguagesIndexRoute
   GraphicDesignIndexRoute: typeof GraphicDesignIndexRoute
@@ -604,6 +625,7 @@ const rootRouteChildren: RootRouteChildren = {
   DesignIndexRoute: DesignIndexRoute,
   DiagnosticsIndexRoute: DiagnosticsIndexRoute,
   EnvironmentIndexRoute: EnvironmentIndexRoute,
+  FileStorageIndexRoute: FileStorageIndexRoute,
   FrameworksIndexRoute: FrameworksIndexRoute,
   FrontendLanguagesIndexRoute: FrontendLanguagesIndexRoute,
   GraphicDesignIndexRoute: GraphicDesignIndexRoute,
@@ -642,6 +664,7 @@ export const routeTree = rootRoute
         "/design/",
         "/diagnostics/",
         "/environment/",
+        "/file-storage/",
         "/frameworks/",
         "/frontend-languages/",
         "/graphic-design/",
@@ -691,6 +714,9 @@ export const routeTree = rootRoute
     },
     "/environment/": {
       "filePath": "environment/index.tsx"
+    },
+    "/file-storage/": {
+      "filePath": "file-storage/index.tsx"
     },
     "/frameworks/": {
       "filePath": "frameworks/index.tsx"

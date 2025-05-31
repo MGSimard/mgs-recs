@@ -19,7 +19,6 @@ Really was just looking for an excuse to try out ~~Mantine UI~~ ~~shadcn/ui~~ Ta
 - [ ] Neon acquired by databricks
 - [ ] Good info to relay https://www.youtube.com/watch?v=PgGV5dTNu9A
 - [ ] Add stylelint & stylelint-gamut
-- [ ] Uploadthing and stuff
 - [ ] GSAP
 - [ ] hCaptcha
 
