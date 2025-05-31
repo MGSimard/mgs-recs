@@ -63,7 +63,7 @@ function PageStateManagement() {
           { label: "TanStack Query", href: "https://tanstack.com/query/latest/docs/framework/react/overview/" },
         ]}
         subTitle="State management & data fetching."
-        description="TanStack Query (formerly React Query) is the missing data-fetching and server state management library for modern web apps. It makes fetching, caching, synchronizing, and updating remote data in your applications simple and automatic. With built-in caching, background updates, and out-of-the-box support for mutations, TanStack Query helps you write less code, avoid async-spaghetti, and deliver a faster, more responsive user experience. Without its client-side data fetching pattern, you'll often just end up implementing a weaker version of TanStack Query. More often than not, the answer is 'Just fucking use TanStack Query'."
+        description="TanStack Query (formerly React Query) is the missing data fetching and server state management library for modern web apps. It makes fetching, caching, synchronizing, and updating remote data in your applications simple and automatic. With built-in caching, background updates, and out-of-the-box support for mutations, TanStack Query helps you write less code, avoid async-spaghetti, and deliver a faster, more responsive user experience. Without its client-side data fetching pattern, you'll often just end up implementing a weaker version of TanStack Query. More often than not, the answer is 'Just fucking use TanStack Query'."
         features={[
           "Declarative, automatic data fetching and caching",
           "Background updates and stale data management",
