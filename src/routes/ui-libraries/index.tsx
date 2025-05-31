@@ -28,8 +28,7 @@ function PageUILibraries() {
           "Framework Agnostic",
           "Easy Theming",
           "React 19 compatible",
-          "SSR support",
-          "Next.js support",
+          "SSR/RSC support",
         ]}
         issues={[
           "Components may sometimes be over-nested",
@@ -51,7 +50,7 @@ function PageUILibraries() {
           "Customizable themes",
           "Powerful hooks",
           "Regular CSS/PostCSS support",
-          "SSR and Next.js support",
+          "SSR/RSC support",
           "Accessibility focused",
           "Responsive design utilities",
           "Dark mode built-in",
