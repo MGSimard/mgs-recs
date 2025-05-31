@@ -113,6 +113,10 @@ export const NavLinks = {
             title: "Zustand",
             url: "/state-management#zustand",
           },
+          {
+            title: "TanStack Query",
+            url: "/state-management#tanstack-query",
+          },
         ],
       },
       {

@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/_components/Section";
-import { LogoAdobeIllustrator, LogoInkscape, LogoReact, LogoZustand } from "@/_components/Icons";
+import { LogoReact, LogoTanStackStart as LogoTanStackQuery, LogoZustand } from "@/_components/Icons";
 
 export const Route = createFileRoute("/state-management/")({
   component: PageStateManagement,
@@ -52,6 +52,33 @@ function PageStateManagement() {
           "Scales from small to large apps",
         ]}
         issues={["Requires tweaking & context use for SSR/RSCs"]}></Section>
+
+      <Section
+        id="tanstack-query"
+        className="bg-[linear-gradient(90deg,oklch(0.6386_0.2063_26.04),oklch(0.7686_0.1647_70.08))]"
+        logo={<LogoTanStackQuery />}
+        title="TanStack Query"
+        links={[{ label: "TanStack Query", href: "https://tanstack.com/query/latest/" }]}
+        docsLinks={[
+          { label: "TanStack Query", href: "https://tanstack.com/query/latest/docs/framework/react/overview/" },
+        ]}
+        subTitle="State management & data fetching."
+        description="TanStack Query (formerly React Query) is the missing data-fetching and server state management library for modern web apps. It makes fetching, caching, synchronizing, and updating remote data in your applications simple and automatic. With built-in caching, background updates, and out-of-the-box support for mutations, TanStack Query helps you write less code, avoid async-spaghetti, and deliver a faster, more responsive user experience. Without its client-side data fetching pattern, you'll often just end up implementing a weaker version of TanStack Query. More often than not, the answer is 'Just fucking use TanStack Query'."
+        features={[
+          "Declarative, automatic data fetching and caching",
+          "Background updates and stale data management",
+          "Built-in support for mutations and optimistic updates",
+          "Devtools for debugging and visualization",
+          "Pagination, infinite scroll, and dependent queries",
+          "Auto refetching on window focus or network reconnect",
+          "Request deduplication and cancellation",
+          "Offline and SSR support",
+          "TypeScript-first, framework-agnostic design",
+          "Extensible and configurable for any use case",
+        ]}
+        issues={[
+          "Not an issue, just a common mistake: Remember to throw your own HTTP errors (!res.ok) when using fetch within queries so the error handling can catch them",
+        ]}></Section>
     </>
   );
 }
