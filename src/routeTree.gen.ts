@@ -17,6 +17,7 @@ import { Route as VersionControlIndexImport } from './routes/version-control/ind
 import { Route as VectorGraphicsIndexImport } from './routes/vector-graphics/index'
 import { Route as ValidationIndexImport } from './routes/validation/index'
 import { Route as UiLibrariesIndexImport } from './routes/ui-libraries/index'
+import { Route as StateManagementIndexImport } from './routes/state-management/index'
 import { Route as PaymentsIndexImport } from './routes/payments/index'
 import { Route as OrmsIndexImport } from './routes/orms/index'
 import { Route as MailingIndexImport } from './routes/mailing/index'
@@ -72,6 +73,12 @@ const ValidationIndexRoute = ValidationIndexImport.update({
 const UiLibrariesIndexRoute = UiLibrariesIndexImport.update({
   id: '/ui-libraries/',
   path: '/ui-libraries/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const StateManagementIndexRoute = StateManagementIndexImport.update({
+  id: '/state-management/',
+  path: '/state-management/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -333,6 +340,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PaymentsIndexImport
       parentRoute: typeof rootRoute
     }
+    '/state-management/': {
+      id: '/state-management/'
+      path: '/state-management'
+      fullPath: '/state-management'
+      preLoaderRoute: typeof StateManagementIndexImport
+      parentRoute: typeof rootRoute
+    }
     '/ui-libraries/': {
       id: '/ui-libraries/'
       path: '/ui-libraries'
@@ -394,6 +408,7 @@ export interface FileRoutesByFullPath {
   '/mailing': typeof MailingIndexRoute
   '/orms': typeof OrmsIndexRoute
   '/payments': typeof PaymentsIndexRoute
+  '/state-management': typeof StateManagementIndexRoute
   '/ui-libraries': typeof UiLibrariesIndexRoute
   '/validation': typeof ValidationIndexRoute
   '/vector-graphics': typeof VectorGraphicsIndexRoute
@@ -422,6 +437,7 @@ export interface FileRoutesByTo {
   '/mailing': typeof MailingIndexRoute
   '/orms': typeof OrmsIndexRoute
   '/payments': typeof PaymentsIndexRoute
+  '/state-management': typeof StateManagementIndexRoute
   '/ui-libraries': typeof UiLibrariesIndexRoute
   '/validation': typeof ValidationIndexRoute
   '/vector-graphics': typeof VectorGraphicsIndexRoute
@@ -451,6 +467,7 @@ export interface FileRoutesById {
   '/mailing/': typeof MailingIndexRoute
   '/orms/': typeof OrmsIndexRoute
   '/payments/': typeof PaymentsIndexRoute
+  '/state-management/': typeof StateManagementIndexRoute
   '/ui-libraries/': typeof UiLibrariesIndexRoute
   '/validation/': typeof ValidationIndexRoute
   '/vector-graphics/': typeof VectorGraphicsIndexRoute
@@ -481,6 +498,7 @@ export interface FileRouteTypes {
     | '/mailing'
     | '/orms'
     | '/payments'
+    | '/state-management'
     | '/ui-libraries'
     | '/validation'
     | '/vector-graphics'
@@ -508,6 +526,7 @@ export interface FileRouteTypes {
     | '/mailing'
     | '/orms'
     | '/payments'
+    | '/state-management'
     | '/ui-libraries'
     | '/validation'
     | '/vector-graphics'
@@ -535,6 +554,7 @@ export interface FileRouteTypes {
     | '/mailing/'
     | '/orms/'
     | '/payments/'
+    | '/state-management/'
     | '/ui-libraries/'
     | '/validation/'
     | '/vector-graphics/'
@@ -564,6 +584,7 @@ export interface RootRouteChildren {
   MailingIndexRoute: typeof MailingIndexRoute
   OrmsIndexRoute: typeof OrmsIndexRoute
   PaymentsIndexRoute: typeof PaymentsIndexRoute
+  StateManagementIndexRoute: typeof StateManagementIndexRoute
   UiLibrariesIndexRoute: typeof UiLibrariesIndexRoute
   ValidationIndexRoute: typeof ValidationIndexRoute
   VectorGraphicsIndexRoute: typeof VectorGraphicsIndexRoute
@@ -592,6 +613,7 @@ const rootRouteChildren: RootRouteChildren = {
   MailingIndexRoute: MailingIndexRoute,
   OrmsIndexRoute: OrmsIndexRoute,
   PaymentsIndexRoute: PaymentsIndexRoute,
+  StateManagementIndexRoute: StateManagementIndexRoute,
   UiLibrariesIndexRoute: UiLibrariesIndexRoute,
   ValidationIndexRoute: ValidationIndexRoute,
   VectorGraphicsIndexRoute: VectorGraphicsIndexRoute,
@@ -629,6 +651,7 @@ export const routeTree = rootRoute
         "/mailing/",
         "/orms/",
         "/payments/",
+        "/state-management/",
         "/ui-libraries/",
         "/validation/",
         "/vector-graphics/",
@@ -695,6 +718,9 @@ export const routeTree = rootRoute
     },
     "/payments/": {
       "filePath": "payments/index.tsx"
+    },
+    "/state-management/": {
+      "filePath": "state-management/index.tsx"
     },
     "/ui-libraries/": {
       "filePath": "ui-libraries/index.tsx"

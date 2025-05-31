@@ -1,5 +1,7 @@
 import {
   Activity,
+  Archive,
+  ArrowLeftRight,
   BookOpen,
   BookType,
   ChartLine,
@@ -95,6 +97,21 @@ export const NavLinks = {
           {
             title: "Fumadocs",
             url: "/frameworks#fumadocs",
+          },
+        ],
+      },
+      {
+        title: "State Management",
+        url: "/state-management",
+        icon: ArrowLeftRight,
+        items: [
+          {
+            title: "React Defaults",
+            url: "/state-management#react-defaults",
+          },
+          {
+            title: "Zustand",
+            url: "/state-management#zustand",
           },
         ],
       },
