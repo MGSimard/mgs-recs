@@ -1,6 +1,6 @@
 import { forwardRef, useRef, useImperativeHandle, useEffect } from "react";
 
-function setCanvasSize(canvas: HTMLCanvasElement, offscreen: HTMLCanvasElement) {
+function setCanvasSize(canvas: HTMLCanvasElement, offscreen: OffscreenCanvas) {
   const dpr = Math.round(Math.max(1, Math.min(window.devicePixelRatio ?? 1, 2)));
   canvas.width = offscreen.width = canvas.offsetWidth * dpr;
   canvas.height = offscreen.height = canvas.offsetHeight * dpr;
@@ -51,20 +51,17 @@ export const Shader = forwardRef<ShaderHandle, ShaderProps>(function ShaderCompo
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
+    const canvasEl = canvas as HTMLCanvasElement;
 
-    let offscreenCanvas: HTMLCanvasElement | OffscreenCanvas;
-    if (typeof window.OffscreenCanvas === "function") {
-      offscreenCanvas = new window.OffscreenCanvas(canvas.offsetWidth, canvas.offsetHeight);
-    } else {
-      offscreenCanvas = document.createElement("canvas");
-    }
-    let dpr = setCanvasSize(canvas, offscreenCanvas as any);
+    const offscreenCanvas = new window.OffscreenCanvas(canvasEl.offsetWidth, canvasEl.offsetHeight);
+    let dpr = setCanvasSize(canvasEl, offscreenCanvas);
 
     let animationId: number;
-    let gl = (offscreenCanvas as any).getContext("webgl2");
-    let ctx = canvas.getContext("2d");
-
-    if (!gl || !ctx) return;
+    const glRaw = offscreenCanvas.getContext("webgl2");
+    const ctxRaw = canvasEl.getContext("2d");
+    if (!glRaw || !ctxRaw) return;
+    const gl = glRaw as WebGL2RenderingContext;
+    const ctx = ctxRaw as CanvasRenderingContext2D;
 
     function compileShader(gl: WebGL2RenderingContext, type: number, source: string): WebGLShader | null {
       const shader = gl.createShader(type);
@@ -116,7 +113,7 @@ export const Shader = forwardRef<ShaderHandle, ShaderProps>(function ShaderCompo
     const uTime = gl.getUniformLocation(program, "u_time");
     const uEventTime = gl.getUniformLocation(program, "u_event_time");
     glStateRef.current = { gl, program };
-    gl.uniform2f(uResolution, canvas.width / dpr, canvas.height / dpr);
+    gl.uniform2f(uResolution, canvasEl.width / dpr, canvasEl.height / dpr);
     gl.enable(gl.BLEND);
     gl.blendFunc(gl.SRC_ALPHA, gl.ONE);
     gl.disable(gl.DEPTH_TEST);
@@ -131,7 +128,6 @@ export const Shader = forwardRef<ShaderHandle, ShaderProps>(function ShaderCompo
     };
     const loadedTextures: TextureInfo[] = [];
     function render(frameTime: number) {
-      if (!gl || !ctx || !canvas) return;
       if (playbackStateRef.current === "paused") {
         animationId = window.requestAnimationFrame(render);
         return;
@@ -160,15 +156,14 @@ export const Shader = forwardRef<ShaderHandle, ShaderProps>(function ShaderCompo
         }
       }
       gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      if (offscreenCanvas.width > 0 && offscreenCanvas.height > 0) ctx.drawImage(offscreenCanvas, 0, 0);
+      ctx.clearRect(0, 0, canvasEl.width, canvasEl.height);
+      if (offscreenCanvas.width > 0 && offscreenCanvas.height > 0) ctx.drawImage(offscreenCanvas as any, 0, 0);
       animationId = window.requestAnimationFrame(render);
     }
     (async () => {
       for (let i = 0; i < textures.length; i++) {
         try {
           const texInfo = await new Promise<TextureInfo>((resolve, reject) => {
-            if (!gl || !program) return reject();
             const texture = gl.createTexture();
             if (!texture) return reject();
             gl.activeTexture(gl.TEXTURE0 + i);
@@ -184,7 +179,6 @@ export const Shader = forwardRef<ShaderHandle, ShaderProps>(function ShaderCompo
             };
             const img = new window.Image();
             img.addEventListener("load", () => {
-              if (!gl) return reject();
               info.width = img.width;
               info.height = img.height;
               gl.activeTexture(gl.TEXTURE0 + i);
@@ -199,25 +193,23 @@ export const Shader = forwardRef<ShaderHandle, ShaderProps>(function ShaderCompo
           return;
         }
       }
-      if (gl) animationId = window.requestAnimationFrame(render);
+      animationId = window.requestAnimationFrame(render);
     })();
     const resizeObserver = new window.ResizeObserver(() => {
-      if (!canvas || !gl) return;
-      dpr = setCanvasSize(canvas, offscreenCanvas as any);
-      gl.uniform2f(uResolution, canvas.width / dpr, canvas.height / dpr);
+      dpr = setCanvasSize(canvasEl, offscreenCanvas);
+      gl.uniform2f(uResolution, canvasEl.width / dpr, canvasEl.height / dpr);
     });
-    resizeObserver.observe(canvas);
+    resizeObserver.observe(canvasEl);
+
     return () => {
       window.cancelAnimationFrame(animationId);
       resizeObserver.disconnect();
-      if (gl) {
-        gl.deleteShader(vertexShader);
-        gl.deleteShader(fragmentShader);
-        gl.deleteProgram(program);
-        gl.deleteBuffer(buffer);
-        for (const { texture } of loadedTextures) {
-          gl.deleteTexture(texture);
-        }
+      gl.deleteShader(vertexShader);
+      gl.deleteShader(fragmentShader);
+      gl.deleteProgram(program);
+      gl.deleteBuffer(buffer);
+      for (const { texture } of loadedTextures) {
+        gl.deleteTexture(texture);
       }
       glStateRef.current = {};
     };
