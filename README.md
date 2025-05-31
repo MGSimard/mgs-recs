@@ -22,6 +22,7 @@ Really was just looking for an excuse to try out ~~Mantine UI~~ ~~shadcn/ui~~ ta
 - [ ] Uploadthing and stuff
 - [ ] GSAP
 - [ ] hCaptcha
+- [ ] Specify cf edge is workers, which is upgradable from pages
 
 ## HOMEWORK
 
