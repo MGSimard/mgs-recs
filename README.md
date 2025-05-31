@@ -10,13 +10,12 @@ _This could've been a markdown file_
 - shadcn/ui
 - TailwindCSS
 
-Really was just looking for an excuse to try out ~~Mantine UI~~ ~~shadcn/ui~~ tailwindcss.
+Really was just looking for an excuse to try out ~~Mantine UI~~ ~~shadcn/ui~~ Tailwind css.
 
 ## Task List
 
 - [ ] Neon acquired by databricks
 - [ ] Good info to relay https://www.youtube.com/watch?v=PgGV5dTNu9A
-- [ ] For UI libraries make sure you talk about compatibility with RSCs
 - [ ] Add stylelint & stylelint-gamut
 - [ ] Uploadthing and stuff
 - [ ] GSAP
