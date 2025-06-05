@@ -27,3 +27,16 @@ Really was just looking for an excuse to try out ~~Mantine UI~~ ~~shadcn/ui~~ Ta
 - [ ] tRPC
 - [ ] Convex
 - [ ] Bun
+
+---
+
+## Contact
+
+MGSimard  
+X: [@MGSimard](https://x.com/MGSimard)  
+GitHub: [@MGSimard](https://github.com/MGSimard)  
+Mail: [mgsimard.dev@gmail.com](mailto:mgsimard.dev@gmail.com)
+
+For more info, view my portfolio at [mgsimard.dev](https://mgsimard.dev).
+
+---
