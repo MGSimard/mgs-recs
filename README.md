@@ -21,6 +21,7 @@ Really was just looking for an excuse to try out ~~Mantine UI~~ ~~shadcn/ui~~ Ta
 - [ ] Add stylelint & stylelint-gamut
 - [ ] GSAP
 - [ ] hCaptcha
+- [ ] BunnyCDN
 
 ## HOMEWORK
 
