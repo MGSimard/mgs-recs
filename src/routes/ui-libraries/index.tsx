@@ -34,6 +34,7 @@ function PageUILibraries() {
           "Components may sometimes be over-nested",
           "Requires semantic adjustments",
           "Reliant on Tailwind CSS",
+          "Depends on Radix UI which is no longer maintained",
         ]}></Section>
 
       <Section
