@@ -1,3 +1,4 @@
+/// <reference types="vite/client" />
 import type { ReactNode } from "react";
 import { Outlet, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { Providers } from "@/_components/Providers";
@@ -11,14 +12,6 @@ import globalCss from "@/_styles/global.css?url";
 import fontsCss from "@/_styles/fonts.css?url";
 
 export const Route = createRootRoute({
-  notFoundComponent: () => <PageNotFound />,
-  errorComponent: (props) => {
-    return (
-      <RootDocument>
-        <PageError {...props} />
-      </RootDocument>
-    );
-  },
   head: () => ({
     meta: [
       {
@@ -99,6 +92,14 @@ export const Route = createRootRoute({
     ],
   }),
   component: RootComponent,
+  notFoundComponent: () => <PageNotFound />,
+  errorComponent: (props) => {
+    return (
+      <RootDocument>
+        <PageError {...props} />
+      </RootDocument>
+    );
+  },
 });
 
 function RootComponent() {
