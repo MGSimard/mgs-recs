@@ -135,7 +135,6 @@
   }
   html {
     font-family: var(--coreFont);
-    scrollbar-gutter: stable;
     scroll-padding-top: 2rem;
   }
   body {
