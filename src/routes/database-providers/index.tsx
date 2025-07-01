@@ -88,7 +88,7 @@ function PageDatabaseProviders() {
         links={[{ label: "Convex", href: "https://convex.dev/" }]}
         docsLinks={[{ label: "Convex", href: "https://docs.convex.dev/" }]}
         subTitle="Reactive database for modern apps."
-        description="Convex is an open-source reactive database where queries are TypeScript code running right in the database. It provides a complete backend-as-a-service with a document-relational database, real-time subscriptions, authentication, file storage, and scheduling. Built for modern reactive UI frameworks, Convex automatically updates your UI when data changes. The cloud version runs on Amazon RDS with MySQL, while the open-source version supports SQLite, Postgres, and MySQL. Convex is now migrating their reactive database infrastructure to PlanetScale's new PostgreSQL offering on PlanetScale Metal for enhanced performance and reliability."
+        description="Convex is an open-source reactive database where queries are TypeScript code running right in the database. It provides a complete backend-as-a-service with a document-relational database, real-time subscriptions, authentication, file storage, and scheduling. Built for modern reactive UI frameworks, Convex automatically updates your UI when data changes. The cloud version runs on Amazon RDS with MySQL, while the open-source version supports SQLite, Postgres, and MySQL. Convex has migrated their reactive database infrastructure to PlanetScale's new PostgreSQL offering on PlanetScale Metal for enhanced performance and reliability."
         features={[
           "Document-relational database",
           "TypeScript queries (no SQL needed)",
