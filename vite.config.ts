@@ -18,6 +18,15 @@ export default defineConfig({
       },
     }),
     tailwindcss(),
-    tanstackStart({ target: "netlify" }),
+    tanstackStart({
+      target: "netlify",
+      spa: {
+        enabled: true,
+        prerender: {
+          enabled: true,
+          crawlLinks: true,
+        },
+      },
+    }),
   ],
 });
