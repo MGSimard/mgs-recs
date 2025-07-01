@@ -5,14 +5,15 @@ import { SidebarMenuSubButton, SidebarMenuSubItem } from "@/_components/ui/sideb
 const normalizePath = (path: string) => path.replace(/\/$/, "");
 
 interface NavSubItemsProps {
+  parentUrl: string;
   items: {
     title: string;
-    url: string;
+    hash: string;
   }[];
   setOpenMobile: (open: boolean) => void;
 }
 
-export function NavSubItems({ items, setOpenMobile }: NavSubItemsProps) {
+export function NavSubItems({ parentUrl, items, setOpenMobile }: NavSubItemsProps) {
   const location = useLocation();
   const currentPath = normalizePath(location.pathname);
   const [currentHash, setCurrentHash] = useState("");
@@ -24,15 +25,14 @@ export function NavSubItems({ items, setOpenMobile }: NavSubItemsProps) {
   return (
     <>
       {items.map((subItem) => {
-        const [subPathRaw, subHashRaw] = subItem.url.split("#");
-        const subPath = normalizePath(subPathRaw || "");
-        const subHash = decodeURIComponent(subHashRaw || "");
+        const subPath = normalizePath(parentUrl || "");
+        const subHash = subItem.hash || "";
         const isActive = currentPath === subPath && ((currentHash === "" && subHash === "") || currentHash === subHash);
 
         return (
           <SidebarMenuSubItem key={subItem.title}>
             <SidebarMenuSubButton asChild className="text-muted-foreground" isActive={isActive}>
-              <Link to={subItem.url} onClick={() => setOpenMobile(false)}>
+              <Link to={parentUrl} hash={subHash} onClick={() => setOpenMobile(false)}>
                 <span>{subItem.title}</span>
               </Link>
             </SidebarMenuSubButton>

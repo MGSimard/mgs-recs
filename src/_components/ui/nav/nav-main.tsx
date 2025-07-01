@@ -15,7 +15,7 @@ export function NavMain({
     icon: LucideIcon;
     items?: {
       title: string;
-      url: string;
+      hash: string;
     }[];
   }[];
 }) {
@@ -35,12 +35,7 @@ export function NavMain({
           // Calculate if any sub-items are active
           const isAnySubItemActive =
             item.items?.some((subItem) => {
-              const [subPathRaw, subHashRaw] = subItem.url.split("#");
-              const subPath = (subPathRaw || "").replace(/\/$/, "");
-              return (
-                currentPath === subPath.replace(/\/$/, "") &&
-                (subHashRaw ? currentHash === subHashRaw.replace(/^#/, "") : true)
-              );
+              return currentPath === normalizedItemUrl && (subItem.hash ? currentHash === subItem.hash : true);
             }) || false;
 
           return (

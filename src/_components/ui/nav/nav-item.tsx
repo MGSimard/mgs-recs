@@ -13,7 +13,7 @@ interface NavItemProps {
   setOpenMobile: (open: boolean) => void;
   items?: {
     title: string;
-    url: string;
+    hash: string;
   }[];
   state: "expanded" | "collapsed";
   isMobile: boolean;
@@ -59,7 +59,7 @@ export function NavItem({
             {items && (
               <CollapsibleContent className="rdx-collapsible">
                 <SidebarMenuSub>
-                  <NavSubItems items={items} setOpenMobile={setOpenMobile} />
+                  <NavSubItems parentUrl={url} items={items} setOpenMobile={setOpenMobile} />
                 </SidebarMenuSub>
               </CollapsibleContent>
             )}

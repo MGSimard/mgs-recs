@@ -1,6 +1,5 @@
 import {
   Activity,
-  Archive,
   ArrowLeftRight,
   BookOpen,
   BookType,
@@ -39,15 +38,15 @@ export const NavLinks = {
         items: [
           {
             title: "Visual Studio Code",
-            url: "/code-editors#visual-studio-code",
+            hash: "visual-studio-code",
           },
           {
             title: "Cursor",
-            url: "/code-editors#cursor",
+            hash: "cursor",
           },
           {
             title: "Phoenix Code",
-            url: "/code-editors#phoenix-code",
+            hash: "phoenix-code",
           },
         ],
       },
@@ -58,19 +57,19 @@ export const NavLinks = {
         items: [
           {
             title: "HTML5",
-            url: "/frontend-languages#html",
+            hash: "html",
           },
           {
             title: "CSS3",
-            url: "/frontend-languages#css",
+            hash: "css",
           },
           {
             title: "JavaScript (ES6+)",
-            url: "/frontend-languages#javascript",
+            hash: "javascript",
           },
           {
             title: "TypeScript",
-            url: "/frontend-languages#typescript",
+            hash: "typescript",
           },
         ],
       },
@@ -81,23 +80,23 @@ export const NavLinks = {
         items: [
           {
             title: "Vite + TanStack Router",
-            url: "/frameworks#vite-tanstack-router",
+            hash: "vite-tanstack-router",
           },
           {
             title: "TanStack Start",
-            url: "/frameworks#tanstack-start",
+            hash: "tanstack-start",
           },
           {
             title: "Next.js",
-            url: "/frameworks#nextjs",
+            hash: "nextjs",
           },
           {
             title: "Payload",
-            url: "/frameworks#payload",
+            hash: "payload",
           },
           {
             title: "Fumadocs",
-            url: "/frameworks#fumadocs",
+            hash: "fumadocs",
           },
         ],
       },
@@ -108,15 +107,15 @@ export const NavLinks = {
         items: [
           {
             title: "React Defaults",
-            url: "/state-management#react-defaults",
+            hash: "react-defaults",
           },
           {
             title: "Zustand",
-            url: "/state-management#zustand",
+            hash: "zustand",
           },
           {
             title: "TanStack Query",
-            url: "/state-management#tanstack-query",
+            hash: "tanstack-query",
           },
         ],
       },
@@ -127,15 +126,15 @@ export const NavLinks = {
         items: [
           {
             title: "shadcn/ui",
-            url: "/ui-libraries#shadcn-ui",
+            hash: "shadcn-ui",
           },
           {
             title: "Mantine",
-            url: "/ui-libraries#mantine",
+            hash: "mantine",
           },
           {
             title: "Ant Design",
-            url: "/ui-libraries#ant-design",
+            hash: "ant-design",
           },
         ],
       },
@@ -146,11 +145,11 @@ export const NavLinks = {
         items: [
           {
             title: "Tailwind CSS",
-            url: "/css-libraries#tailwind-css",
+            hash: "tailwind-css",
           },
           {
             title: "PostCSS",
-            url: "/css-libraries#postcss",
+            hash: "postcss",
           },
         ],
       },
@@ -161,15 +160,15 @@ export const NavLinks = {
         items: [
           {
             title: "Lucide",
-            url: "/icon-libraries#lucide",
+            hash: "lucide",
           },
           {
             title: "Heroicons",
-            url: "/icon-libraries#heroicons",
+            hash: "heroicons",
           },
           {
             title: "svgl",
-            url: "/icon-libraries#svgl",
+            hash: "svgl",
           },
         ],
       },
@@ -180,27 +179,27 @@ export const NavLinks = {
         items: [
           {
             title: "PostgreSQL",
-            url: "/databases#postgresql",
+            hash: "postgresql",
           },
           {
             title: "MySQL",
-            url: "/databases#mysql",
+            hash: "mysql",
           },
           {
             title: "Redis",
-            url: "/databases#redis",
+            hash: "redis",
           },
           {
             title: "Dexie.js",
-            url: "/databases#dexiejs",
+            hash: "dexiejs",
           },
           {
             title: "localStorage",
-            url: "/databases#localstorage",
+            hash: "localstorage",
           },
           {
             title: "Google Sheets",
-            url: "/databases#google-sheets",
+            hash: "google-sheets",
           },
         ],
       },
@@ -211,19 +210,19 @@ export const NavLinks = {
         items: [
           {
             title: "Neon",
-            url: "/database-providers#neon",
+            hash: "neon",
           },
           {
             title: "Supabase",
-            url: "/database-providers#supabase",
+            hash: "supabase",
           },
           {
             title: "PlanetScale",
-            url: "/database-providers#planetscale",
+            hash: "planetscale",
           },
           {
             title: "Convex",
-            url: "/database-providers#convex",
+            hash: "convex",
           },
         ],
       },
@@ -234,11 +233,11 @@ export const NavLinks = {
         items: [
           {
             title: "Drizzle ORM",
-            url: "/orms#drizzle-orm",
+            hash: "drizzle-orm",
           },
           {
             title: "Prisma ORM",
-            url: "/orms#prisma",
+            hash: "prisma",
           },
         ],
       },
@@ -249,11 +248,11 @@ export const NavLinks = {
         items: [
           {
             title: "Better Auth",
-            url: "/auth#better-auth",
+            hash: "better-auth",
           },
           {
             title: "Clerk",
-            url: "/auth#clerk",
+            hash: "clerk",
           },
         ],
       },
@@ -264,11 +263,11 @@ export const NavLinks = {
         items: [
           {
             title: "Polar",
-            url: "/payments#polar",
+            hash: "polar",
           },
           {
             title: "Stripe",
-            url: "/payments#stripe",
+            hash: "stripe",
           },
         ],
       },
@@ -279,7 +278,7 @@ export const NavLinks = {
         items: [
           {
             title: "Resend",
-            url: "/mailing#resend",
+            hash: "resend",
           },
         ],
       },
@@ -290,7 +289,7 @@ export const NavLinks = {
         items: [
           {
             title: "UploadThing",
-            url: "/file-storage#uploadthing",
+            hash: "uploadthing",
           },
         ],
       },
@@ -301,19 +300,19 @@ export const NavLinks = {
         items: [
           {
             title: "Node.js",
-            url: "/environment#nodejs",
+            hash: "nodejs",
           },
           {
             title: "pnpm",
-            url: "/environment#pnpm",
+            hash: "pnpm",
           },
           {
             title: "Prettier",
-            url: "/environment#prettier",
+            hash: "prettier",
           },
           {
             title: "ESLint",
-            url: "/environment#eslint",
+            hash: "eslint",
           },
         ],
       },
@@ -324,11 +323,11 @@ export const NavLinks = {
         items: [
           {
             title: "Git",
-            url: "/version-control#git",
+            hash: "git",
           },
           {
             title: "GitHub",
-            url: "/version-control#github",
+            hash: "github",
           },
         ],
       },
@@ -339,11 +338,11 @@ export const NavLinks = {
         items: [
           {
             title: "GitHub Actions",
-            url: "/ci-cd#github-actions",
+            hash: "github-actions",
           },
           {
             title: "CodeRabbit",
-            url: "/ci-cd#coderabbit",
+            hash: "coderabbit",
           },
         ],
       },
@@ -354,11 +353,11 @@ export const NavLinks = {
         items: [
           {
             title: "Zod",
-            url: "/validation#zod",
+            hash: "zod",
           },
           {
             title: "T3 Env",
-            url: "/validation#t3-env",
+            hash: "t3-env",
           },
         ],
       },
@@ -369,23 +368,23 @@ export const NavLinks = {
         items: [
           {
             title: "Cloudflare Pages",
-            url: "/hosting#cloudflare-pages",
+            hash: "cloudflare-pages",
           },
           {
             title: "Vercel",
-            url: "/hosting#vercel",
+            hash: "vercel",
           },
           {
             title: "Netlify",
-            url: "/hosting#netlify",
+            hash: "netlify",
           },
           {
             title: "Coolify",
-            url: "/hosting#coolify",
+            hash: "coolify",
           },
           {
             title: "Hetzner",
-            url: "/hosting#hetzner",
+            hash: "hetzner",
           },
         ],
       },
@@ -396,15 +395,15 @@ export const NavLinks = {
         items: [
           {
             title: "PostHog",
-            url: "/analytics#posthog",
+            hash: "posthog",
           },
           {
             title: "Plausible",
-            url: "/analytics#plausible",
+            hash: "plausible",
           },
           {
             title: "Google Analytics",
-            url: "/analytics#google-analytics",
+            hash: "google-analytics",
           },
         ],
       },
@@ -415,19 +414,19 @@ export const NavLinks = {
         items: [
           {
             title: "React Scan",
-            url: "/diagnostics#react-scan",
+            hash: "react-scan",
           },
           {
             title: "Lighthouse",
-            url: "/diagnostics#lighthouse",
+            hash: "lighthouse",
           },
           {
             title: "Sentry",
-            url: "/diagnostics#sentry",
+            hash: "sentry",
           },
           {
             title: "check-site-meta",
-            url: "/diagnostics#check-site-meta",
+            hash: "check-site-meta",
           },
         ],
       },
@@ -438,23 +437,23 @@ export const NavLinks = {
         items: [
           {
             title: "freeCodeCamp",
-            url: "/learning#freecodecamp",
+            hash: "freecodecamp",
           },
           {
             title: "Frontend Mentor",
-            url: "/learning#frontend-mentor",
+            hash: "frontend-mentor",
           },
           {
             title: "Codevolution",
-            url: "/learning#codevolution",
+            hash: "codevolution",
           },
           {
             title: "Jack Herrington",
-            url: "/learning#jack-herrington",
+            hash: "jack-herrington",
           },
           {
             title: "Theo - t3.gg",
-            url: "/learning#theo",
+            hash: "theo",
           },
         ],
       },
@@ -470,27 +469,27 @@ export const NavLinks = {
         items: [
           {
             title: "Excalidraw",
-            url: "/design#excalidraw",
+            hash: "excalidraw",
           },
           {
             title: "Figma",
-            url: "/design#figma",
+            hash: "figma",
           },
           {
             title: "Canva",
-            url: "/design#canva",
+            hash: "canva",
           },
           {
             title: "PureRef",
-            url: "/design#pureref",
+            hash: "pureref",
           },
           {
             title: "Image Color Picker",
-            url: "/design#image-color-picker",
+            hash: "image-color-picker",
           },
           {
             title: "OKLCH Color Picker & Converter",
-            url: "/design#oklch-color-picker-converter",
+            hash: "oklch-color-picker-converter",
           },
         ],
       },
@@ -501,11 +500,11 @@ export const NavLinks = {
         items: [
           {
             title: "GIMP",
-            url: "/graphic-design#gimp",
+            hash: "gimp",
           },
           {
             title: "Adobe Photoshop",
-            url: "/graphic-design#adobe-photoshop",
+            hash: "adobe-photoshop",
           },
         ],
       },
@@ -516,11 +515,11 @@ export const NavLinks = {
         items: [
           {
             title: "Adobe Illustrator",
-            url: "/vector-graphics#adobe-illustrator",
+            hash: "adobe-illustrator",
           },
           {
             title: "Inkscape",
-            url: "/vector-graphics#inkscape",
+            hash: "inkscape",
           },
         ],
       },
@@ -531,7 +530,7 @@ export const NavLinks = {
         items: [
           {
             title: "DaVinci Resolve",
-            url: "/video-editing#davinci-resolve",
+            hash: "davinci-resolve",
           },
         ],
       },
