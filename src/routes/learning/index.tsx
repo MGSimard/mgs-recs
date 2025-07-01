@@ -69,6 +69,23 @@ function PageLearning() {
         issues={[]}></Section>
 
       <Section
+        id="jack-herrington"
+        className="bg-[radial-gradient(oklch(0.32_0.1365_265.54),oklch(0.17_0_0))]"
+        logo={<img className="object-cover rounded-full" src="/assets/brands/jack-herrington.webp" alt="" />}
+        title="Jack Herrington"
+        links={[{ label: "Jack Herrington (Youtube)", href: "https://www.youtube.com/@jherr/" }]}
+        subTitle="Deep dives into modern web development."
+        description="Jack Herrington's channel explores the full spectrum of modern web and software development, from beginner-friendly tutorials to very advanced deep dives. His videos cover frontend and backend frameworks, protocols, AI, developer tooling, and the latest trends in the tech ecosystem. Whether you want to master React, Next.js, tRPC, serverless, or understand new protocols and best practices, Jack's clear explanations and real-world examples make complex topics accessible and engaging. He also actively contributes to the new standards meant to replace create-react-app, such as create-tsrouter-app and other affiliated projects."
+        features={[
+          "Deep dives into React, Next.js, and modern web tech",
+          "Tutorials from beginner to advanced topics",
+          "Real-world projects and practical coding examples",
+          "Covers new frameworks, tools, and best practices",
+          "Clear explanations of complex concepts",
+        ]}
+        issues={[]}></Section>
+
+      <Section
         id="theo"
         className="bg-[radial-gradient(oklch(0.36_0.0586_304.5),oklch(0.33_0.0542_303.48))]"
         logo={<img className="object-cover rounded-full" src="/assets/brands/theo.webp" alt="" />}
@@ -86,23 +103,6 @@ function PageLearning() {
           "Shaved the mustache",
           "Long form reaction/explanatory/news coverage content may be less interesting to beginners",
         ]}></Section>
-
-      <Section
-        id="jack-herrington"
-        className="bg-[radial-gradient(oklch(0.32_0.1365_265.54),oklch(0.17_0_0))]"
-        logo={<img className="object-cover rounded-full" src="/assets/brands/jack-herrington.webp" alt="" />}
-        title="Jack Herrington"
-        links={[{ label: "Jack Herrington (Youtube)", href: "https://www.youtube.com/@jherr/" }]}
-        subTitle="Deep dives into modern web development."
-        description="Jack Herrington's channel explores the full spectrum of modern web and software development, from beginner-friendly tutorials to very advanced deep dives. His videos cover frontend and backend frameworks, protocols, AI, developer tooling, and the latest trends in the tech ecosystem. Whether you want to master React, Next.js, tRPC, serverless, or understand new protocols and best practices, Jack's clear explanations and real-world examples make complex topics accessible and engaging. He also actively contributes to the new standards meant to replace create-react-app, such as create-tsrouter-app and other affiliated projects."
-        features={[
-          "Deep dives into React, Next.js, and modern web tech",
-          "Tutorials from beginner to advanced topics",
-          "Real-world projects and practical coding examples",
-          "Covers new frameworks, tools, and best practices",
-          "Clear explanations of complex concepts",
-        ]}
-        issues={[]}></Section>
     </>
   );
 }

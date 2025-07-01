@@ -445,12 +445,12 @@ export const NavLinks = {
             url: "/learning#codevolution",
           },
           {
-            title: "Theo - t3.gg",
-            url: "/learning#theo",
-          },
-          {
             title: "Jack Herrington",
             url: "/learning#jack-herrington",
+          },
+          {
+            title: "Theo - t3.gg",
+            url: "/learning#theo",
           },
         ],
       },
