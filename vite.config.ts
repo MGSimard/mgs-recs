@@ -18,6 +18,6 @@ export default defineConfig({
       },
     }),
     tailwindcss(),
-    tanstackStart({ target: "cloudflare-module" }),
+    tanstackStart({ target: "netlify" }),
   ],
 });
