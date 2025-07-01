@@ -2,7 +2,7 @@
 
 _This could've been a markdown file_
 
-Collection of my recommended webdev things @ https://mgs-recs.netlify.app/
+Collection of my recommended webdev things @ https://mgs-recs.netlify.app
 
 ## Stack
 
