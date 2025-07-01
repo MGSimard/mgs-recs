@@ -28,10 +28,10 @@ export function Section({
   ...props
 }: SectionProps) {
   return (
-    <section className="flex sm:flex-row flex-col bg-card border rounded-sm shadow-sm overflow-hidden" {...props}>
+    <section className="flex @3xl:flex-row flex-col bg-card border rounded-sm shadow-sm overflow-hidden" {...props}>
       <div
         className={cn(
-          "shrink-0 flex items-center justify-center sm:p-0 p-4 sm:w-28 w-full [&>svg]:w-12 [&>svg]:h-12 [&>img]:w-12 [&>img]:h-12",
+          "shrink-0 flex items-center justify-center @3xl:p-0 p-4 @3xl:w-28 w-full [&>svg]:w-12 [&>svg]:h-12 [&>img]:w-12 [&>img]:h-12",
           className
         )}>
         {logo}
@@ -53,7 +53,7 @@ export function Section({
         <hr className="my-4 border-muted" />
 
         <h3 className="text-lg font-bold mb-2">Key Features:</h3>
-        <ul className="grid sm:grid-cols-3 grid-cols-1 gap-4 list-inside leading-4 font-medium mb-4 items-start">
+        <ul className="grid @3xl:grid-cols-3 @xl:grid-cols-2 grid-cols-1 gap-4 list-inside leading-4 font-medium mb-4 items-start">
           {features.map((feature) => (
             <li key={feature} className="flex items-start gap-2">
               <CircleCheck className="shrink-0 w-[1em] h-[1em] text-green-500" aria-hidden="true" />
@@ -63,7 +63,7 @@ export function Section({
         </ul>
 
         <h3 className="text-lg font-bold mb-2">Issues:</h3>
-        <ul className="grid sm:grid-cols-3 grid-cols-1 gap-4 list-inside leading-4 font-medium">
+        <ul className="grid @3xl:grid-cols-3 @xl:grid-cols-2 grid-cols-1 gap-4 list-inside leading-4 font-medium">
           {issues.length > 0 ? (
             issues.map((issue) => (
               <li key={issue} className="flex items-start gap-2">

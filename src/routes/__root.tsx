@@ -122,7 +122,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
           <AppSidebar className="whitespace-nowrap" />
           <SidebarInset className="max-w-screen-xl mx-auto">
             <Header />
-            <main className="flex flex-1 flex-col gap-12 p-8">{children}</main>
+            <main className="@container flex flex-1 flex-col gap-12 p-8">{children}</main>
           </SidebarInset>
         </Providers>
         <Scripts />
