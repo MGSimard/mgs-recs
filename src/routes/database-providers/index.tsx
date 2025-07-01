@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/_components/Section";
-import { LogoNeon, LogoPlanetScale, LogoSupabase } from "@/_components/Icons";
+import { LogoNeon, LogoPlanetScale, LogoSupabase, LogoConvex } from "@/_components/Icons";
 
 export const Route = createFileRoute("/database-providers/")({
   component: PageDatabaseProviders,
@@ -62,10 +62,10 @@ function PageDatabaseProviders() {
         title="PlanetScale"
         links={[{ label: "PlanetScale", href: "https://planetscale.com/" }]}
         docsLinks={[{ label: "PlanetScale", href: "https://planetscale.com/docs/" }]}
-        subTitle="Scalable MySQL."
-        description="PlanetScale is a serverless database platform built on MySQL and powered by Vitess, a database clustering system originally developed at YouTube. Its standout features are database branching (similar to Git) and a schema change workflow that eliminates downtime for migrations. PlanetScale focuses heavily on developer experience and scalability for MySQL workloads. However, unlike some other options, PlanetScale does not currently offer a free tier, making it a more suitable choice for established enterprises or projects with production budgets rather than individual hobbyists or those just starting out."
+        subTitle="Scalable MySQL and PostgreSQL."
+        description="PlanetScale is a serverless database platform built on MySQL and powered by Vitess, a database clustering system originally developed at YouTube. Its standout features are database branching (similar to Git) and a schema change workflow that eliminates downtime for migrations. PlanetScale focuses heavily on developer experience and scalability for MySQL workloads. Recently, PlanetScale announced support for PostgreSQL, with early adopters like Convex migrating their reactive database infrastructure to PlanetScale for Postgres. However, unlike some other options, PlanetScale does not currently offer a free tier, making it a more suitable choice for established enterprises or projects with production budgets rather than individual hobbyists or those just starting out."
         features={[
-          "MySQL",
+          "MySQL and PostgreSQL (new)",
           "Zero-downtime schema changes",
           "Database branching workflow",
           "Horizontal sharding with Vitess",
@@ -76,6 +76,32 @@ function PageDatabaseProviders() {
           "SOC2 and HIPAA compliant",
         ]}
         issues={["No free tier"]}></Section>
+
+      {/*// Yellow: oklch(0.7996 0.1603 79.95)
+// Purple: oklch(0.4588 0.1633 338.34)
+// Red: oklch(0.6194 0.2216 27.69) */}
+      <Section
+        id="convex"
+        className="bg-[conic-gradient(oklch(0.6194_0.2216_27.69)0%,oklch(0.6194_0.2216_27.69)33%,oklch(0.7996_0.1603_79.95)33%,oklch(0.7996_0.1603_79.95)66%,oklch(0.4588_0.1633_338.34)66%,oklch(0.4588_0.1633_338.34)100%)]"
+        logo={<LogoConvex />}
+        title="Convex"
+        links={[{ label: "Convex", href: "https://convex.dev/" }]}
+        docsLinks={[{ label: "Convex", href: "https://docs.convex.dev/" }]}
+        subTitle="Reactive database for modern apps."
+        description="Convex is an open-source reactive database where queries are TypeScript code running right in the database. It provides a complete backend-as-a-service with a document-relational database, real-time subscriptions, authentication, file storage, and scheduling. Built for modern reactive UI frameworks, Convex automatically updates your UI when data changes. The cloud version runs on Amazon RDS with MySQL, while the open-source version supports SQLite, Postgres, and MySQL. Convex is now migrating their reactive database infrastructure to PlanetScale's new PostgreSQL offering on PlanetScale Metal for enhanced performance and reliability."
+        features={[
+          "Document-relational database",
+          "TypeScript queries (no SQL needed)",
+          "Real-time reactive subscriptions",
+          "Built-in authentication (80+ OAuth providers)",
+          "File storage and vector search",
+          "Serverless functions and actions",
+          "Cron jobs and scheduling",
+          "AI-friendly architecture",
+          "Open source and self-hostable",
+          "ACID transactions with optimistic concurrency",
+        ]}
+        issues={[]}></Section>
     </>
   );
 }

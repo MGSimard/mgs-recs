@@ -221,6 +221,10 @@ export const NavLinks = {
             title: "PlanetScale",
             url: "/database-providers#planetscale",
           },
+          {
+            title: "Convex",
+            url: "/database-providers#convex",
+          },
         ],
       },
       {
