@@ -22,7 +22,7 @@ export function NavMain({
   const location = useLocation();
   const currentPath = location.pathname.replace(/\/$/, "");
   const currentHash = location.hash.replace(/^#/, "");
-  const { state, isMobile } = useSidebar();
+  const { state, isMobile, setOpenMobile } = useSidebar();
 
   return (
     <SidebarGroup>
@@ -50,6 +50,7 @@ export function NavMain({
               isAnySubItemActive={isAnySubItemActive}
               state={state}
               isMobile={isMobile}
+              setOpenMobile={setOpenMobile}
               {...item}
             />
           );

@@ -9,9 +9,10 @@ interface NavSubItemsProps {
     title: string;
     url: string;
   }[];
+  setOpenMobile: (open: boolean) => void;
 }
 
-export function NavSubItems({ items }: NavSubItemsProps) {
+export function NavSubItems({ items, setOpenMobile }: NavSubItemsProps) {
   const location = useLocation();
   const currentPath = normalizePath(location.pathname);
   const [currentHash, setCurrentHash] = useState("");
@@ -31,7 +32,7 @@ export function NavSubItems({ items }: NavSubItemsProps) {
         return (
           <SidebarMenuSubItem key={subItem.title}>
             <SidebarMenuSubButton asChild className="text-muted-foreground" isActive={isActive}>
-              <Link to={subItem.url}>
+              <Link to={subItem.url} onClick={() => setOpenMobile(false)}>
                 <span>{subItem.title}</span>
               </Link>
             </SidebarMenuSubButton>

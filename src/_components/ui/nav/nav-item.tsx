@@ -10,6 +10,7 @@ interface NavItemProps {
   icon: LucideIcon;
   isActive: boolean;
   isAnySubItemActive: boolean;
+  setOpenMobile: (open: boolean) => void;
   items?: {
     title: string;
     url: string;
@@ -24,6 +25,7 @@ export function NavItem({
   icon: Icon,
   isActive,
   isAnySubItemActive,
+  setOpenMobile,
   items,
   state,
   isMobile,
@@ -57,7 +59,7 @@ export function NavItem({
             {items && (
               <CollapsibleContent className="rdx-collapsible">
                 <SidebarMenuSub>
-                  <NavSubItems items={items} />
+                  <NavSubItems items={items} setOpenMobile={setOpenMobile} />
                 </SidebarMenuSub>
               </CollapsibleContent>
             )}
