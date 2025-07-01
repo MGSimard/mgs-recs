@@ -62,7 +62,7 @@ function PageDatabaseProviders() {
         title="PlanetScale"
         links={[{ label: "PlanetScale", href: "https://planetscale.com/" }]}
         docsLinks={[{ label: "PlanetScale", href: "https://planetscale.com/docs/" }]}
-        subTitle="Secalable MySQL."
+        subTitle="Scalable MySQL."
         description="PlanetScale is a serverless database platform built on MySQL and powered by Vitess, a database clustering system originally developed at YouTube. Its standout features are database branching (similar to Git) and a schema change workflow that eliminates downtime for migrations. PlanetScale focuses heavily on developer experience and scalability for MySQL workloads. However, unlike some other options, PlanetScale does not currently offer a free tier, making it a more suitable choice for established enterprises or projects with production budgets rather than individual hobbyists or those just starting out."
         features={[
           "MySQL",
