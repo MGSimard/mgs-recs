@@ -1,16 +1,16 @@
-# MGS-Recs
+# [MGS-Recs](https://mgs-recs.netlify.app/)
 
 _This could've been a markdown file_
 
-Collection of my recommended webdev things.
+Collection of my recommended webdev things @ https://mgs-recs.netlify.app/
 
 ## Stack
 
-- TanStack Start (React 19, Vite, Nitro, H3, Vinxi)
+- TanStack Start
 - TypeScript
-- Cloudflare Workers
 - shadcn/ui
 - Tailwind CSS
+- Netlify
 
 Really was just looking for an excuse to try out ~~Mantine UI~~ ~~shadcn/ui~~ Tailwind CSS.
 
@@ -26,7 +26,6 @@ Really was just looking for an excuse to try out ~~Mantine UI~~ ~~shadcn/ui~~ Ta
 ## HOMEWORK
 
 - [ ] tRPC
-- [ ] Convex
 - [ ] Bun
 
 ---
