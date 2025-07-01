@@ -5,5 +5,5 @@ export function PageH1() {
   const match = matches[matches.length - 1];
   const title = match?.loaderData?.title;
 
-  return title ? <h1 className="text-sm font-normal text-muted-foreground">{title}</h1> : null;
+  return title ? <h1 className="text-sm font-normal text-muted-foreground">MGS RECS - {title}</h1> : null;
 }
