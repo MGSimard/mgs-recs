@@ -24,7 +24,9 @@ export default defineConfig({
         enabled: true,
         prerender: {
           enabled: true,
+          outputPath: "/custom-shell",
           crawlLinks: true,
+          retryCount: 3,
         },
       },
     }),
