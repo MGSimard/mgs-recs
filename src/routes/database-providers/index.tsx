@@ -33,29 +33,6 @@ function PageDatabaseProviders() {
         issues={["More outages; reliability concerns", "Bad cold start latency"]}></Section>
 
       <Section
-        id="supabase"
-        className="bg-[oklch(0.76_0.1551_159.51)]"
-        logo={<LogoSupabase />}
-        title="Supabase"
-        links={[{ label: "Supabase", href: "https://supabase.com/" }]}
-        docsLinks={[{ label: "Supabase", href: "https://supabase.com/docs/" }]}
-        subTitle="Open source alternative to Firebase."
-        description="Supabase is an open source platform that provides a suite of tools to build backends, aiming to be an alternative to Firebase. At its core is a PostgreSQL database. Built on top of AWS infrastructure, Supabase offers a managed service with integrated authentication, real-time subscriptions, serverless functions, storage, and vector embeddings alongside the database. It provides a comprehensive backend-as-a-service experience with the flexibility of open source."
-        features={[
-          "PostgreSQL",
-          "Multi-provider authentication",
-          "Auto-generated APIs (REST/GraphQL)",
-          "Real-time WebSocket subscriptions",
-          "Serverless Edge Functions",
-          "S3-compatible storage",
-          "Vector database for AI",
-          "Database branching",
-          "Row Level Security",
-          "Cron jobs and message queues",
-        ]}
-        issues={[]}></Section>
-
-      <Section
         id="planetscale"
         className="bg-[oklch(0.66_0.2021_39.35)]"
         logo={<LogoPlanetScale />}
@@ -77,9 +54,6 @@ function PageDatabaseProviders() {
         ]}
         issues={["No free tier"]}></Section>
 
-      {/*// Yellow: oklch(0.7996 0.1603 79.95)
-// Purple: oklch(0.4588 0.1633 338.34)
-// Red: oklch(0.6194 0.2216 27.69) */}
       <Section
         id="convex"
         className="bg-[conic-gradient(oklch(0.6194_0.2216_27.69)0%,oklch(0.6194_0.2216_27.69)33%,oklch(0.7996_0.1603_79.95)33%,oklch(0.7996_0.1603_79.95)66%,oklch(0.4588_0.1633_338.34)66%,oklch(0.4588_0.1633_338.34)100%)]"
@@ -102,6 +76,33 @@ function PageDatabaseProviders() {
           "ACID transactions with optimistic concurrency",
         ]}
         issues={[]}></Section>
+
+      <Section
+        id="supabase"
+        className="bg-[oklch(0.76_0.1551_159.51)]"
+        logo={<LogoSupabase />}
+        title="Supabase"
+        links={[{ label: "Supabase", href: "https://supabase.com/" }]}
+        docsLinks={[{ label: "Supabase", href: "https://supabase.com/docs/" }]}
+        subTitle="Open source alternative to Firebase."
+        description="Supabase is an open source platform that provides a suite of tools to build backends, aiming to be an alternative to Firebase. At its core is a PostgreSQL database. Built on top of AWS infrastructure, Supabase offers a managed service with integrated authentication, real-time subscriptions, serverless functions, storage, and vector embeddings alongside the database. It provides a comprehensive backend-as-a-service experience with the flexibility of open source."
+        features={[
+          "PostgreSQL",
+          "Multi-provider authentication",
+          "Auto-generated APIs (REST/GraphQL)",
+          "Real-time WebSocket subscriptions",
+          "Serverless Edge Functions",
+          "S3-compatible storage",
+          "Vector database for AI",
+          "Database branching",
+          "Row Level Security",
+          "Cron jobs and message queues",
+        ]}
+        issues={[]}></Section>
+
+      {/*// Yellow: oklch(0.7996 0.1603 79.95)
+// Purple: oklch(0.4588 0.1633 338.34)
+// Red: oklch(0.6194 0.2216 27.69) */}
     </>
   );
 }
